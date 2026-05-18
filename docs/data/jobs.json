@@ -1,10 +1,41 @@
 {
-  "last_updated": "2026-05-18T08:49:47.880225+00:00",
+  "last_updated": "2026-05-18T12:07:35.126799+00:00",
   "stats": {
-    "total": 0,
-    "permanent": 0,
-    "postdoc": 0,
+    "total": 2,
+    "permanent": 1,
+    "postdoc": 1,
     "phd": 0
   },
-  "jobs": []
+  "jobs": [
+    {
+      "id": "0e1ff8b360e37c3f",
+      "title": "Research Assistant in Neurodegenerative Diseases PR27/05/2026",
+      "institution": "University",
+      "location": "Norway",
+      "url": "https://euraxess.ec.europa.eu/jobs/437332",
+      "deadline": "18 May 2026",
+      "type": "permanent",
+      "description": "Autonomous University of Madrid (Universidad Autónoma de Madrid) Posted on: 18 May 2026 Research Assistant in Neurodegenerative Diseases PR27/05/2026 The selected candidate will contribute to the development of a research project focused on the study of neurodegeneration using a murine model of amyotrophic lateral sclerosis (ALS). The researcher will support the execution of the project through da",
+      "source": "euraxess.eu",
+      "stats_highlight": false,
+      "relevant": true,
+      "relevance_score": 1,
+      "fetched_at": "2026-05-18T12:09:36.497795+00:00"
+    },
+    {
+      "id": "24a7b443ea77f316",
+      "title": "MSCA-PF Supervision Offer: Microbial Ecology using Metagenomics and Predictive Modelling",
+      "institution": "",
+      "location": "Norway",
+      "url": "https://euraxess.ec.europa.eu/jobs/hosting/msca-pf-supervision-offer-microbial-ecology-using-metagenomics-and-predictive",
+      "deadline": "18 May 2026",
+      "type": "postdoc",
+      "description": "Agencia Estatal Consejo Superior de Investigaciones Científicas Posted on: 18 May 2026 MSCA-PF Supervision Offer: Microbial Ecology using Metagenomics and Predictive Modelling Description The group of Predictive Microbial Ecology led by Dr. Josep Ramoneda at CEAB-CSIC invites outstanding postdoctoral researchers to develop 2–3 year research projects under the Horizon Europe Marie Skłodowska-Curie",
+      "source": "euraxess.eu",
+      "stats_highlight": false,
+      "relevant": true,
+      "relevance_score": 1,
+      "fetched_at": "2026-05-18T12:09:36.498425+00:00"
+    }
+  ]
 }
