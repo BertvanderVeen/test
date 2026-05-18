@@ -1,18 +1,9 @@
 {
-<<<<<<< HEAD
-  "last_updated": "2026-05-18T08:49:47.880225+00:00",
-=======
-<<<<<<< HEAD
-  "last_updated": "2026-05-18T13:08:12.465046+00:00",
-=======
-  "last_updated": "2026-05-18T08:49:47.880225+00:00",
->>>>>>> bdb79cb (update)
->>>>>>> refs/remotes/origin/main
+  "last_updated": "2026-05-18T13:25:49.861426+00:00",
   "stats": {
     "total": 1,
     "permanent": 0,
-    "postdoc": 0,
-    "phd": 0
+    "postdoc": 0
   },
   "jobs": [
     {
@@ -31,7 +22,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-05-18T13:08:57.101989+00:00"
+      "fetched_at": "2026-05-18T13:26:46.564939+00:00"
     }
   ]
 }
