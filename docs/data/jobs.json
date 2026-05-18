@@ -1,0 +1,28 @@
+{
+  "last_updated": "2026-05-18T13:30:34.630534+00:00",
+  "stats": {
+    "total": 1,
+    "permanent": 0,
+    "postdoc": 0
+  },
+  "jobs": [
+    {
+      "id": "f62bbe45d9107985",
+      "title": "Forskningsassistent inom INFLUX projektet",
+      "institution": "Stockholm University",
+      "location": "Stockholm",
+      "country": "sweden",
+      "inst_type": "university",
+      "url": "https://su.varbi.com/en/what:job/jobID:932460/",
+      "deadline": "Fri, 08 May 2026 00:00:00 +0200",
+      "type": "unknown",
+      "description": "Stockholms Resilienscentrum (SRC) utforskar hur människor och natur kan leva och utvecklas inom planetens gränser. Centret är ett samarbete mellan Stockholms universitet och Beijerinstitutet för ekologisk ekonomi vid Kungliga Vetenskapsakademien. Vi samlar människor från hela världen för att forska, studera och samarbeta för en levande och resilient biosfär som möjliggör välbefinnande för alla. Mer information finns på: Stockholms Resilienscentrum. Projektbeskrivning Anställningen är kopplad till ett ERC Starting Grant-projekt, INFLUX: Emerging pests and pathogens as a novel lens for unravelling social-ecological cascades. Nya skadegörare och patogener (EPPs) – inklusive infektionssjukdomar ",
+      "source": "su.se",
+      "aggregator": false,
+      "stats_highlight": false,
+      "relevant": true,
+      "relevance_score": 1,
+      "fetched_at": "2026-05-18T13:31:23.292950+00:00"
+    }
+  ]
+}
