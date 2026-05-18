@@ -243,7 +243,7 @@
 
     .stat-sep { opacity: 0.3; }
 
-    #refresh-btn, #trigger-btn, #settings-btn {
+    #refresh-btn {
       margin-left: auto;
       background: none;
       border: 1px solid var(--border);
@@ -259,15 +259,8 @@
       gap: 0.4rem;
     }
 
-    #trigger-btn, #settings-btn { margin-left: 0; }
-
-    #refresh-btn:hover, #trigger-btn:hover, #settings-btn:hover {
-      border-color: var(--border-act);
-      color: var(--text);
-    }
-
-    #trigger-btn.spinning svg, #trigger-btn.polling svg { animation: spin 1s linear infinite; }
-    #trigger-btn:disabled { opacity: 0.45; cursor: default; }
+    #refresh-btn:hover { border-color: var(--border-act); color: var(--text); }
+    #refresh-btn.spinning svg { animation: spin 1s linear infinite; }
     @keyframes spin { to { transform: rotate(360deg); } }
 
     /* ── Sectioned layout ───────────────────────────────────────────────────── */
@@ -640,44 +633,13 @@
     <span class="stat-sep">|</span>
     <span class="stat-item"><strong id="count-postdoc">—</strong> postdoc</span>
 
-    <div style="margin-left:auto;display:flex;gap:0.4rem;align-items:center;">
-      <button id="trigger-btn" title="Trigger GitHub Actions scraper (1h cooldown)">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polyline points="23 4 23 10 17 10"/>
-          <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
-        </svg>
-        <span id="trigger-label">Fetch new</span>
-      </button>
-      <button id="settings-btn" title="Configure GitHub token">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="3"/>
-          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
-        </svg>
-      </button>
-    </div>
-  </div>
-</div>
-
-<!-- ── Settings modal ──────────────────────────────────────────────────────── -->
-<div id="settings-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:100;align-items:center;justify-content:center;">
-  <div style="background:#141f18;border:1px solid #3d5c41;border-radius:3px;padding:1.5rem;width:min(480px,90vw);font-family:'JetBrains Mono',monospace;font-size:0.8rem;">
-    <div style="color:#62d878;margin-bottom:1rem;font-size:0.9rem;">GitHub Actions configuration</div>
-    <p style="color:#7a9a7e;margin-bottom:1rem;line-height:1.5;">
-      Enter a fine-grained GitHub PAT with <strong style="color:#cfe0d0">Actions: write</strong> permission for your repo.
-      Stored only in your browser's localStorage — never sent anywhere except GitHub's API.
-    </p>
-    <label style="color:#7a9a7e;display:block;margin-bottom:0.3rem;">Repo owner</label>
-    <input id="cfg-owner" type="text" placeholder="BertvanderVeen" style="width:100%;padding:0.4rem 0.6rem;background:#0b1410;border:1px solid #223326;color:#cfe0d0;border-radius:2px;margin-bottom:0.75rem;font-family:inherit;">
-    <label style="color:#7a9a7e;display:block;margin-bottom:0.3rem;">Repo name</label>
-    <input id="cfg-repo" type="text" placeholder="test" style="width:100%;padding:0.4rem 0.6rem;background:#0b1410;border:1px solid #223326;color:#cfe0d0;border-radius:2px;margin-bottom:0.75rem;font-family:inherit;">
-    <label style="color:#7a9a7e;display:block;margin-bottom:0.3rem;">Workflow file</label>
-    <input id="cfg-workflow" type="text" placeholder="fetch-jobs.yml" style="width:100%;padding:0.4rem 0.6rem;background:#0b1410;border:1px solid #223326;color:#cfe0d0;border-radius:2px;margin-bottom:0.75rem;font-family:inherit;">
-    <label style="color:#7a9a7e;display:block;margin-bottom:0.3rem;">GitHub PAT</label>
-    <input id="cfg-token" type="password" placeholder="github_pat_..." style="width:100%;padding:0.4rem 0.6rem;background:#0b1410;border:1px solid #223326;color:#cfe0d0;border-radius:2px;margin-bottom:1rem;font-family:inherit;">
-    <div style="display:flex;gap:0.5rem;justify-content:flex-end;">
-      <button id="cfg-cancel" style="padding:0.4rem 0.8rem;background:none;border:1px solid #223326;color:#7a9a7e;cursor:pointer;border-radius:2px;font-family:inherit;">Cancel</button>
-      <button id="cfg-save" style="padding:0.4rem 0.8rem;background:#2d5c35;border:1px solid #62d878;color:#62d878;cursor:pointer;border-radius:2px;font-family:inherit;">Save</button>
-    </div>
+    <button id="refresh-btn" title="Reload jobs.json from GitHub Pages">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="23 4 23 10 17 10"/>
+        <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+      </svg>
+      Refresh
+    </button>
   </div>
 </div>
 
@@ -789,7 +751,7 @@
 
       <div class="portal-card">
         <div class="portal-name">NTNU — Trondheim</div>
-        <div class="portal-desc">Dept. of Biology (IBY) and Dept. of Mathematical Sciences (IMF) are the relevant units for ecology and statistics.</div>
+        <div class="portal-desc">Dept. of Biology (IBI) and Dept. of Mathematical Sciences (IMF) are the relevant units for ecology and statistics.</div>
         <div class="portal-links">
           <a class="portal-link" href="https://www.ntnu.edu/vacancies" target="_blank" rel="noopener">
             <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
@@ -1108,138 +1070,31 @@
 
   // ── Data loading ─────────────────────────────────────────────────────────────
 
-  async function loadJobs(showSpinner = true) {
-    if (showSpinner) { loadingBox.style.display = ''; sections.classList.add('hidden'); }
+  const refreshBtn = document.getElementById('refresh-btn');
+
+  async function loadJobs() {
+    refreshBtn.classList.add('spinning');
+    loadingBox.style.display = '';
+    sections.classList.add('hidden');
     try {
       const resp = await fetch(`data/jobs.json?t=${Date.now()}`);
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
       const data = await resp.json();
       allJobs = data.jobs || [];
-      lastUpdated.textContent = data.last_updated ? fmtDate(data.last_updated) : 'never — trigger fetch';
+      lastUpdated.textContent = data.last_updated ? fmtDate(data.last_updated) : 'never — run the Action';
       loadingBox.style.display = 'none';
       sections.classList.remove('hidden');
       applyFilters();
-      return data.last_updated || null;
     } catch (err) {
       loadingBox.innerHTML = `
         <div class="state-icon">⚠️</div>
         <div class="state-title">Could not load jobs.json</div>
         <div class="state-body">${esc(err.message)}<br><br>
           Serve locally: <code>python3 -m http.server 8000</code> from <code>docs/</code></div>`;
-      return null;
+    } finally {
+      refreshBtn.classList.remove('spinning');
     }
   }
-
-  // ── GitHub Actions trigger ────────────────────────────────────────────────────
-
-  const COOLDOWN_MS  = 60 * 60 * 1000; // 1 hour
-  const POLL_INTERVAL = 30 * 1000;     // 30s
-  const POLL_MAX      = 10;            // give up after 5 minutes
-
-  const triggerBtn   = document.getElementById('trigger-btn');
-  const triggerLabel = document.getElementById('trigger-label');
-  const settingsBtn  = document.getElementById('settings-btn');
-  const modal        = document.getElementById('settings-modal');
-
-  function cfg(key) { return localStorage.getItem('jobscrape_' + key) || ''; }
-  function setCfg(key, val) { localStorage.setItem('jobscrape_' + key, val); }
-
-  function updateTriggerState() {
-    const last = parseInt(localStorage.getItem('jobscrape_last_trigger') || '0', 10);
-    const ago  = Date.now() - last;
-    if (ago < COOLDOWN_MS) {
-      const mins = Math.ceil((COOLDOWN_MS - ago) / 60000);
-      triggerBtn.disabled = true;
-      triggerLabel.textContent = `cooldown ${mins}m`;
-    } else {
-      triggerBtn.disabled = false;
-      triggerLabel.textContent = 'Fetch new';
-    }
-  }
-
-  async function triggerFetch() {
-    const owner    = cfg('owner');
-    const repo     = cfg('repo');
-    const workflow = cfg('workflow') || 'fetch-jobs.yml';
-    const token    = cfg('token');
-
-    if (!owner || !repo || !token) {
-      modal.style.display = 'flex';
-      return;
-    }
-
-    triggerBtn.disabled = true;
-    triggerBtn.classList.add('spinning');
-    triggerLabel.textContent = 'Triggering…';
-
-    const url = `https://api.github.com/repos/${owner}/${repo}/actions/workflows/${workflow}/dispatches`;
-    try {
-      const r = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          'Accept': 'application/vnd.github+json',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ ref: 'main' }),
-      });
-
-      if (r.status === 204 || r.ok) {
-        localStorage.setItem('jobscrape_last_trigger', Date.now());
-        triggerBtn.classList.remove('spinning');
-        triggerBtn.classList.add('polling');
-        triggerLabel.textContent = 'Polling…';
-
-        // Poll jobs.json until last_updated changes (scraper finished)
-        const knownTimestamp = allJobs.length
-          ? document.getElementById('last-updated').textContent
-          : null;
-        let polls = 0;
-
-        const interval = setInterval(async () => {
-          polls++;
-          const newTs = await loadJobs(false);
-          const newLabel = newTs ? fmtDate(newTs) : null;
-          if ((newLabel && newLabel !== knownTimestamp) || polls >= POLL_MAX) {
-            clearInterval(interval);
-            triggerBtn.classList.remove('polling');
-            updateTriggerState();
-          }
-        }, POLL_INTERVAL);
-
-      } else {
-        const body = await r.json().catch(() => ({}));
-        triggerLabel.textContent = `Error ${r.status}`;
-        console.error('GitHub API error:', body);
-        setTimeout(updateTriggerState, 3000);
-      }
-    } catch (err) {
-      triggerLabel.textContent = 'Network error';
-      console.error(err);
-      setTimeout(updateTriggerState, 3000);
-    }
-  }
-
-  // ── Settings modal ────────────────────────────────────────────────────────────
-
-  function openModal() {
-    document.getElementById('cfg-owner').value    = cfg('owner');
-    document.getElementById('cfg-repo').value     = cfg('repo');
-    document.getElementById('cfg-workflow').value = cfg('workflow') || 'fetch-jobs.yml';
-    document.getElementById('cfg-token').value    = cfg('token');
-    modal.style.display = 'flex';
-  }
-
-  settingsBtn.addEventListener('click', openModal);
-  document.getElementById('cfg-cancel').addEventListener('click', () => { modal.style.display = 'none'; });
-  document.getElementById('cfg-save').addEventListener('click', () => {
-    setCfg('owner',    document.getElementById('cfg-owner').value.trim());
-    setCfg('repo',     document.getElementById('cfg-repo').value.trim());
-    setCfg('workflow', document.getElementById('cfg-workflow').value.trim());
-    setCfg('token',    document.getElementById('cfg-token').value.trim());
-    modal.style.display = 'none';
-  });
-  modal.addEventListener('click', e => { if (e.target === modal) modal.style.display = 'none'; });
 
   // ── Events ───────────────────────────────────────────────────────────────────
 
@@ -1258,16 +1113,12 @@
     applyFilters();
   });
 
-  triggerBtn.addEventListener('click', triggerFetch);
-  updateTriggerState();
-  setInterval(updateTriggerState, 60000); // re-check cooldown every minute
-
+  refreshBtn.addEventListener('click', loadJobs);
   loadJobs();
 
 })();
-
-})();
 </script>
+
 
 </body>
 </html>
