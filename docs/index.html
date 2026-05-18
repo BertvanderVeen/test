@@ -1025,6 +1025,7 @@
     const filtered = allJobs.filter(job => {
       if (activeType !== 'all' && job.type !== activeType) return false;
       if (statsOnly && !job.stats_highlight) return false;
+      if (job.deadline && deadlineStatus(job.deadline) === 'expired') return false;
       if (q && !`${job.title} ${job.institution} ${job.description}`.toLowerCase().includes(q)) return false;
       return true;
     });

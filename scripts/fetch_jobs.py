@@ -656,6 +656,33 @@ def deduplicate(jobs):
 
 def filter_relevant(jobs): return [j for j in jobs if j.get('relevant', False)]
 
+def filter_expired(jobs):
+    """Drop jobs with a parseable deadline that has already passed."""
+    from datetime import date
+    import re
+    today = date.today()
+    result = []
+    for job in jobs:
+        dl = job.get('deadline')
+        if not dl:
+            result.append(job)
+            continue
+        # Try ISO date first, then dd.mm.yyyy, then give benefit of doubt
+        parsed = None
+        try:
+            m = re.search(r'(\d{4}-\d{2}-\d{2})', dl)
+            if m:
+                parsed = date.fromisoformat(m.group(1))
+            else:
+                m = re.search(r'(\d{1,2})[.\-/](\d{1,2})[.\-/](\d{4})', dl)
+                if m:
+                    parsed = date(int(m.group(3)), int(m.group(2)), int(m.group(1)))
+        except Exception:
+            pass
+        if parsed is None or parsed >= today:
+            result.append(job)
+    return result
+
 def sort_jobs(jobs):
     order = {'permanent':0,'postdoc':1,'unknown':2}
     return sorted(jobs, key=lambda j: (order.get(j['type'],9), -j.get('relevance_score',0)))
@@ -701,7 +728,8 @@ def main():
 
     deduped  = deduplicate(all_jobs)
     relevant = filter_relevant(deduped)
-    sorted_  = sort_jobs(relevant)
+    active   = filter_expired(relevant)
+    sorted_  = sort_jobs(active)
 
     perm    = sum(1 for j in sorted_ if j['type']=='permanent')
     postdoc = sum(1 for j in sorted_ if j['type']=='postdoc')
