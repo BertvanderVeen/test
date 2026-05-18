@@ -22,17 +22,9 @@ OUTPUT_PATH = os.path.join(SCRIPT_DIR, '..', 'docs', 'data', 'jobs.json')
 
 SESSION = requests.Session()
 SESSION.headers.update({
-    'User-Agent': (
-        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
-        'AppleWebKit/537.36 (KHTML, like Gecko) '
-        'Chrome/124.0.0.0 Safari/537.36'
-    ),
-    'Accept':           'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-    'Accept-Language':  'en-US,en;q=0.9,nb;q=0.8',
-    'Accept-Encoding':  'gzip, deflate, br',
-    'Sec-Fetch-Dest':   'document',
-    'Sec-Fetch-Mode':   'navigate',
-    'Sec-Fetch-Site':   'none',
+    'User-Agent': 'Mozilla/5.0 ...',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Accept-Language': 'en-US,en;q=0.9,nb;q=0.8',
 })
 TIMEOUT     = 25
 MAX_RETRIES = 3
@@ -139,23 +131,33 @@ def make_job(title, url, institution='', location='Norway',
 
 def get_html(url, extra_headers=None):
     parsed = urlparse(url)
-    hdrs   = {'Referer': f'{parsed.scheme}://{parsed.netloc}/'}
-    if extra_headers: hdrs.update(extra_headers)
+    hdrs = {'Referer': f'{parsed.scheme}://{parsed.netloc}/'}
+    if extra_headers:
+        hdrs.update(extra_headers)
+
     for attempt in range(MAX_RETRIES):
         try:
             resp = SESSION.get(url, headers=hdrs, timeout=TIMEOUT)
             resp.raise_for_status()
             return resp
+
         except requests.HTTPError as exc:
             code = exc.response.status_code if exc.response else '?'
-            if code in (403, 404): return None
+            if code in (403, 404):
+                return None
+
             wait = 2.0 * (2 ** attempt) + random.uniform(0, 0.5)
-            print(f'  HTTP {code} attempt {attempt+1} – retry in {wait:.1f}s', file=sys.stderr)
+            print(f'HTTP {code} attempt {attempt+1} – retry in {wait:.1f}s', file=sys.stderr)
             time.sleep(wait)
+
         except requests.RequestException as exc:
+            import traceback
+            traceback.print_exc()
+
             wait = 2.0 * (2 ** attempt) + random.uniform(0, 0.5)
-            print(f'  {exc} – retry in {wait:.1f}s', file=sys.stderr)
+            print(f'Connection error – retry in {wait:.1f}s', file=sys.stderr)
             time.sleep(wait)
+
     return None
 
 def delay(): time.sleep(random.uniform(0.8, 1.8))
