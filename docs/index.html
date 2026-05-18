@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Norway Ecology Jobs</title>
+  <title>Norway &amp; Sweden Ecology Jobs</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Fira+Sans:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -267,37 +267,92 @@
     #refresh-btn.spinning svg { animation: spin 1s linear infinite; }
     @keyframes spin { to { transform: rotate(360deg); } }
 
-    /* ── Main grid ──────────────────────────────────────────────────────────── */
+    /* ── Sectioned layout ───────────────────────────────────────────────────── */
     main {
-      max-width: 1100px;
+      max-width: 1300px;
       margin: 0 auto;
       padding: 1.5rem 2rem 3rem;
     }
 
-    #job-grid {
+    .country-section {
+      margin-bottom: 2.5rem;
+    }
+
+    .country-heading {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      padding: 0.5rem 0 0.75rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 1px;
+    }
+
+    .country-heading span {
+      color: var(--green);
+    }
+
+    .two-col {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      grid-template-columns: 1fr 1fr;
       gap: 1px;
       background: var(--border);
       border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
+      border-top: none;
+      border-radius: 0 0 var(--radius) var(--radius);
+    }
+
+    .inst-col {
+      background: var(--bg);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .col-header {
+      background: var(--surface);
+      padding: 0.5rem 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+
+    .col-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      background: var(--border);
+      flex: 1;
+    }
+
+    .col-empty {
+      padding: 1.5rem 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      text-align: center;
+      background: var(--card);
     }
 
     /* ── Job card ────────────────────────────────────────────────────────────── */
     .job-card {
       background: var(--card);
-      padding: 1.1rem 1.25rem;
+      padding: 1rem 1.1rem;
       transition: background var(--transition);
       position: relative;
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
+      gap: 0.45rem;
     }
 
     .job-card:hover { background: var(--card-hover); }
 
-    /* Left accent bar coloured by type */
     .job-card::before {
       content: '';
       position: absolute;
@@ -307,7 +362,6 @@
 
     .job-card[data-type="permanent"]::before { background: var(--green); }
     .job-card[data-type="postdoc"]::before   { background: var(--amber); }
-    .job-card[data-type="phd"]::before       { background: var(--blue);  }
     .job-card[data-type="unknown"]::before   { background: var(--border-act); }
 
     .card-badges {
@@ -394,7 +448,6 @@
 
     /* ── Empty / loading states ─────────────────────────────────────────────── */
     .state-box {
-      grid-column: 1 / -1;
       padding: 3rem 2rem;
       text-align: center;
     }
@@ -426,6 +479,13 @@
       border-radius: 50%;
       animation: spin 0.8s linear infinite;
       margin-bottom: 1rem;
+    }
+
+    #loading-box {
+      padding: 4rem 2rem;
+      text-align: center;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
     }
 
     /* ── Portal links section ───────────────────────────────────────────────── */
@@ -505,11 +565,11 @@
     }
 
     /* ── Responsive ─────────────────────────────────────────────────────────── */
-    @media (max-width: 640px) {
+    @media (max-width: 800px) {
       header, .controls-bar, .stats-strip { padding-left: 1rem; padding-right: 1rem; }
       main { padding-left: 1rem; padding-right: 1rem; }
       .site-title { font-size: 1.5rem; }
-      #job-grid { grid-template-columns: 1fr; }
+      .two-col { grid-template-columns: 1fr; }
       .portals-grid { grid-template-columns: 1fr; }
     }
 
@@ -525,7 +585,7 @@
 <header>
   <div class="header-inner">
     <div>
-      <div class="site-title">Norway <span>Ecology</span> Jobs</div>
+      <div class="site-title">Norway &amp; Sweden <span>Ecology</span> Jobs</div>
       <div class="site-subtitle">Permanent · Postdoc · PhD — ecology &amp; statistical ecology</div>
     </div>
     <div class="header-meta">
@@ -549,7 +609,6 @@
       <button class="filter-btn active" data-type="all">All</button>
       <button class="filter-btn" data-type="permanent">Permanent</button>
       <button class="filter-btn amber" data-type="postdoc">Postdoc</button>
-      <button class="filter-btn blue" data-type="phd">PhD</button>
     </div>
 
     <div class="filter-group" id="stats-filter">
@@ -566,8 +625,6 @@
     <span class="stat-item"><strong id="count-permanent">—</strong> permanent</span>
     <span class="stat-sep">|</span>
     <span class="stat-item"><strong id="count-postdoc">—</strong> postdoc</span>
-    <span class="stat-sep">|</span>
-    <span class="stat-item"><strong id="count-phd">—</strong> PhD</span>
 
     <button id="refresh-btn" title="Re-fetch jobs.json">
       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -579,18 +636,49 @@
   </div>
 </div>
 
-<!-- ── Job grid ────────────────────────────────────────────────────────────── -->
+<!-- ── Job sections ────────────────────────────────────────────────────────── -->
 <main>
-  <div id="job-grid">
-    <div class="state-box">
-      <div class="spinner"></div>
-      <div class="state-title">Loading positions…</div>
+  <div id="loading-box">
+    <div class="spinner"></div>
+    <div class="state-title">Loading positions…</div>
+  </div>
+
+  <div id="sections" class="hidden">
+    <!-- Norway -->
+    <div class="country-section" id="section-norway">
+      <div class="country-heading"><span>Norway</span></div>
+      <div class="two-col">
+        <div class="inst-col">
+          <div class="col-header">Universities</div>
+          <div class="col-cards" id="col-no-uni"></div>
+        </div>
+        <div class="inst-col">
+          <div class="col-header">Institutes</div>
+          <div class="col-cards" id="col-no-inst"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sweden -->
+    <div class="country-section" id="section-sweden">
+      <div class="country-heading"><span>Sweden</span></div>
+      <div class="two-col">
+        <div class="inst-col">
+          <div class="col-header">Universities</div>
+          <div class="col-cards" id="col-se-uni"></div>
+        </div>
+        <div class="inst-col">
+          <div class="col-header">Institutes</div>
+          <div class="col-cards" id="col-se-inst"></div>
+        </div>
+      </div>
     </div>
   </div>
 
   <!-- ── Manual portal links ─────────────────────────────────────────────── -->
   <div class="portals-section">
     <div class="portals-header">Direct portal search links — manual fallback</div>
+    <!-- Swedish portals injected below the Norwegian ones -->
     <div class="portals-grid">
 
       <div class="portal-card">
@@ -648,7 +736,7 @@
 
       <div class="portal-card">
         <div class="portal-name">NTNU — Trondheim</div>
-        <div class="portal-desc">Dept. of Biology, Centre for Biodiversity Dynamics (CBD), Statistics group.</div>
+        <div class="portal-desc">Dept. of Biology and Dept. of Mathematical Sciences. UiT posts all vacancies exclusively via Jobbnorge.</div>
         <div class="portal-links">
           <a class="portal-link" href="https://www.ntnu.edu/vacancies" target="_blank" rel="noopener">
             <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
@@ -711,16 +799,107 @@
       </div>
 
       <div class="portal-card">
-        <div class="portal-name">UiT &amp; UiB</div>
-        <div class="portal-desc">Arctic University of Norway (Tromsø) and University of Bergen — active in marine and Arctic ecology.</div>
+        <div class="portal-name">UiT, UiB, INN, HVL, UiA, UiS</div>
+        <div class="portal-desc">UiT (Arctic, Tromsø) and UiB (Bergen) post exclusively via Jobbnorge. INN (Innlandet) has applied ecology and wildlife. HVL, UiA, UiS are smaller but occasionally relevant.</div>
         <div class="portal-links">
-          <a class="portal-link" href="https://uit.no/om/art?p_document_id=347537" target="_blank" rel="noopener">
+          <a class="portal-link" href="https://en.uit.no/om/jobbeveduit" target="_blank" rel="noopener">
             <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            UiT Vacancies
+            UiT — work at UiT (→ Jobbnorge)
           </a>
-          <a class="portal-link" href="https://www.jobbnorge.no/search/en?q=university+of+bergen+biology&OrderBy=Published" target="_blank" rel="noopener">
+          <a class="portal-link" href="https://www.uib.no/en/about/84777/vacant-positions-uib" target="_blank" rel="noopener">
             <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            UiB Biology on Jobbnorge
+            UiB Vacancies
+          </a>
+          <a class="portal-link" href="https://www.inn.no/english/about-inn/work-at-inn-university/vacant-positions/" target="_blank" rel="noopener">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            INN Vacancies
+          </a>
+          <a class="portal-link" href="https://www.hvl.no/en/work-at-hvl/" target="_blank" rel="noopener">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            HVL Vacancies
+          </a>
+          <a class="portal-link" href="https://www.uia.no/english/about-uia/working-at-uia/vacancies/" target="_blank" rel="noopener">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            UiA Vacancies
+          </a>
+          <a class="portal-link" href="https://www.uis.no/en/about-uis/vacant-positions-at-uis" target="_blank" rel="noopener">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            UiS Vacancies
+          </a>
+        </div>
+      </div>
+
+      <!-- ── Sweden ─────────────────────────────────────────────────────── -->
+      <div class="portal-card">
+        <div class="portal-name">SLU — Swedish University of Agricultural Sciences</div>
+        <div class="portal-desc">Largest Swedish employer for ecology: forest, wildlife, aquatic, quantitative methods. Campuses in Uppsala, Umeå, Alnarp, Skara.</div>
+        <div class="portal-links">
+          <a class="portal-link" href="https://www.slu.se/en/about-slu/work-at-slu/jobs-vacancies/" target="_blank" rel="noopener">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            SLU Vacancies
+          </a>
+          <a class="portal-link" href="https://www.slu.se/en/about-slu/work-at-slu/jobs-vacancies/?type=researcher" target="_blank" rel="noopener">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            SLU Researcher posts
+          </a>
+        </div>
+      </div>
+
+      <div class="portal-card">
+        <div class="portal-name">Uppsala University</div>
+        <div class="portal-desc">Dept of Ecology &amp; Genetics, Centre for Population Biology. Strong in population ecology, evolutionary biology, statistical genetics.</div>
+        <div class="portal-links">
+          <a class="portal-link" href="https://www.uu.se/en/about-uu/work-at-uu/jobs" target="_blank" rel="noopener">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            UU Vacancies
+          </a>
+        </div>
+      </div>
+
+      <div class="portal-card">
+        <div class="portal-name">Stockholm University</div>
+        <div class="portal-desc">Dept of Ecology, Environment and Plant Sciences (DEEP). Marine, terrestrial, and community ecology.</div>
+        <div class="portal-links">
+          <a class="portal-link" href="https://www.su.se/english/about/working-at-su/jobs-at-su" target="_blank" rel="noopener">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            SU Vacancies
+          </a>
+        </div>
+      </div>
+
+      <div class="portal-card">
+        <div class="portal-name">Umeå University</div>
+        <div class="portal-desc">Dept of Ecology and Environmental Science. Strong in boreal ecology, plant-animal interactions, paleoecology.</div>
+        <div class="portal-links">
+          <a class="portal-link" href="https://www.umu.se/en/work-at-umu/open-positions/" target="_blank" rel="noopener">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            UmU Vacancies
+          </a>
+        </div>
+      </div>
+
+      <div class="portal-card">
+        <div class="portal-name">Lund University</div>
+        <div class="portal-desc">Dept of Biology — animal ecology, functional ecology, theoretical population ecology.</div>
+        <div class="portal-links">
+          <a class="portal-link" href="https://www.lu.se/work-at-lund-university/vacancies" target="_blank" rel="noopener">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Lund Vacancies
+          </a>
+        </div>
+      </div>
+
+      <div class="portal-card">
+        <div class="portal-name">NRM &amp; IVL</div>
+        <div class="portal-desc">Swedish Museum of Natural History (systematics, biodiversity) and IVL Swedish Environmental Research Institute.</div>
+        <div class="portal-links">
+          <a class="portal-link" href="https://www.nrm.se/en/aboutthemuseum/workatthemuseum.9000254.html" target="_blank" rel="noopener">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            NRM Vacancies
+          </a>
+          <a class="portal-link" href="https://www.ivl.se/en/start/about-ivl/career.html" target="_blank" rel="noopener">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            IVL Vacancies
           </a>
         </div>
       </div>
@@ -731,7 +910,7 @@
 
 <footer>
   Auto-scraped daily by GitHub Actions · Keyword-filtered for ecology &amp; statistical ecology ·
-  Permanent positions in Norway scarce — check portals directly · 
+  Norway &amp; Sweden · Permanent positions are scarce — check portals directly ·
   <a href="https://github.com" target="_blank" rel="noopener">Source on GitHub</a>
 </footer>
 
@@ -740,223 +919,171 @@
 (function () {
   'use strict';
 
-  // ── State ────────────────────────────────────────────────────────────────
   let allJobs = [];
   let activeType = 'all';
   let statsOnly = false;
   let searchQuery = '';
 
-  // ── DOM refs ─────────────────────────────────────────────────────────────
-  const grid          = document.getElementById('job-grid');
-  const searchInput   = document.getElementById('search-input');
-  const typeButtons   = document.querySelectorAll('#type-filters .filter-btn');
-  const statsBtn      = document.getElementById('toggle-stats-only');
-  const refreshBtn    = document.getElementById('refresh-btn');
-  const lastUpdated   = document.getElementById('last-updated');
-  const cntShowing    = document.getElementById('count-showing');
-  const cntPermanent  = document.getElementById('count-permanent');
-  const cntPostdoc    = document.getElementById('count-postdoc');
-  const cntPhd        = document.getElementById('count-phd');
+  const loadingBox   = document.getElementById('loading-box');
+  const sections     = document.getElementById('sections');
+  const searchInput  = document.getElementById('search-input');
+  const typeButtons  = document.querySelectorAll('#type-filters .filter-btn');
+  const statsBtn     = document.getElementById('toggle-stats-only');
+  const refreshBtn   = document.getElementById('refresh-btn');
+  const lastUpdated  = document.getElementById('last-updated');
+  const cntShowing   = document.getElementById('count-showing');
+  const cntPermanent = document.getElementById('count-permanent');
+  const cntPostdoc   = document.getElementById('count-postdoc');
 
-  // ── Helpers ───────────────────────────────────────────────────────────────
+  const COLS = {
+    'norway-university':  document.getElementById('col-no-uni'),
+    'norway-institute':   document.getElementById('col-no-inst'),
+    'sweden-university':  document.getElementById('col-se-uni'),
+    'sweden-institute':   document.getElementById('col-se-inst'),
+  };
+
+  // ── Helpers ─────────────────────────────────────────────────────────────────
 
   function fmtDate(iso) {
-    if (!iso) return null;
-    try {
-      return new Date(iso).toLocaleDateString('en-GB', {
-        day: 'numeric', month: 'short', year: 'numeric'
-      });
-    } catch { return iso; }
+    try { return new Date(iso).toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' }); }
+    catch { return iso; }
   }
 
-  function deadlineStatus(deadlineStr) {
-    if (!deadlineStr) return 'none';
-    // Try to parse common date formats
-    const d = new Date(deadlineStr);
-    if (isNaN(d.getTime())) return 'unknown';
-    const now = new Date();
-    const diff = (d - now) / (1000 * 60 * 60 * 24);
-    if (diff < 0)  return 'expired';
-    if (diff <= 14) return 'soon';
-    return 'ok';
+  function deadlineStatus(s) {
+    if (!s) return 'none';
+    const d = new Date(s), now = new Date();
+    if (isNaN(d)) return 'unknown';
+    const days = (d - now) / 86400000;
+    return days < 0 ? 'expired' : days <= 14 ? 'soon' : 'ok';
   }
 
-  function escHtml(str) {
-    const el = document.createElement('div');
-    el.textContent = str;
-    return el.innerHTML;
+  function esc(str) {
+    const d = document.createElement('div');
+    d.textContent = str || '';
+    return d.innerHTML;
   }
 
-  function externalLinkSvg(size = 11) {
-    return `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`;
-  }
+  const extSvg = `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`;
 
-  // ── Render ────────────────────────────────────────────────────────────────
+  // ── Card rendering ───────────────────────────────────────────────────────────
 
   function renderCard(job) {
-    const type     = job.type || 'unknown';
-    const dlStatus = deadlineStatus(job.deadline);
-    const dlClass  = dlStatus === 'expired' ? 'deadline-expired'
-                   : dlStatus === 'soon'    ? 'deadline-soon'
-                   : '';
+    const type = job.type || 'unknown';
+    const ds   = deadlineStatus(job.deadline);
+    const dlCls = ds === 'expired' ? 'deadline-expired' : ds === 'soon' ? 'deadline-soon' : '';
+    const label = type === 'postdoc' ? 'Postdoc' : type === 'permanent' ? 'Permanent' : 'Researcher';
 
-    const typeBadge = `<span class="badge badge-${type}">${
-      type === 'phd' ? 'PhD' :
-      type.charAt(0).toUpperCase() + type.slice(1)
-    }</span>`;
+    const dl = job.deadline
+      ? `<span class="card-meta-item ${dlCls}">
+           <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+           ${ds === 'expired' ? 'Expired' : 'Deadline'}: ${esc(job.deadline)}
+         </span>` : '';
 
-    const statsBadge = job.stats_highlight
-      ? `<span class="badge badge-stats">★ stats/quant</span>`
-      : '';
-
-    const deadlineLine = job.deadline
-      ? `<span class="card-meta-item ${dlClass}">
-           <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-             <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-             <line x1="16" y1="2" x2="16" y2="6"/>
-             <line x1="8" y1="2" x2="8" y2="6"/>
-             <line x1="3" y1="10" x2="21" y2="10"/>
-           </svg>
-           ${dlStatus === 'expired' ? 'Expired' : 'Deadline'}: ${escHtml(job.deadline)}
-         </span>`
-      : '';
-
-    const institutionLine = job.institution
+    const inst = job.institution
       ? `<div class="card-institution">
-           <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-             <polyline points="9 22 9 12 15 12 15 22"/>
-           </svg>
-           ${escHtml(job.institution || '')}
-           ${job.location && job.location !== 'Norway' ? ` · ${escHtml(job.location)}` : ''}
-         </div>`
-      : '';
+           <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+           ${esc(job.institution)}${job.location ? ' · ' + esc(job.location) : ''}
+         </div>` : '';
 
-    const sourceLine = `<span class="card-meta-item">
-        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="10"/>
-          <line x1="2" y1="12" x2="22" y2="12"/>
-          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-        </svg>
-        ${escHtml(job.source || '')}
-      </span>`;
-
-    const descLine = job.description
-      ? `<div class="card-desc">${escHtml(job.description)}</div>`
-      : '';
-
-    return `
-      <div class="job-card" data-type="${type}" data-stats="${job.stats_highlight ? 1 : 0}">
-        <div class="card-badges">${typeBadge}${statsBadge}</div>
-        <div class="card-title">${escHtml(job.title)}</div>
-        ${institutionLine}
-        ${descLine}
-        <div class="card-meta">
-          ${deadlineLine}
-          ${sourceLine}
-        </div>
-        <a class="card-link" href="${escHtml(job.url)}" target="_blank" rel="noopener">
-          View position ${externalLinkSvg()}
-        </a>
-      </div>`;
+    return `<div class="job-card" data-type="${type}" data-stats="${job.stats_highlight?1:0}">
+      <div class="card-badges">
+        <span class="badge badge-${type}">${label}</span>
+        ${job.stats_highlight ? '<span class="badge badge-stats">★ stats</span>' : ''}
+      </div>
+      <div class="card-title">${esc(job.title)}</div>
+      ${inst}
+      ${job.description ? `<div class="card-desc">${esc(job.description)}</div>` : ''}
+      <div class="card-meta">${dl}</div>
+      <a class="card-link" href="${esc(job.url)}" target="_blank" rel="noopener">View position ${extSvg}</a>
+    </div>`;
   }
+
+  // ── Render all four columns ──────────────────────────────────────────────────
 
   function applyFilters() {
     const q = searchQuery.toLowerCase().trim();
+
     const filtered = allJobs.filter(job => {
       if (activeType !== 'all' && job.type !== activeType) return false;
       if (statsOnly && !job.stats_highlight) return false;
-      if (q) {
-        const haystack = `${job.title} ${job.institution} ${job.description}`.toLowerCase();
-        if (!haystack.includes(q)) return false;
-      }
+      if (q && !`${job.title} ${job.institution} ${job.description}`.toLowerCase().includes(q)) return false;
       return true;
     });
 
-    // Update stat counts
     cntShowing.textContent   = filtered.length;
     cntPermanent.textContent = filtered.filter(j => j.type === 'permanent').length;
     cntPostdoc.textContent   = filtered.filter(j => j.type === 'postdoc').length;
-    cntPhd.textContent       = filtered.filter(j => j.type === 'phd').length;
 
-    if (filtered.length === 0) {
-      if (allJobs.length === 0) {
-        grid.innerHTML = `
-          <div class="state-box">
-            <div class="state-icon">🌿</div>
-            <div class="state-title">No positions fetched yet</div>
-            <div class="state-body">
-              Trigger the GitHub Actions workflow to run the scraper,
-              or check the portal links below for direct searches.
-            </div>
-          </div>`;
-      } else {
-        grid.innerHTML = `<div class="no-results">No positions match current filters.</div>`;
-      }
-      return;
-    }
+    // Bucket into four columns
+    const buckets = { 'norway-university': [], 'norway-institute': [],
+                      'sweden-university': [], 'sweden-institute': [] };
 
-    grid.innerHTML = filtered.map(renderCard).join('');
+    filtered.forEach(job => {
+      const country = (job.country || 'norway').toLowerCase();
+      const itype   = (job.inst_type || 'university').toLowerCase();
+      const key     = `${country}-${itype}`;
+      if (buckets[key]) buckets[key].push(job);
+      else buckets['norway-university'].push(job); // fallback
+    });
+
+    Object.entries(COLS).forEach(([key, el]) => {
+      const jobs = buckets[key];
+      el.innerHTML = jobs.length
+        ? jobs.map(renderCard).join('')
+        : '<div class="col-empty">No positions</div>';
+    });
+
+    // Hide country sections if both columns are empty
+    const noNorway = !buckets['norway-university'].length && !buckets['norway-institute'].length;
+    const noSweden = !buckets['sweden-university'].length && !buckets['sweden-institute'].length;
+    document.getElementById('section-norway').style.display = noNorway ? 'none' : '';
+    document.getElementById('section-sweden').style.display = noSweden ? 'none' : '';
   }
 
-  // ── Data loading ──────────────────────────────────────────────────────────
+  // ── Data loading ─────────────────────────────────────────────────────────────
 
   async function loadJobs() {
     refreshBtn.classList.add('spinning');
+    loadingBox.style.display = '';
+    sections.classList.add('hidden');
     try {
       const resp = await fetch(`data/jobs.json?t=${Date.now()}`);
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
       const data = await resp.json();
       allJobs = data.jobs || [];
-      if (data.last_updated) {
-        lastUpdated.textContent = fmtDate(data.last_updated) || data.last_updated;
-      } else {
-        lastUpdated.textContent = 'never (trigger the Action)';
-      }
+      lastUpdated.textContent = data.last_updated ? fmtDate(data.last_updated) : 'never — trigger the Action';
+      loadingBox.style.display = 'none';
+      sections.classList.remove('hidden');
       applyFilters();
     } catch (err) {
-      console.error('Failed to load jobs.json:', err);
-      grid.innerHTML = `
-        <div class="state-box">
-          <div class="state-icon">⚠️</div>
-          <div class="state-title">Could not load jobs.json</div>
-          <div class="state-body">
-            ${escHtml(err.message)}<br><br>
-            If you're opening index.html locally without a server,
-            use: <code>python3 -m http.server 8000</code> from the <code>docs/</code> folder.
-          </div>
-        </div>`;
+      loadingBox.innerHTML = `
+        <div class="state-icon">⚠️</div>
+        <div class="state-title">Could not load jobs.json</div>
+        <div class="state-body">${esc(err.message)}<br><br>
+          Serve locally: <code>python3 -m http.server 8000</code> from <code>docs/</code></div>`;
     } finally {
       refreshBtn.classList.remove('spinning');
     }
   }
 
-  // ── Event handlers ────────────────────────────────────────────────────────
+  // ── Events ───────────────────────────────────────────────────────────────────
 
-  searchInput.addEventListener('input', () => {
-    searchQuery = searchInput.value;
+  searchInput.addEventListener('input', () => { searchQuery = searchInput.value; applyFilters(); });
+
+  typeButtons.forEach(btn => btn.addEventListener('click', () => {
+    typeButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeType = btn.dataset.type;
     applyFilters();
-  });
-
-  typeButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      typeButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      activeType = btn.dataset.type;
-      applyFilters();
-    });
-  });
+  }));
 
   statsBtn.addEventListener('click', () => {
     statsOnly = !statsOnly;
-    statsBtn.dataset.active = statsOnly;
     statsBtn.classList.toggle('active', statsOnly);
     applyFilters();
   });
 
   refreshBtn.addEventListener('click', loadJobs);
-
-  // ── Init ──────────────────────────────────────────────────────────────────
   loadJobs();
 
 })();
