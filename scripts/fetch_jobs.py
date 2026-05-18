@@ -47,16 +47,17 @@ MAX_RETRIES = 3
 # Statistics: statistical/statistician/biostatistics in an ecological context.
 # A job is relevant if it matches at least one from each, OR a compound term.
 
-ECOLOGY_TERMS = ['ecolog', 'biodiversity']
+ECOLOGY_TERMS = ['ecolog']   # matches ecology, ecological, ecologist
 
-STATS_TERMS = ['biostatistic', 'statistical ecol', 'quantitative ecol',
-               'ecological statistic', 'population statistic']
+STATS_TERMS = [
+    'statistical ecol',      # statistical ecology
+    'ecological statistic',  # ecological statistics
+    'quantitative ecol',     # quantitative ecology
+    'biostatistic',          # biostatistics
+]
 
-# Combined: either an ecology term alone, or ecology+stats compound
-# Plain 'statistic' alone is too broad (finance, epidemiology, etc.)
-
-# Stats-highlighted: these are the stat-heavy positions worth starring
-STATS_HIGHLIGHT_KEYWORDS = STATS_TERMS[:]  # same set drives the badge
+# Stats-highlighted badge: same terms
+STATS_HIGHLIGHT_KEYWORDS = STATS_TERMS[:]
 
 # Positions to hard-exclude regardless of keyword match
 EXCLUDE_MARKERS = [
@@ -86,6 +87,8 @@ SKIP_NAV = ['contact us','about us','cookie','privacy policy','home page',
             'sign in','log in','register','subscribe','newsletter',
             'read more about','click here','see all jobs','show all',
             'back to','apply for this job']
+
+AGGREGATOR_SOURCES = {'academicpositions.com', 'scholarshipdb.net'}
 
 
 def is_ecology_relevant(title, description=''):
@@ -198,6 +201,7 @@ def make_job(title, url, institution='', location='Norway',
         'type':           jtype,
         'description':    desc,
         'source':         source,
+        'aggregator':     source in AGGREGATOR_SOURCES,
         'stats_highlight':is_stats_highlight(title, desc),
         'relevant':       (is_ecology_relevant(title, desc)
                           and not is_excluded(title, desc)
@@ -216,15 +220,22 @@ def get_html(url, extra_headers=None):
             resp.raise_for_status()
             return resp
         except requests.HTTPError as exc:
-            code = exc.response.status_code if exc.response else '?'
-            if code in (403, 404): return None
+            code = exc.response.status_code if exc.response is not None else None
+            if code is None or code in (400, 403, 404, 410):
+                return None  # no point retrying
             wait = 2.0 * (2 ** attempt) + random.uniform(0, 0.5)
-            print(f'  HTTP {code} attempt {attempt+1} – retry in {wait:.1f}s', file=sys.stderr)
+            print(f'  HTTP {code} on {url} (attempt {attempt+1}), retry in {wait:.1f}s', file=sys.stderr)
+            time.sleep(wait)
+        except (requests.ConnectionError, requests.Timeout) as exc:
+            if attempt == MAX_RETRIES - 1:
+                print(f'  Failed after {MAX_RETRIES} attempts: {url}', file=sys.stderr)
+                return None
+            wait = 2.0 * (2 ** attempt) + random.uniform(0, 0.5)
+            print(f'  {type(exc).__name__} (attempt {attempt+1}), retry in {wait:.1f}s', file=sys.stderr)
             time.sleep(wait)
         except requests.RequestException as exc:
-            wait = 2.0 * (2 ** attempt) + random.uniform(0, 0.5)
-            print(f'  {exc} – retry in {wait:.1f}s', file=sys.stderr)
-            time.sleep(wait)
+            print(f'  {exc}', file=sys.stderr)
+            return None
     return None
 
 def delay(): time.sleep(random.uniform(0.8, 1.8))
@@ -233,7 +244,7 @@ def delay(): time.sleep(random.uniform(0.8, 1.8))
 # ─── Sources ──────────────────────────────────────────────────────────────────
 
 def fetch_jobbnorge_api():
-    """Probe Jobbnorge undocumented JSON API endpoints."""
+    """Probe Jobbnorge undocumented JSON API endpoints. Fail silently — expected to 404."""
     probes = [
         'https://www.jobbnorge.no/api/jobad/search?q={q}&lang=en&pagesize=50',
         'https://www.jobbnorge.no/api/search?q={q}&lang=en&pagesize=50',
@@ -249,28 +260,32 @@ def fetch_jobbnorge_api():
                     'Accept': 'application/json',
                     'Referer': 'https://www.jobbnorge.no/'
                 }, timeout=TIMEOUT)
-                if resp.status_code == 200 and 'json' in resp.headers.get('Content-Type',''):
-                    data  = resp.json()
-                    items = (data.get('jobs') or data.get('results') or
-                             data.get('items') or data.get('hits') or
-                             (data if isinstance(data, list) else []))
-                    jobs = []
-                    for item in items:
-                        if not isinstance(item, dict): continue
-                        title = item.get('title') or item.get('Title') or item.get('jobTitle') or ''
-                        link  = item.get('url') or item.get('link') or item.get('applicationUrl') or ''
-                        inst  = item.get('employer') or item.get('organization') or ''
-                        desc  = item.get('description') or item.get('ingress') or ''
-                        dl    = item.get('deadline') or item.get('applicationDeadline') or ''
-                        if title and link:
-                            jobs.append(make_job(title, link, institution=inst,
-                                                 deadline=dl, description=desc,
-                                                 source='jobbnorge.no'))
-                    if jobs:
-                        print(f'  [jobbnorge-api] OK: {url}')
-                        return jobs
+                # Only proceed on genuine 200 JSON response
+                if resp.status_code != 200:
+                    continue
+                if 'json' not in resp.headers.get('Content-Type', ''):
+                    continue
+                data  = resp.json()
+                items = (data.get('jobs') or data.get('results') or
+                         data.get('items') or data.get('hits') or
+                         (data if isinstance(data, list) else []))
+                jobs = []
+                for item in items:
+                    if not isinstance(item, dict): continue
+                    title = item.get('title') or item.get('Title') or item.get('jobTitle') or ''
+                    link  = item.get('url') or item.get('link') or item.get('applicationUrl') or ''
+                    inst  = item.get('employer') or item.get('organization') or ''
+                    desc  = item.get('description') or item.get('ingress') or ''
+                    dl    = item.get('deadline') or item.get('applicationDeadline') or ''
+                    if title and link:
+                        jobs.append(make_job(title, link, institution=inst,
+                                             deadline=dl, description=desc,
+                                             source='jobbnorge.no'))
+                if jobs:
+                    print(f'  [jobbnorge-api] OK: {url}')
+                    return jobs
             except Exception:
-                pass
+                pass  # probe failures are expected and silent
     return []
 
 
@@ -544,151 +559,89 @@ def scrape_nature_careers():
 
 
 # ─── Sweden ───────────────────────────────────────────────────────────────────
-# Key institutions: SLU (Uppsala/Umeå), Stockholm University, Uppsala University,
-# Umeå University, Lund University, Swedish Museum of Natural History (NRM).
-# All use Varbi ATS or their own static pages.
+# All major Swedish universities use Varbi ATS, which exposes a public RSS feed
+# at {org}.varbi.com/what:rssfeed/  — reliable, no HTML parsing needed.
+# SLU uses ReachMee embedded in slu.se.
+# Added Gothenburg University (marine/aquatic ecology).
 
-def _scrape_varbi(org_id: str, institution: str, location: str, source: str) -> list:
-    """Generic scraper for Varbi ATS (used by most Swedish universities)."""
+VARBI_ORGS = {
+    'Uppsala University':    ('uu',  'Uppsala',     'uu.se'),
+    'Stockholm University':  ('su',  'Stockholm',   'su.se'),
+    'Umeå University':       ('umu', 'Umeå',        'umu.se'),
+    'Lund University':       ('lu',  'Lund',        'lu.se'),
+    'Gothenburg University': ('gu',  'Gothenburg',  'gu.se'),
+}
+
+def _scrape_varbi_rss(org_slug, institution, location, source):
+    """Fetch all vacancies from a university's public Varbi RSS feed."""
     jobs = []
-    # Varbi exposes a JSON feed per organisation
-    url = f'https://varbi.com/se/what/1/joblist/?organisation={org_id}&lang=en'
-    delay()
-    resp = get_html(url, extra_headers={'Referer': f'https://varbi.com/'})
-    if not resp:
-        # Fallback: try the HTML job list
-        url_html = f'https://varbi.com/se/what/1/joblist/?organisation={org_id}'
-        resp = get_html(url_html)
-    if not resp: return jobs
-    soup = BeautifulSoup(resp.text, 'html.parser')
-    for a in soup.select('h2 a, h3 a, a.jobtitle, .job-title a, td a, li a'):
-        title = a.get_text(strip=True)
-        href  = a['href']
-        if not href.startswith('http'): href = urljoin('https://varbi.com', href)
-        if looks_like_nav(title): continue
-        ctx = a.parent.get_text(' ', strip=True) if a.parent else ''
-        jobs.append(make_job(title, href, institution=institution, location=location,
-                             deadline=extract_deadline(ctx), description=ctx, source=source))
+    url = f'https://{org_slug}.varbi.com/what:rssfeed/'
+    try:
+        feed = feedparser.parse(url)
+        for entry in feed.entries:
+            title   = entry.get('title', '').strip()
+            link    = entry.get('link', '')
+            summary = entry.get('summary', entry.get('description', ''))
+            dl      = entry.get('published', None)
+            if title and link:
+                jobs.append(make_job(title, link, institution=institution,
+                                     location=location, deadline=dl,
+                                     description=summary, source=source))
+    except Exception as exc:
+        print(f'  [{org_slug}.varbi] {exc}', file=sys.stderr)
     return jobs
 
 
-def _scrape_generic_vacancies(url: str, institution: str, location: str,
-                               source: str, base_url: str | None = None) -> list:
-    """Generic static-HTML vacancies page scraper."""
+def scrape_sweden_varbi():
+    """Fetch all Swedish Varbi university feeds."""
     jobs = []
+    for institution, (slug, location, source) in VARBI_ORGS.items():
+        delay()
+        jobs.extend(_scrape_varbi_rss(slug, institution, location, source))
+    return jobs
+
+
+def scrape_slu():
+    """SLU uses ReachMee via slu.se — correct URL confirmed."""
+    jobs = []
+    url = 'https://www.slu.se/en/about-slu/work-at-slu/jobs-and-vacancies/'
     delay()
-    resp = get_html(url)
+    resp = get_html(url, extra_headers={'Referer': 'https://www.slu.se/'})
     if not resp: return jobs
-    base = base_url or url
     soup = BeautifulSoup(resp.text, 'html.parser')
-    main = soup.find('main') or soup.find('div', id='main-content') or soup
+    main = soup.find('main') or soup
     for a in main.find_all('a', href=True):
         title = a.get_text(strip=True)
         href  = a['href']
-        if not href.startswith('http'): href = urljoin(base, href)
+        if not href.startswith('http'): href = urljoin('https://www.slu.se', href)
         if looks_like_nav(title): continue
-        # Must stay on the same domain or link to Varbi/JobbSverige
-        domain = urlparse(href).netloc
-        base_domain = urlparse(base).netloc
-        if not any(d in domain for d in [base_domain.replace('www.',''),
-                                          'varbi.com', 'jobbsverige.se',
-                                          'se.indeed.com', 'linkedin.com']):
+        if not any(d in urlparse(href).netloc for d in ['slu.se', 'varbi.com', 'reachmee.com']):
             continue
         ctx = a.parent.get_text(' ', strip=True) if a.parent else ''
-        jobs.append(make_job(title, href, institution=institution, location=location,
-                             deadline=extract_deadline(ctx), description=ctx, source=source))
+        jobs.append(make_job(title, href, institution='SLU', location='Sweden',
+                             deadline=extract_deadline(ctx), description=ctx, source='slu.se'))
     return jobs
 
 
-def scrape_slu() -> list:
-    """Swedish University of Agricultural Sciences — largest employer for ecology in Sweden."""
+def scrape_nrm():
+    """Swedish Museum of Natural History."""
     jobs = []
-    # SLU uses Varbi; also has its own listing page
-    for url in [
-        'https://www.slu.se/en/about-slu/work-at-slu/jobs-vacancies/',
-        'https://www.slu.se/en/about-slu/work-at-slu/jobs-vacancies/?type=researcher',
-    ]:
-        delay()
-        resp = get_html(url, extra_headers={'Referer': 'https://www.slu.se/'})
-        if not resp: continue
-        soup = BeautifulSoup(resp.text, 'html.parser')
-        main = soup.find('main') or soup
-        for a in main.find_all('a', href=True):
-            title = a.get_text(strip=True)
-            href  = a['href']
-            if not href.startswith('http'): href = urljoin('https://www.slu.se', href)
-            if looks_like_nav(title): continue
-            domain = urlparse(href).netloc
-            if not any(d in domain for d in ['slu.se', 'varbi.com']):
-                continue
-            ctx = a.parent.get_text(' ', strip=True) if a.parent else ''
-            jt  = classify_type(title, ctx)
-            jobs.append(make_job(title, href, institution='SLU', location='Sweden',
-                                 deadline=extract_deadline(ctx), description=ctx,
-                                 job_type=jt, source='slu.se'))
-    return jobs
-
-
-def scrape_stockholm_university() -> list:
-    return _scrape_generic_vacancies(
-        url='https://www.su.se/english/about/working-at-su/jobs-at-su',
-        institution='Stockholm University', location='Stockholm',
-        source='su.se', base_url='https://www.su.se',
-    )
-
-
-def scrape_uu() -> list:
-    """Uppsala University — Centre for Population Biology, Dept of Ecology & Genetics."""
-    return _scrape_generic_vacancies(
-        url='https://www.uu.se/en/about-uu/work-at-uu/jobs',
-        institution='Uppsala University', location='Uppsala',
-        source='uu.se', base_url='https://www.uu.se',
-    )
-
-
-def scrape_umu() -> list:
-    """Umeå University — Dept of Ecology & Environmental Science."""
-    return _scrape_generic_vacancies(
-        url='https://www.umu.se/en/work-at-umu/open-positions/',
-        institution='Umeå University', location='Umeå',
-        source='umu.se', base_url='https://www.umu.se',
-    )
-
-
-def scrape_lund() -> list:
-    return _scrape_generic_vacancies(
-        url='https://www.lu.se/work-at-lund-university/vacancies',
-        institution='Lund University', location='Lund',
-        source='lu.se', base_url='https://www.lu.se',
-    )
-
-
-def scrape_nrm() -> list:
-    """Swedish Museum of Natural History — permanent research posts in systematics/biodiversity."""
-    return _scrape_generic_vacancies(
-        url='https://www.nrm.se/en/aboutthemuseum/workatthemuseum.9000254.html',
-        institution='Swedish Museum of Natural History', location='Stockholm',
-        source='nrm.se', base_url='https://www.nrm.se',
-    )
-
-
-def scrape_naturecareers_se() -> list:
-    jobs = []
-    url  = 'https://www.nature.com/naturecareers/jobs/country/SE/'
+    url = 'https://www.nrm.se/en/aboutthemuseum/workatthemuseum.9000254.html'
     delay()
-    resp = get_html(url, extra_headers={'Referer': 'https://www.nature.com/'})
+    resp = get_html(url)
     if not resp: return jobs
     soup = BeautifulSoup(resp.text, 'html.parser')
-    for a in soup.select('h2 a, h3 a, .job-listing a, [data-test="job-title"] a'):
+    main = soup.find('main') or soup
+    for a in main.find_all('a', href=True):
         title = a.get_text(strip=True)
         href  = a['href']
-        if not href.startswith('http'): href = urljoin('https://www.nature.com', href)
+        if not href.startswith('http'): href = urljoin('https://www.nrm.se', href)
         if looks_like_nav(title): continue
-        parent = a.parent.parent if (a.parent and a.parent.parent) else a.parent
-        ctx = parent.get_text(' ', strip=True) if parent else ''
-        jobs.append(make_job(title, href, location='Sweden',
-                             deadline=extract_deadline(ctx),
-                             description=ctx[:400], source='nature.com/naturecareers'))
+        if 'nrm.se' not in urlparse(href).netloc: continue
+        ctx = a.parent.get_text(' ', strip=True) if a.parent else ''
+        jobs.append(make_job(title, href, institution='Swedish Museum of Natural History',
+                             location='Stockholm', deadline=extract_deadline(ctx),
+                             description=ctx, source='nrm.se'))
     return jobs
 
 
@@ -726,13 +679,10 @@ SOURCES = [
     ('scholarshipdb',     scrape_scholarshipdb),
     ('nature-careers-no', scrape_nature_careers),
     # ── Sweden ───────────────────────────────────────────────────────────────
+    # Varbi RSS covers Uppsala, Stockholm, Umeå, Lund, Gothenburg
+    ('sweden-varbi',      scrape_sweden_varbi),
     ('slu',               scrape_slu),
-    ('stockholm-univ',    scrape_stockholm_university),
-    ('uu',                scrape_uu),
-    ('umu',               scrape_umu),
-    ('lund',              scrape_lund),
     ('nrm',               scrape_nrm),
-    ('nature-careers-se', scrape_naturecareers_se),
 ]
 
 
