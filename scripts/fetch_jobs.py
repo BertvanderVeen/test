@@ -79,6 +79,7 @@ POSTDOC_MARKERS   = ['postdoc', 'post-doc', 'postdoctoral', 'post doc',
                      'postdoctoral research fellow']
 PERMANENT_MARKERS = ['professor', 'associate professor', 'assistant professor',
                      'førsteamanuensis', 'amanuensis', 'dosent',
+                     'universitetslektor', 'førstelektor', 'lecturer',
                      'permanent', 'fast stilling', 'senior researcher',
                      'senior forsker', 'principal researcher', 'chief researcher',
                      'section leader', 'group leader', 'head of', 'researcher']
