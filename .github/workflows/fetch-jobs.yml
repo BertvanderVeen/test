@@ -2,7 +2,6 @@ name: Fetch Norway Ecology Jobs
 
 on:
   schedule:
-    # Run daily at 06:00 UTC (08:00 CET / 07:00 CET winter)
     - cron: '0 6 * * *'
   workflow_dispatch:
 
@@ -12,30 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      issues: write    # needed to open notification issues
+      issues: write
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: Save previous job IDs
-        run: |
-          if [ -f docs/data/jobs.json ]; then
-            python3 -c "
-import json, sys
-try:
-    data = json.load(open('docs/data/jobs.json'))
-    ids  = {j['id'] for j in data.get('jobs', [])}
-    open('/tmp/prev_ids.txt', 'w').write('\n'.join(ids))
-    print(f'Saved {len(ids)} previous job IDs')
-except Exception as e:
-    print(f'Could not read previous jobs.json: {e}')
-    open('/tmp/prev_ids.txt', 'w').write('')
-"
-          else
-            echo "" > /tmp/prev_ids.txt
-            echo "No previous jobs.json"
-          fi
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -45,6 +25,9 @@ except Exception as e:
 
       - name: Install dependencies
         run: pip install -r requirements.txt
+
+      - name: Save previous job IDs
+        run: python scripts/save_prev_ids.py
 
       - name: Run scraper
         run: python scripts/fetch_jobs.py
@@ -57,62 +40,8 @@ except Exception as e:
           default_author: github_actions
           push: true
 
-      - name: Check for new jobs and open issue if found
+      - name: Open issue for new positions
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
-        run: |
-          python3 - << 'EOF'
-import json, os, subprocess, sys
-
-prev_ids = set(open('/tmp/prev_ids.txt').read().splitlines()) - {''}
-
-try:
-    data = json.load(open('docs/data/jobs.json'))
-except Exception as e:
-    print(f'Could not read jobs.json: {e}')
-    sys.exit(0)
-
-jobs     = data.get('jobs', [])
-new_jobs = [j for j in jobs if j['id'] not in prev_ids]
-
-if not new_jobs:
-    print('No new positions — skipping issue.')
-    sys.exit(0)
-
-print(f'{len(new_jobs)} new position(s) found — opening GitHub issue.')
-
-lines = [f"**{len(new_jobs)} new position(s) found** — {data.get('last_updated','')[:10]}\n"]
-for j in new_jobs:
-    badge = '★ stats/quant · ' if j.get('stats_highlight') else ''
-    inst  = f" @ {j['institution']}" if j.get('institution') else ''
-    loc   = f", {j['location']}" if j.get('location') else ''
-    dl    = f" · deadline {j['deadline']}" if j.get('deadline') else ''
-    lines.append(f"- [{j['title']}{inst}{loc}]({j['url']})  ")
-    lines.append(f"  {badge}{j['type']}{dl}")
-    lines.append("")
-
-body  = '\n'.join(lines)
-repo  = os.environ['REPO']
-title = f"[Jobs] {len(new_jobs)} new ecology/statistics position(s)"
-
-result = subprocess.run(
-    ['gh', 'issue', 'create', '--repo', repo,
-     '--title', title, '--body', body, '--label', 'jobs'],
-    capture_output=True, text=True
-)
-if result.returncode == 0:
-    print(f'Issue created: {result.stdout.strip()}')
-else:
-    # Label may not exist yet — retry without it
-    result2 = subprocess.run(
-        ['gh', 'issue', 'create', '--repo', repo,
-         '--title', title, '--body', body],
-        capture_output=True, text=True
-    )
-    if result2.returncode == 0:
-        print(f'Issue created: {result2.stdout.strip()}')
-    else:
-        print(f'Failed: {result2.stderr}', file=sys.stderr)
-        sys.exit(1)
-EOF
+        run: python scripts/notify_new_jobs.py
