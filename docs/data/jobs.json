@@ -1,9 +1,28 @@
 {
-  "last_updated": "2026-05-22T07:40:22.126388+00:00",
+  "last_updated": "2026-05-22T08:14:36.159492+00:00",
   "stats": {
-    "total": 0,
-    "permanent": 0,
+    "total": 1,
+    "permanent": 1,
     "postdoc": 0
   },
-  "jobs": []
+  "jobs": [
+    {
+      "id": "d64d9df23a09025c",
+      "title": "Researcher in Diagnostics of Infection and Antimicrobial Resistance",
+      "institution": "Universitetet",
+      "location": "Norway",
+      "country": "norway",
+      "inst_type": "university",
+      "url": "https://www.jobbnorge.no/ledige-stillinger/stilling/301540",
+      "deadline": null,
+      "type": "permanent",
+      "description": "Universitetet i Innlandet Researcher in Diagnostics of Infection and Antimicrobial Resistance The Department of Biotechnology at the Faculty of Applied Ecology, Agricultural Sciences, and Biotechnology (ALB) at the University of ... Hamar Heltid 25.05.2026",
+      "source": "jobbnorge.no",
+      "aggregator": false,
+      "stats_highlight": false,
+      "relevant": true,
+      "relevance_score": 1,
+      "fetched_at": "2026-05-22T08:14:39.927889+00:00"
+    }
+  ]
 }
