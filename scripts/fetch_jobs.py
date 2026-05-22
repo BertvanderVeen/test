@@ -47,13 +47,23 @@ MAX_RETRIES = 3
 # Statistics: statistical/statistician/biostatistics in an ecological context.
 # A job is relevant if it matches at least one from each, OR a compound term.
 
-ECOLOGY_TERMS = ['ecolog']   # matches ecology, ecological, ecologist
+ECOLOGY_TERMS = [
+    'ecolog',        # English: ecology, ecological, ecologist
+    'økologi',       # Norwegian: ecology
+    'ekologi',       # Swedish: ecology
+    'biodiversity',
+    'biodiversitet',
+]
 
 STATS_TERMS = [
-    'statistical ecol',      # statistical ecology
-    'ecological statistic',  # ecological statistics
-    'quantitative ecol',     # quantitative ecology
-    'biostatistic',          # biostatistics
+    'statistical ecol',      # English
+    'ecological statistic',
+    'quantitative ecol',
+    'biostatistic',
+    'statistisk økologi',    # Norwegian
+    'kvantitativ økologi',
+    'statistisk ekologi',    # Swedish
+    'kvantitativ ekologi',
 ]
 
 # Stats-highlighted badge: same terms
@@ -80,13 +90,24 @@ IN_SCOPE_LOCATIONS = ['norway', 'norge', 'sweden', 'sverige',
 
 POSTDOC_MARKERS   = ['postdoc', 'post-doc', 'postdoctoral', 'post doc',
                      'postdoctoral fellow', 'postdoctoral researcher',
-                     'postdoctoral research fellow']
-PERMANENT_MARKERS = ['professor', 'associate professor', 'assistant professor',
-                     'førsteamanuensis', 'amanuensis', 'dosent',
-                     'universitetslektor', 'førstelektor', 'lecturer',
-                     'permanent', 'fast stilling', 'senior researcher',
-                     'senior forsker', 'principal researcher', 'chief researcher',
-                     'section leader', 'group leader', 'head of', 'researcher']
+                     'postdoctoral research fellow',
+                     'postdoktor']   # Norwegian
+
+PERMANENT_MARKERS = [
+    # Academic title hierarchy — reliable indicators of permanent posts
+    'professor', 'associate professor', 'assistant professor',
+    'førsteamanuensis', 'amanuensis', 'dosent',
+    'førstelektor', 'universitetslektor', 'lecturer',
+    # Explicitly flagged
+    'permanent', 'fast stilling', 'fast ansettelse',
+    # Senior institute roles — usually permanent but not always
+    'senior researcher', 'senior forsker',
+    'principal researcher', 'chief researcher',
+    'section leader', 'group leader', 'head of',
+    # Swedish equivalents
+    'universitetslektor', 'biträdande professor', 'docent',
+]
+# Note: bare 'researcher' / 'forsker' removed — too often fixed-term at institutes
 
 SKIP_NAV = ['contact us','about us','cookie','privacy policy','home page',
             'sign in','log in','register','subscribe','newsletter',
@@ -264,10 +285,12 @@ def scrape_jobbnorge_playwright():
         'ecology', 'ecologist', 'ecological',
         'statistical+ecology', 'quantitative+ecology',
         'biodiversity',
+        'økologi',       # Norwegian: catches Norwegian-language listings
+        'statistisk+økologi',
     ]
     BASE       = 'https://www.jobbnorge.no'
-    JOB_PATH   = '/ledige-stillinger/stilling/'
-    SELECTOR   = f'a[href*="{JOB_PATH}"]'
+    JOB_PATHS  = ['/ledige-stillinger/stilling/', '/en/available-jobs/job/']
+    SELECTOR   = ', '.join(f'a[href*="{p}"]' for p in JOB_PATHS)
     jobs = []
     seen = set()
 
@@ -295,7 +318,7 @@ def scrape_jobbnorge_playwright():
                 found = 0
                 for a in soup.find_all('a', href=True):
                     href = a['href']
-                    if JOB_PATH not in href:
+                    if not any(p in href for p in JOB_PATHS):
                         continue
                     if not href.startswith('http'):
                         href = BASE + href
