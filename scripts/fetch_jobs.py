@@ -244,77 +244,102 @@ def delay(): time.sleep(random.uniform(0.8, 1.8))
 
 # ─── Sources ──────────────────────────────────────────────────────────────────
 
-def fetch_jobbnorge_api():
-    """Probe Jobbnorge undocumented JSON API endpoints. Fail silently — expected to 404."""
-    probes = [
-        'https://www.jobbnorge.no/api/jobad/search?q={q}&lang=en&pagesize=50',
-        'https://www.jobbnorge.no/api/search?q={q}&lang=en&pagesize=50',
-        'https://www.jobbnorge.no/search/api?q={q}&lang=en',
+def scrape_jobbnorge_playwright():
+    """
+    Scrape Jobbnorge using Playwright (headless Chromium).
+    Jobbnorge is fully JS-rendered so requests/feedparser return nothing useful.
+    Searches for ecology and statistical ecology terms; extracts all result links.
+    Requires: playwright installed + 'playwright install chromium' run first.
+    """
+    try:
+        from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
+    except ImportError:
+        print('  [jobbnorge-playwright] playwright not installed', file=sys.stderr)
+        return []
+
+    SEARCH_TERMS = [
+        'ecology', 'ecologist', 'ecological',
+        'statistical ecology', 'quantitative ecology',
+        'biodiversity',
     ]
-    queries = ['ecology', 'ecologist', 'biodiversity', 'statistical ecology',
-               'quantitative ecology', 'population ecology']
-    for pattern in probes:
-        for q in queries:
-            url = pattern.format(q=q)
+    BASE   = 'https://www.jobbnorge.no'
+    jobs   = []
+    seen   = set()
+
+    with sync_playwright() as pw:
+        browser = pw.chromium.launch(headless=True, args=['--no-sandbox'])
+        ctx     = browser.new_context(
+            user_agent='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 '
+                        '(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+            locale='en-US',
+        )
+        page = ctx.new_page()
+        page.set_default_timeout(20000)
+
+        for term in SEARCH_TERMS:
+            url = f'{BASE}/en/available-jobs?q={term.replace(" ", "+")}'
             try:
-                resp = SESSION.get(url, headers={
-                    'Accept': 'application/json',
-                    'Referer': 'https://www.jobbnorge.no/'
-                }, timeout=TIMEOUT)
-                # Only proceed on genuine 200 JSON response
-                if resp.status_code != 200:
+                page.goto(url, wait_until='domcontentloaded')
+                # Wait for job result links to appear
+                try:
+                    page.wait_for_selector(
+                        'a[href*="/en/available-jobs/job/"], '
+                        'a[href*="/ledige-stillinger/stilling/"]',
+                        timeout=12000,
+                    )
+                except PWTimeout:
+                    # Page loaded but no results for this term
                     continue
-                if 'json' not in resp.headers.get('Content-Type', ''):
-                    continue
-                data  = resp.json()
-                items = (data.get('jobs') or data.get('results') or
-                         data.get('items') or data.get('hits') or
-                         (data if isinstance(data, list) else []))
-                jobs = []
-                for item in items:
-                    if not isinstance(item, dict): continue
-                    title = item.get('title') or item.get('Title') or item.get('jobTitle') or ''
-                    link  = item.get('url') or item.get('link') or item.get('applicationUrl') or ''
-                    inst  = item.get('employer') or item.get('organization') or ''
-                    desc  = item.get('description') or item.get('ingress') or ''
-                    dl    = item.get('deadline') or item.get('applicationDeadline') or ''
-                    if title and link:
-                        jobs.append(make_job(title, link, institution=inst,
-                                             deadline=dl, description=desc,
-                                             source='jobbnorge.no'))
-                if jobs:
-                    print(f'  [jobbnorge-api] OK: {url}')
-                    return jobs
-            except Exception:
-                pass  # probe failures are expected and silent
-    return []
 
+                html  = page.content()
+                soup  = BeautifulSoup(html, 'html.parser')
 
-def fetch_jobbnorge_rss():
-    patterns = [
-        'https://www.jobbnorge.no/rss/en/jobs?q=ecology',
-        'https://www.jobbnorge.no/rss/en/jobs?q=biodiversity',
-        'https://www.jobbnorge.no/rss/en/jobs?q=ecologist',
-        'https://www.jobbnorge.no/search/en?q=ecology&format=rss',
-    ]
-    for rss_url in patterns:
-        try:
-            feed = feedparser.parse(rss_url)
-            if feed.entries:
-                jobs = []
-                for e in feed.entries:
-                    title   = e.get('title','')
-                    link    = e.get('link','')
-                    summary = e.get('summary', e.get('description',''))
-                    dl      = e.get('published', None)
-                    if title and link:
-                        jobs.append(make_job(title, link, deadline=dl,
-                                             description=summary, source='jobbnorge.no'))
-                print(f'  [jobbnorge-rss] OK: {rss_url} → {len(jobs)} entries')
-                return jobs
-        except Exception as exc:
-            print(f'  [jobbnorge-rss] {rss_url}: {exc}', file=sys.stderr)
-    return []
+                for a in soup.find_all('a', href=True):
+                    href = a['href']
+                    if '/available-jobs/job/' not in href and \
+                       '/ledige-stillinger/stilling/' not in href:
+                        continue
+                    if not href.startswith('http'):
+                        href = BASE + href
+                    if href in seen:
+                        continue
+                    seen.add(href)
+
+                    title = a.get_text(strip=True)
+                    if not title or len(title) < 8:
+                        # Title may be in a sibling element
+                        parent = a.find_parent(['li', 'article', 'div'])
+                        if parent:
+                            title = parent.get_text(' ', strip=True)[:120]
+
+                    # Try to extract institution and deadline from surrounding text
+                    parent = a.find_parent(['li', 'article', 'div', 'tr'])
+                    ctx_text = parent.get_text(' ', strip=True) if parent else ''
+                    inst_match = re.search(
+                        r'(University|Institute|NTNU|UiO|UiT|UiB|NMBU|NINA|NIVA|'
+                        r'NIBIO|Inland Norway|HVL|UiA|UiS|Nord University)',
+                        ctx_text, re.IGNORECASE
+                    )
+                    institution = inst_match.group(0) if inst_match else ''
+                    deadline    = extract_deadline(ctx_text)
+
+                    jobs.append(make_job(
+                        title, href,
+                        institution=institution,
+                        location='Norway',
+                        deadline=deadline,
+                        description=ctx_text[:500],
+                        source='jobbnorge.no',
+                    ))
+
+            except Exception as exc:
+                print(f'  [jobbnorge-playwright] {term}: {exc}', file=sys.stderr)
+
+        browser.close()
+
+    print(f'  [jobbnorge-playwright] {len(jobs)} raw links found')
+    return jobs
+
 
 
 def scrape_uio():
@@ -691,8 +716,7 @@ def sort_jobs(jobs):
 
 SOURCES = [
     # ── Norway ──────────────────────────────────────────────────────────────
-    ('jobbnorge-api',     fetch_jobbnorge_api),
-    ('jobbnorge-rss',     fetch_jobbnorge_rss),
+    ('jobbnorge',         scrape_jobbnorge_playwright),   # headless Chromium
     ('uio',               scrape_uio),
     ('uib',               scrape_uib),
     ('nina',              scrape_nina),
@@ -707,7 +731,6 @@ SOURCES = [
     ('scholarshipdb',     scrape_scholarshipdb),
     ('nature-careers-no', scrape_nature_careers),
     # ── Sweden ───────────────────────────────────────────────────────────────
-    # Varbi RSS covers Uppsala, Stockholm, Umeå, Lund, Gothenburg
     ('sweden-varbi',      scrape_sweden_varbi),
     ('slu',               scrape_slu),
     ('nrm',               scrape_nrm),
