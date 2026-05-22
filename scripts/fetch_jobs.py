@@ -61,10 +61,14 @@ STATS_HIGHLIGHT_KEYWORDS = STATS_TERMS[:]
 
 # Positions to hard-exclude regardless of keyword match
 EXCLUDE_MARKERS = [
+    # English
     'phd candidate', 'ph.d. candidate', 'doctoral fellow', 'stipendiat',
     'phd position', 'phd fellowship', 'phd fellow', 'phd research fellow',
     'research assistant', 'research trainee', 'student assistant',
     'internship', 'intern position', 'master student', 'visiting student',
+    # Norwegian / Swedish (research assistant, apprentice, summer job)
+    'forskningsassistent', 'vitenskapelig assistent', 'amanuens',
+    'lærlingplass', 'sommerjobb', 'praktikant',
 ]
 
 # Countries that are in scope — anything else from aggregators is dropped
@@ -254,7 +258,7 @@ def scrape_jobbnorge_playwright():
     try:
         from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
     except ImportError:
-        print('  [jobbnorge-playwright] playwright not installed', file=sys.stderr)
+        print('[jobbnorge-playwright] ERROR: playwright not installed — run: playwright install chromium --with-deps')
         return []
 
     SEARCH_TERMS = [
@@ -333,9 +337,12 @@ def scrape_jobbnorge_playwright():
                     ))
 
             except Exception as exc:
-                print(f'  [jobbnorge-playwright] {term}: {exc}', file=sys.stderr)
+                print(f'  [jobbnorge-playwright] {term}: {type(exc).__name__}: {exc}')
 
         browser.close()
+
+    if not jobs:
+        print('[jobbnorge-playwright] WARNING: 0 results — check selector or page structure')
 
     print(f'  [jobbnorge-playwright] {len(jobs)} raw links found')
     return jobs
@@ -685,7 +692,7 @@ def filter_relevant(jobs): return [j for j in jobs if j.get('relevant', False)]
 def filter_expired(jobs):
     """Drop jobs with a parseable deadline that has already passed."""
     from datetime import date
-    import re
+    from email.utils import parsedate
     today = date.today()
     result = []
     for job in jobs:
@@ -693,18 +700,30 @@ def filter_expired(jobs):
         if not dl:
             result.append(job)
             continue
-        # Try ISO date first, then dd.mm.yyyy, then give benefit of doubt
         parsed = None
+        # RFC 2822 (e.g. "Fri, 08 May 2026 00:00:00 +0200" from RSS feeds)
         try:
-            m = re.search(r'(\d{4}-\d{2}-\d{2})', dl)
-            if m:
-                parsed = date.fromisoformat(m.group(1))
-            else:
+            t = parsedate(dl)
+            if t:
+                parsed = date(t[0], t[1], t[2])
+        except Exception:
+            pass
+        # ISO date
+        if parsed is None:
+            try:
+                m = re.search(r'(\d{4}-\d{2}-\d{2})', dl)
+                if m:
+                    parsed = date.fromisoformat(m.group(1))
+            except Exception:
+                pass
+        # European dd.mm.yyyy
+        if parsed is None:
+            try:
                 m = re.search(r'(\d{1,2})[.\-/](\d{1,2})[.\-/](\d{4})', dl)
                 if m:
                     parsed = date(int(m.group(3)), int(m.group(2)), int(m.group(1)))
-        except Exception:
-            pass
+            except Exception:
+                pass
         if parsed is None or parsed >= today:
             result.append(job)
     return result
