@@ -251,102 +251,86 @@ def delay(): time.sleep(random.uniform(0.8, 1.8))
 def scrape_jobbnorge_playwright():
     """
     Scrape Jobbnorge using Playwright (headless Chromium).
-    Jobbnorge is fully JS-rendered so requests/feedparser return nothing useful.
-    Searches for ecology and statistical ecology terms; extracts all result links.
-    Requires: playwright installed + 'playwright install chromium' run first.
+    Correct search URL: /search?term={q}
+    Job links use:      /ledige-stillinger/stilling/{id}
     """
     try:
         from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
     except ImportError:
-        print('[jobbnorge-playwright] ERROR: playwright not installed — run: playwright install chromium --with-deps')
+        print('[jobbnorge-playwright] ERROR: playwright not installed')
         return []
 
     SEARCH_TERMS = [
         'ecology', 'ecologist', 'ecological',
-        'statistical ecology', 'quantitative ecology',
+        'statistical+ecology', 'quantitative+ecology',
         'biodiversity',
     ]
-    BASE   = 'https://www.jobbnorge.no'
-    jobs   = []
-    seen   = set()
+    BASE       = 'https://www.jobbnorge.no'
+    JOB_PATH   = '/ledige-stillinger/stilling/'
+    SELECTOR   = f'a[href*="{JOB_PATH}"]'
+    jobs = []
+    seen = set()
 
     with sync_playwright() as pw:
         browser = pw.chromium.launch(headless=True, args=['--no-sandbox'])
-        ctx     = browser.new_context(
+        ctx = browser.new_context(
             user_agent='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 '
-                        '(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+                       '(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
             locale='en-US',
         )
         page = ctx.new_page()
-        page.set_default_timeout(20000)
+        page.set_default_timeout(30000)
 
         for term in SEARCH_TERMS:
-            url = f'{BASE}/en/available-jobs?q={term.replace(" ", "+")}'
+            url = f'{BASE}/search?term={term}&OrderBy=Published&Period=All'
             try:
-                page.goto(url, wait_until='domcontentloaded')
-                # Wait for job result links to appear
+                page.goto(url, wait_until='networkidle', timeout=30000)
                 try:
-                    page.wait_for_selector(
-                        'a[href*="/en/available-jobs/job/"], '
-                        'a[href*="/ledige-stillinger/stilling/"]',
-                        timeout=12000,
-                    )
+                    page.wait_for_selector(SELECTOR, timeout=15000)
                 except PWTimeout:
-                    # Page loaded but no results for this term
+                    print(f'  [jobbnorge-playwright] no results for: {term!r}')
                     continue
 
-                html  = page.content()
-                soup  = BeautifulSoup(html, 'html.parser')
-
+                soup  = BeautifulSoup(page.content(), 'html.parser')
+                found = 0
                 for a in soup.find_all('a', href=True):
                     href = a['href']
-                    if '/available-jobs/job/' not in href and \
-                       '/ledige-stillinger/stilling/' not in href:
+                    if JOB_PATH not in href:
                         continue
                     if not href.startswith('http'):
                         href = BASE + href
                     if href in seen:
                         continue
                     seen.add(href)
-
-                    title = a.get_text(strip=True)
-                    if not title or len(title) < 8:
-                        # Title may be in a sibling element
-                        parent = a.find_parent(['li', 'article', 'div'])
-                        if parent:
-                            title = parent.get_text(' ', strip=True)[:120]
-
-                    # Try to extract institution and deadline from surrounding text
+                    found += 1
+                    title = a.get_text(strip=True) or ''
                     parent = a.find_parent(['li', 'article', 'div', 'tr'])
                     ctx_text = parent.get_text(' ', strip=True) if parent else ''
-                    inst_match = re.search(
-                        r'(University|Institute|NTNU|UiO|UiT|UiB|NMBU|NINA|NIVA|'
-                        r'NIBIO|Inland Norway|HVL|UiA|UiS|Nord University)',
+                    m = re.search(
+                        r'(University|Institute|Universitetet|NTNU|UiO|UiT|UiB|'
+                        r'NMBU|NINA|NIVA|NIBIO|Inland Norway|Innlandet|HVL|UiA|'
+                        r'UiS|Nord University)',
                         ctx_text, re.IGNORECASE
                     )
-                    institution = inst_match.group(0) if inst_match else ''
-                    deadline    = extract_deadline(ctx_text)
-
                     jobs.append(make_job(
                         title, href,
-                        institution=institution,
+                        institution=m.group(0) if m else '',
                         location='Norway',
-                        deadline=deadline,
+                        deadline=extract_deadline(ctx_text),
                         description=ctx_text[:500],
                         source='jobbnorge.no',
                     ))
-
+                print(f'  [jobbnorge-playwright] {term!r}: {found} new links')
+            except PWTimeout:
+                print(f'  [jobbnorge-playwright] page load timeout: {url}')
             except Exception as exc:
                 print(f'  [jobbnorge-playwright] {term}: {type(exc).__name__}: {exc}')
 
         browser.close()
 
     if not jobs:
-        print('[jobbnorge-playwright] WARNING: 0 results — check selector or page structure')
-
-    print(f'  [jobbnorge-playwright] {len(jobs)} raw links found')
+        print('[jobbnorge-playwright] WARNING: 0 results')
     return jobs
-
 
 
 def scrape_uio():
