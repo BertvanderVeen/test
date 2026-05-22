@@ -42,7 +42,23 @@ result = subprocess.run(
     capture_output=True, text=True
 )
 if result.returncode == 0:
-    print(f'Issue created: {result.stdout.strip()}')
+    issue_url = result.stdout.strip()
+    print(f'Issue created: {issue_url}')
+    # Extract issue number and close it immediately — GitHub emails on create,
+    # closing keeps the repo's issue list clean
+    import re
+    m = re.search(r'/issues/(\d+)', issue_url)
+    if m:
+        issue_number = m.group(1)
+        close = subprocess.run(
+            ['gh', 'issue', 'close', issue_number, '--repo', repo,
+             '--comment', 'Closing automatically — notification sent by email.'],
+            capture_output=True, text=True
+        )
+        if close.returncode == 0:
+            print(f'Issue #{issue_number} closed.')
+        else:
+            print(f'Could not close issue: {close.stderr}')
 else:
     # Label may not exist — retry without it
     result2 = subprocess.run(
@@ -51,7 +67,16 @@ else:
         capture_output=True, text=True
     )
     if result2.returncode == 0:
-        print(f'Issue created: {result2.stdout.strip()}')
+        issue_url = result2.stdout.strip()
+        print(f'Issue created: {issue_url}')
+        import re
+        m = re.search(r'/issues/(\d+)', issue_url)
+        if m:
+            subprocess.run(
+                ['gh', 'issue', 'close', m.group(1), '--repo', repo,
+                 '--comment', 'Closing automatically — notification sent by email.'],
+                capture_output=True, text=True
+            )
     else:
         print(f'Failed: {result2.stderr}', file=sys.stderr)
         sys.exit(1)
