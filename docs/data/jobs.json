@@ -1,10 +1,82 @@
 {
-  "last_updated": "2026-05-18T08:49:47.880225+00:00",
+  "last_updated": "2026-05-23T08:20:45.014560+00:00",
   "stats": {
-    "total": 0,
-    "permanent": 0,
-    "postdoc": 0,
-    "phd": 0
+    "total": 4,
+    "permanent": 1,
+    "postdoc": 1
   },
-  "jobs": []
+  "jobs": [
+    {
+      "id": "b62984fa0ede9035",
+      "title": "Universitetslektor i økologi og økosystembasert forvaltning",
+      "institution": "UiT",
+      "location": "Norway",
+      "country": "norway",
+      "inst_type": "university",
+      "url": "https://www.jobbnorge.no/ledige-stillinger/stilling/301181",
+      "deadline": null,
+      "type": "permanent",
+      "description": "UiT Norges arktiske universitet Universitetslektor i økologi og økosystembasert forvaltning Fakultet for biovitenskap, fiskeri og økonomi ... Tromsø Heltid 09.06.2026",
+      "source": "jobbnorge.no",
+      "aggregator": false,
+      "stats_highlight": false,
+      "relevant": true,
+      "relevance_score": 1,
+      "fetched_at": "2026-05-23T08:22:00.350377+00:00"
+    },
+    {
+      "id": "cf188ca92fe02570",
+      "title": "Postdoktor - dyp læring for bildebasert kartlegging av biodiversitet",
+      "institution": "NIBIO",
+      "location": "Norway",
+      "country": "norway",
+      "inst_type": "institute",
+      "url": "https://www.jobbnorge.no/ledige-stillinger/stilling/296696",
+      "deadline": null,
+      "type": "postdoc",
+      "description": "Norsk institutt for bioøkonomi (NIBIO) Postdoktor - dyp læring for bildebasert kartlegging av biodiversitet Til NextBON prosjektet søker vi en motivert postdoktor-kandidat som kan bidra til banebrytende forskning innen dyp læring for bakkebasert ... Ås Heltid 27.05.2026",
+      "source": "jobbnorge.no",
+      "aggregator": false,
+      "stats_highlight": false,
+      "relevant": true,
+      "relevance_score": 1,
+      "fetched_at": "2026-05-23T08:21:58.441779+00:00"
+    },
+    {
+      "id": "d64d9df23a09025c",
+      "title": "Researcher in Diagnostics of Infection and Antimicrobial Resistance",
+      "institution": "Universitetet",
+      "location": "Norway",
+      "country": "norway",
+      "inst_type": "university",
+      "url": "https://www.jobbnorge.no/ledige-stillinger/stilling/301540",
+      "deadline": null,
+      "type": "unknown",
+      "description": "Universitetet i Innlandet Researcher in Diagnostics of Infection and Antimicrobial Resistance The Department of Biotechnology at the Faculty of Applied Ecology, Agricultural Sciences, and Biotechnology (ALB) at the University of ... Hamar Heltid 25.05.2026",
+      "source": "jobbnorge.no",
+      "aggregator": false,
+      "stats_highlight": false,
+      "relevant": true,
+      "relevance_score": 1,
+      "fetched_at": "2026-05-23T08:20:48.579761+00:00"
+    },
+    {
+      "id": "808dc9b2f8c86c23",
+      "title": "Researcher in Diagnostics of Infection and Antimicrobial Resistance",
+      "institution": "INN University",
+      "location": "Innlandet",
+      "country": "norway",
+      "inst_type": "university",
+      "url": "https://www.jobbnorge.no/en/available-jobs/job/301540/researcher-in-diagnostics-of-infection-and-antimicrobial-resistance",
+      "deadline": null,
+      "type": "unknown",
+      "description": "Researcher in Diagnostics of Infection and Antimicrobial Resistance Researcher in Diagnostics of Infection and Antimicrobial Resistance - Fakultet for anvendt økologi, landbruksfag og bioteknologi",
+      "source": "inn.no",
+      "aggregator": false,
+      "stats_highlight": false,
+      "relevant": true,
+      "relevance_score": 1,
+      "fetched_at": "2026-05-23T08:22:39.795303+00:00"
+    }
+  ]
 }
