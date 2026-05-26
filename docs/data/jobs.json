@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-25T10:07:09.969646+00:00",
+  "last_updated": "2026-05-26T09:57:26.795942+00:00",
   "stats": {
-    "total": 4,
+    "total": 2,
     "permanent": 1,
     "postdoc": 1
   },
@@ -22,7 +22,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-05-25T10:08:27.965742+00:00"
+      "fetched_at": "2026-05-26T09:58:42.972914+00:00"
     },
     {
       "id": "cf188ca92fe02570",
@@ -40,43 +40,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-05-25T10:08:25.879633+00:00"
-    },
-    {
-      "id": "d64d9df23a09025c",
-      "title": "Researcher in Diagnostics of Infection and Antimicrobial Resistance",
-      "institution": "Universitetet",
-      "location": "Norway",
-      "country": "norway",
-      "inst_type": "university",
-      "url": "https://www.jobbnorge.no/ledige-stillinger/stilling/301540",
-      "deadline": null,
-      "type": "unknown",
-      "description": "Universitetet i Innlandet Researcher in Diagnostics of Infection and Antimicrobial Resistance The Department of Biotechnology at the Faculty of Applied Ecology, Agricultural Sciences, and Biotechnology (ALB) at the University of ... Hamar Heltid 25.05.2026",
-      "source": "jobbnorge.no",
-      "aggregator": false,
-      "stats_highlight": false,
-      "relevant": true,
-      "relevance_score": 1,
-      "fetched_at": "2026-05-25T10:07:14.508981+00:00"
-    },
-    {
-      "id": "808dc9b2f8c86c23",
-      "title": "Researcher in Diagnostics of Infection and Antimicrobial Resistance",
-      "institution": "INN University",
-      "location": "Innlandet",
-      "country": "norway",
-      "inst_type": "university",
-      "url": "https://www.jobbnorge.no/en/available-jobs/job/301540/researcher-in-diagnostics-of-infection-and-antimicrobial-resistance",
-      "deadline": null,
-      "type": "unknown",
-      "description": "Researcher in Diagnostics of Infection and Antimicrobial Resistance Researcher in Diagnostics of Infection and Antimicrobial Resistance - Fakultet for anvendt økologi, landbruksfag og bioteknologi",
-      "source": "inn.no",
-      "aggregator": false,
-      "stats_highlight": false,
-      "relevant": true,
-      "relevance_score": 1,
-      "fetched_at": "2026-05-25T10:09:05.668382+00:00"
+      "fetched_at": "2026-05-26T09:58:40.945564+00:00"
     }
   ]
 }
