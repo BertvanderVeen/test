@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-05-27T09:50:20.385632+00:00",
+  "last_updated": "2026-05-28T10:02:12.266510+00:00",
   "stats": {
-    "total": 2,
+    "total": 1,
     "permanent": 1,
-    "postdoc": 1
+    "postdoc": 0
   },
   "jobs": [
     {
@@ -22,25 +22,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-05-27T09:51:36.207964+00:00"
-    },
-    {
-      "id": "cf188ca92fe02570",
-      "title": "Postdoktor - dyp læring for bildebasert kartlegging av biodiversitet",
-      "institution": "NIBIO",
-      "location": "Norway",
-      "country": "norway",
-      "inst_type": "institute",
-      "url": "https://www.jobbnorge.no/ledige-stillinger/stilling/296696",
-      "deadline": null,
-      "type": "postdoc",
-      "description": "Norsk institutt for bioøkonomi (NIBIO) Postdoktor - dyp læring for bildebasert kartlegging av biodiversitet Til NextBON prosjektet søker vi en motivert postdoktor-kandidat som kan bidra til banebrytende forskning innen dyp læring for bakkebasert ... Ås Heltid 27.05.2026",
-      "source": "jobbnorge.no",
-      "aggregator": false,
-      "stats_highlight": false,
-      "relevant": true,
-      "relevance_score": 1,
-      "fetched_at": "2026-05-27T09:51:34.323668+00:00"
+      "fetched_at": "2026-05-28T10:03:30.252494+00:00"
     }
   ]
 }
