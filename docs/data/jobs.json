@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-28T10:02:12.266510+00:00",
+  "last_updated": "2026-05-29T09:59:23.534295+00:00",
   "stats": {
-    "total": 1,
+    "total": 2,
     "permanent": 1,
     "postdoc": 0
   },
@@ -22,7 +22,25 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-05-28T10:03:30.252494+00:00"
+      "fetched_at": "2026-05-29T10:00:43.107977+00:00"
+    },
+    {
+      "id": "44b21fc80d5a337b",
+      "title": "Forskningsingeniør innen terrestrisk økologi",
+      "institution": "",
+      "location": "Norway",
+      "country": "norway",
+      "inst_type": "institute",
+      "url": "https://www.jobbnorge.no/ledige-stillinger/stilling/302841",
+      "deadline": null,
+      "type": "unknown",
+      "description": "Norsk Polarinstitutt Forskningsingeniør innen terrestrisk økologi Bli vår nye forskningsingeniør innen terrestrisk økologi og sjøfugl ... Tromsø Heltid 12.06.2026",
+      "source": "jobbnorge.no",
+      "aggregator": false,
+      "stats_highlight": false,
+      "relevant": true,
+      "relevance_score": 1,
+      "fetched_at": "2026-05-29T10:00:43.107773+00:00"
     }
   ]
 }
