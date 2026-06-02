@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-01T11:35:04.481023+00:00",
+  "last_updated": "2026-06-02T10:24:05.102875+00:00",
   "stats": {
-    "total": 3,
+    "total": 2,
     "permanent": 1,
     "postdoc": 0
   },
@@ -22,7 +22,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-01T11:36:20.959729+00:00"
+      "fetched_at": "2026-06-02T10:25:23.008433+00:00"
     },
     {
       "id": "44b21fc80d5a337b",
@@ -40,25 +40,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-01T11:36:20.959560+00:00"
-    },
-    {
-      "id": "d59e4ba6c6e1fb21",
-      "title": "Projektassistent",
-      "institution": "Umeå University",
-      "location": "Umeå",
-      "country": "sweden",
-      "inst_type": "university",
-      "url": "https://umu.varbi.com/en/what:job/jobID:940071/",
-      "deadline": "Mon, 01 Jun 2026 00:00:00 +0200",
-      "type": "unknown",
-      "description": "Vi söker en projektassistent för att arbeta med markekologisk forskning vid Institutionen för ekologi, miljö och geovetenskap, med placering i Umeå. Anställningen är tidsbegränsad, på 40% under fem månader, från 1 augusti till 31 december 2026, eller efter överenskommelse. Sista ansökningsdag är 2026-06-19. Projektassistenten kommer delta i två forskningsprojekt som undersöker mikrobiella processer i vatten och jord i norra Sverige. Arbetsuppgifter Projektassistenten kommer att delta i olika forskningsaktiviteter både på laboratorium och ute i fält. Arbetsuppgifterna omfattar bland annat: - Provtagning av sjövatten. - DNA-/RNA-extraktion. - Bearbetning av jordprover. - Manövrering av drönare",
-      "source": "umu.se",
-      "aggregator": false,
-      "stats_highlight": false,
-      "relevant": true,
-      "relevance_score": 1,
-      "fetched_at": "2026-06-01T11:37:19.616245+00:00"
+      "fetched_at": "2026-06-02T10:25:23.008280+00:00"
     }
   ]
 }
