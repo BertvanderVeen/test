@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-04T09:56:36.324361+00:00",
+  "last_updated": "2026-06-05T09:51:12.666416+00:00",
   "stats": {
-    "total": 2,
+    "total": 3,
     "permanent": 1,
     "postdoc": 0
   },
@@ -22,7 +22,25 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-04T09:57:55.349118+00:00"
+      "fetched_at": "2026-06-05T09:52:28.364992+00:00"
+    },
+    {
+      "id": "a61959839b0d1c32",
+      "title": "Forsker innen bentisk økologi",
+      "institution": "",
+      "location": "Norway",
+      "country": "norway",
+      "inst_type": "institute",
+      "url": "https://www.jobbnorge.no/ledige-stillinger/stilling/301931",
+      "deadline": null,
+      "type": "unknown",
+      "description": "Havforskningsinstituttet Forsker innen bentisk økologi Forskningsgruppen Bentisk økologi ved Havforskningsinstituttet (HI) søker en høyt motivert 1109/1110-forsker til et tverrfaglig ... Tromsø Heltid 21.06.2026",
+      "source": "jobbnorge.no",
+      "aggregator": false,
+      "stats_highlight": false,
+      "relevant": true,
+      "relevance_score": 1,
+      "fetched_at": "2026-06-05T09:51:16.240648+00:00"
     },
     {
       "id": "44b21fc80d5a337b",
@@ -40,7 +58,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-04T09:57:55.348946+00:00"
+      "fetched_at": "2026-06-05T09:52:28.364794+00:00"
     }
   ]
 }
