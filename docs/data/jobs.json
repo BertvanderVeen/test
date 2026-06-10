@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-06-09T09:43:48.128937+00:00",
+  "last_updated": "2026-06-10T10:00:36.801655+00:00",
   "stats": {
-    "total": 4,
-    "permanent": 2,
-    "postdoc": 0
+    "total": 5,
+    "permanent": 1,
+    "postdoc": 2
   },
   "jobs": [
     {
@@ -22,25 +22,43 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-09T09:45:05.082132+00:00"
+      "fetched_at": "2026-06-10T10:01:52.964703+00:00"
     },
     {
-      "id": "b62984fa0ede9035",
-      "title": "Universitetslektor i økologi og økosystembasert forvaltning",
-      "institution": "UiT",
+      "id": "65145af68d4cb268",
+      "title": "Postdoktor innen bentisk økologi",
+      "institution": "",
       "location": "Norway",
       "country": "norway",
-      "inst_type": "university",
-      "url": "https://www.jobbnorge.no/ledige-stillinger/stilling/301181",
+      "inst_type": "institute",
+      "url": "https://www.jobbnorge.no/ledige-stillinger/stilling/303614",
       "deadline": null,
-      "type": "permanent",
-      "description": "UiT Norges arktiske universitet Universitetslektor i økologi og økosystembasert forvaltning Fakultet for biovitenskap, fiskeri og økonomi ... Tromsø Heltid 09.06.2026",
+      "type": "postdoc",
+      "description": "Havforskningsinstituttet Postdoktor innen bentisk økologi Lei av å vake i overflaten? Gjør et dypdykk med Havforskningsinstituttet! ... Tromsø Heltid 26.06.2026",
       "source": "jobbnorge.no",
       "aggregator": false,
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-09T09:45:05.082540+00:00"
+      "fetched_at": "2026-06-10T10:00:41.093391+00:00"
+    },
+    {
+      "id": "03e08b825c9b4ab8",
+      "title": "Postdoktor (2 år) inom cellväggens dynamik och mechanokemisk signalering",
+      "institution": "Umeå University",
+      "location": "Umeå",
+      "country": "sweden",
+      "inst_type": "university",
+      "url": "https://umu.varbi.com/en/what:job/jobID:945427/",
+      "deadline": "Wed, 10 Jun 2026 00:00:00 +0200",
+      "type": "postdoc",
+      "description": "Postdoktor (2 år) inom cellväggens dynamik och mechanokemisk signalering Institutionen för fysiologisk botanik (Umeå universitet, Umeå Plant Science Centre, Sverige) välkomnar sökande till en postdoktoranställning inom cellväggens dynamik och mechanokemisk signalering. Förväntat startdatum är september 2026 eller enligt överenskommelse. Umeå Plant Science Centre (UPSC) är en av Europas starkaste forskningsmiljöer för växtbiologisk grundforskning. Forskningen vid UPSC omfattar ett brett spektrum inom växtbiologi, inbegripet ekologi, beräkningsbiologi, genetik, fysiologi, biokemi, cellbiologi och molekylärbiologi (se www.upsc.se). Vi erbjuder nu en postdoktoranställning vid Institutionen för f",
+      "source": "umu.se",
+      "aggregator": false,
+      "stats_highlight": false,
+      "relevant": true,
+      "relevance_score": 1,
+      "fetched_at": "2026-06-10T10:03:16.881301+00:00"
     },
     {
       "id": "a61959839b0d1c32",
@@ -58,7 +76,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-09T09:43:53.157086+00:00"
+      "fetched_at": "2026-06-10T10:00:41.093659+00:00"
     },
     {
       "id": "44b21fc80d5a337b",
@@ -76,7 +94,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-09T09:45:05.082397+00:00"
+      "fetched_at": "2026-06-10T10:01:52.964908+00:00"
     }
   ]
 }
