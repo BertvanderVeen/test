@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-06-10T10:00:36.801655+00:00",
+  "last_updated": "2026-06-11T10:25:17.112642+00:00",
   "stats": {
     "total": 5,
     "permanent": 1,
-    "postdoc": 2
+    "postdoc": 1
   },
   "jobs": [
     {
@@ -22,7 +22,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-10T10:01:52.964703+00:00"
+      "fetched_at": "2026-06-11T10:26:38.232189+00:00"
     },
     {
       "id": "65145af68d4cb268",
@@ -40,25 +40,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-10T10:00:41.093391+00:00"
-    },
-    {
-      "id": "03e08b825c9b4ab8",
-      "title": "Postdoktor (2 år) inom cellväggens dynamik och mechanokemisk signalering",
-      "institution": "Umeå University",
-      "location": "Umeå",
-      "country": "sweden",
-      "inst_type": "university",
-      "url": "https://umu.varbi.com/en/what:job/jobID:945427/",
-      "deadline": "Wed, 10 Jun 2026 00:00:00 +0200",
-      "type": "postdoc",
-      "description": "Postdoktor (2 år) inom cellväggens dynamik och mechanokemisk signalering Institutionen för fysiologisk botanik (Umeå universitet, Umeå Plant Science Centre, Sverige) välkomnar sökande till en postdoktoranställning inom cellväggens dynamik och mechanokemisk signalering. Förväntat startdatum är september 2026 eller enligt överenskommelse. Umeå Plant Science Centre (UPSC) är en av Europas starkaste forskningsmiljöer för växtbiologisk grundforskning. Forskningen vid UPSC omfattar ett brett spektrum inom växtbiologi, inbegripet ekologi, beräkningsbiologi, genetik, fysiologi, biokemi, cellbiologi och molekylärbiologi (se www.upsc.se). Vi erbjuder nu en postdoktoranställning vid Institutionen för f",
-      "source": "umu.se",
-      "aggregator": false,
-      "stats_highlight": false,
-      "relevant": true,
-      "relevance_score": 1,
-      "fetched_at": "2026-06-10T10:03:16.881301+00:00"
+      "fetched_at": "2026-06-11T10:25:24.381155+00:00"
     },
     {
       "id": "a61959839b0d1c32",
@@ -76,7 +58,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-10T10:00:41.093659+00:00"
+      "fetched_at": "2026-06-11T10:25:24.381454+00:00"
     },
     {
       "id": "44b21fc80d5a337b",
@@ -94,7 +76,25 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-10T10:01:52.964908+00:00"
+      "fetched_at": "2026-06-11T10:26:38.232406+00:00"
+    },
+    {
+      "id": "a9c35a7a58d547fd",
+      "title": "Projektassistent i limnologi",
+      "institution": "Uppsala University",
+      "location": "Uppsala",
+      "country": "sweden",
+      "inst_type": "university",
+      "url": "https://uu.varbi.com/en/what:job/jobID:943255/",
+      "deadline": "Thu, 11 Jun 2026 00:00:00 +0200",
+      "type": "unknown",
+      "description": "Institutionen för ekologi och genetik är en internationell miljö med personal och studenter från hela världen. Vår forskning omfattar allt från evolutionär ekologi och genetik till studier av ekosystem. Se vidare www.ieg.uu.se. Erkenlaboratoriet är en fältstation som grundades på 1940-talet för forskare och studenter vid Uppsala universitet som studerar limnologi (läran om inlandsvatten). Fältstationen har idag ett omfattande miljöövervakningsprogram och tar emot forskare från hela världen inom olika områden av naturvetenskap. Cirka nio personer arbetar för närvarande vid stationen. Fältstationen har ett ackrediterat laboratorium för analys av vatten- och sedimentprover samt enkla gästboende",
+      "source": "uu.se",
+      "aggregator": false,
+      "stats_highlight": false,
+      "relevant": true,
+      "relevance_score": 1,
+      "fetched_at": "2026-06-11T10:27:36.311198+00:00"
     }
   ]
 }
