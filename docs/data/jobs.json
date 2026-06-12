@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-11T10:25:17.112642+00:00",
+  "last_updated": "2026-06-12T10:13:59.690397+00:00",
   "stats": {
-    "total": 5,
+    "total": 6,
     "permanent": 1,
     "postdoc": 1
   },
@@ -22,7 +22,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-11T10:26:38.232189+00:00"
+      "fetched_at": "2026-06-12T10:15:19.597992+00:00"
     },
     {
       "id": "65145af68d4cb268",
@@ -40,7 +40,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-11T10:25:24.381155+00:00"
+      "fetched_at": "2026-06-12T10:14:05.511861+00:00"
     },
     {
       "id": "a61959839b0d1c32",
@@ -58,7 +58,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-11T10:25:24.381454+00:00"
+      "fetched_at": "2026-06-12T10:14:05.512166+00:00"
     },
     {
       "id": "44b21fc80d5a337b",
@@ -76,25 +76,43 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-11T10:26:38.232406+00:00"
+      "fetched_at": "2026-06-12T10:15:19.598210+00:00"
     },
     {
-      "id": "a9c35a7a58d547fd",
-      "title": "Projektassistent i limnologi",
-      "institution": "Uppsala University",
-      "location": "Uppsala",
-      "country": "sweden",
+      "id": "50cf8accc651c084",
+      "title": "Instituttleder for jordbruksfag",
+      "institution": "INN University",
+      "location": "Innlandet",
+      "country": "norway",
       "inst_type": "university",
-      "url": "https://uu.varbi.com/en/what:job/jobID:943255/",
-      "deadline": "Thu, 11 Jun 2026 00:00:00 +0200",
+      "url": "https://www.jobbnorge.no/en/available-jobs/job/303041/instituttleder-for-jordbruksfag",
+      "deadline": null,
       "type": "unknown",
-      "description": "Institutionen för ekologi och genetik är en internationell miljö med personal och studenter från hela världen. Vår forskning omfattar allt från evolutionär ekologi och genetik till studier av ekosystem. Se vidare www.ieg.uu.se. Erkenlaboratoriet är en fältstation som grundades på 1940-talet för forskare och studenter vid Uppsala universitet som studerar limnologi (läran om inlandsvatten). Fältstationen har idag ett omfattande miljöövervakningsprogram och tar emot forskare från hela världen inom olika områden av naturvetenskap. Cirka nio personer arbetar för närvarande vid stationen. Fältstationen har ett ackrediterat laboratorium för analys av vatten- och sedimentprover samt enkla gästboende",
-      "source": "uu.se",
+      "description": "Instituttleder for jordbruksfag Instituttleder for jordbruksfag - Fakultet for anvendt økologi, landbruksfag og bioteknologi",
+      "source": "inn.no",
       "aggregator": false,
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-11T10:27:36.311198+00:00"
+      "fetched_at": "2026-06-12T10:15:54.292076+00:00"
+    },
+    {
+      "id": "a1d5cf9bcd22d8fc",
+      "title": "Doktorand i växtbiologi",
+      "institution": "Umeå University",
+      "location": "Umeå",
+      "country": "sweden",
+      "inst_type": "university",
+      "url": "https://umu.varbi.com/en/what:job/jobID:945867/",
+      "deadline": "Fri, 12 Jun 2026 00:00:00 +0200",
+      "type": "unknown",
+      "description": "Doktorand i växtbiologi Institutionen för fysiologisk botanik (Umeå universitet, Umeå Plant Science Centre, Sverige) välkomnar sökande till en doktorandanställning inom växtbiologi. Förväntat startdatum är september 2026 eller enligt överenskommelse. Umeå Plant Science Centre (UPSC) är en av Europas starkaste forskningsmiljöer för växtbiologisk grundforskning. Forskningen vid UPSC omfattar ett brett spektrum inom växtbiologi, inbegripet ekologi, beräkningsbiologi, genetik, fysiologi, biokemi, cellbiologi och molekylärbiologi (se www.upsc.se). En anställning som doktorand finns tillgänglig vid Institutionen för fysiologisk botanik, Umeå universitet, som är en del av Umeå Plant Science Centre.",
+      "source": "umu.se",
+      "aggregator": false,
+      "stats_highlight": false,
+      "relevant": true,
+      "relevance_score": 1,
+      "fetched_at": "2026-06-12T10:16:25.883387+00:00"
     }
   ]
 }
