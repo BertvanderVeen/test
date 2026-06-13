@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-12T10:13:59.690397+00:00",
+  "last_updated": "2026-06-13T08:58:43.318560+00:00",
   "stats": {
-    "total": 6,
+    "total": 4,
     "permanent": 1,
     "postdoc": 1
   },
@@ -22,7 +22,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-12T10:15:19.597992+00:00"
+      "fetched_at": "2026-06-13T08:59:59.019063+00:00"
     },
     {
       "id": "65145af68d4cb268",
@@ -40,7 +40,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-12T10:14:05.511861+00:00"
+      "fetched_at": "2026-06-13T08:58:47.111716+00:00"
     },
     {
       "id": "a61959839b0d1c32",
@@ -58,25 +58,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-12T10:14:05.512166+00:00"
-    },
-    {
-      "id": "44b21fc80d5a337b",
-      "title": "Forskningsingeniør innen terrestrisk økologi",
-      "institution": "",
-      "location": "Norway",
-      "country": "norway",
-      "inst_type": "institute",
-      "url": "https://www.jobbnorge.no/ledige-stillinger/stilling/302841",
-      "deadline": null,
-      "type": "unknown",
-      "description": "Norsk Polarinstitutt Forskningsingeniør innen terrestrisk økologi Bli vår nye forskningsingeniør innen terrestrisk økologi og sjøfugl ... Tromsø Heltid 12.06.2026",
-      "source": "jobbnorge.no",
-      "aggregator": false,
-      "stats_highlight": false,
-      "relevant": true,
-      "relevance_score": 1,
-      "fetched_at": "2026-06-12T10:15:19.598210+00:00"
+      "fetched_at": "2026-06-13T08:58:47.111971+00:00"
     },
     {
       "id": "50cf8accc651c084",
@@ -94,25 +76,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-12T10:15:54.292076+00:00"
-    },
-    {
-      "id": "a1d5cf9bcd22d8fc",
-      "title": "Doktorand i växtbiologi",
-      "institution": "Umeå University",
-      "location": "Umeå",
-      "country": "sweden",
-      "inst_type": "university",
-      "url": "https://umu.varbi.com/en/what:job/jobID:945867/",
-      "deadline": "Fri, 12 Jun 2026 00:00:00 +0200",
-      "type": "unknown",
-      "description": "Doktorand i växtbiologi Institutionen för fysiologisk botanik (Umeå universitet, Umeå Plant Science Centre, Sverige) välkomnar sökande till en doktorandanställning inom växtbiologi. Förväntat startdatum är september 2026 eller enligt överenskommelse. Umeå Plant Science Centre (UPSC) är en av Europas starkaste forskningsmiljöer för växtbiologisk grundforskning. Forskningen vid UPSC omfattar ett brett spektrum inom växtbiologi, inbegripet ekologi, beräkningsbiologi, genetik, fysiologi, biokemi, cellbiologi och molekylärbiologi (se www.upsc.se). En anställning som doktorand finns tillgänglig vid Institutionen för fysiologisk botanik, Umeå universitet, som är en del av Umeå Plant Science Centre.",
-      "source": "umu.se",
-      "aggregator": false,
-      "stats_highlight": false,
-      "relevant": true,
-      "relevance_score": 1,
-      "fetched_at": "2026-06-12T10:16:25.883387+00:00"
+      "fetched_at": "2026-06-13T09:00:33.529850+00:00"
     }
   ]
 }
