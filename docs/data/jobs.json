@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-06-16T11:10:44.146181+00:00",
+  "last_updated": "2026-06-17T10:56:41.636341+00:00",
   "stats": {
-    "total": 6,
+    "total": 5,
     "permanent": 1,
-    "postdoc": 2
+    "postdoc": 1
   },
   "jobs": [
     {
@@ -22,7 +22,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-16T11:12:00.974894+00:00"
+      "fetched_at": "2026-06-17T10:57:57.085016+00:00"
     },
     {
       "id": "65145af68d4cb268",
@@ -40,25 +40,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-16T11:10:49.033681+00:00"
-    },
-    {
-      "id": "b4334fc9109cad07",
-      "title": "Postdoktor i svampars evolution",
-      "institution": "Stockholm University",
-      "location": "Stockholm",
-      "country": "sweden",
-      "inst_type": "university",
-      "url": "https://su.varbi.com/en/what:job/jobID:945099/",
-      "deadline": "Tue, 16 Jun 2026 00:00:00 +0200",
-      "type": "postdoc",
-      "description": "Institutionen för ekologi, miljö och botanik (DEEP) bedriver forskning och utbildning vid Arrheniuslaboratorierna på campus Frescati. Vi är cirka 100 medarbetare, inklusive doktorander och postdoktorer, fördelade på 25 forskargrupper. Mer information om oss finns på: Institutionen för ekologi, miljö och botanik Projektbeskrivning Postdoktorn kommer att arbeta inom ett projekt som syftar till att förstå hur evolutionära processer påverkas av svampars speciella livscykler, klonala tillväxt och rumsliga organisation. Projektet fokuserar särskilt på hur somatiska mutationer som uppstår under vegetativ tillväxt kan spridas inom mycel och påverka selektion, anpassning och genetiska konflikter, sam",
-      "source": "su.se",
-      "aggregator": false,
-      "stats_highlight": false,
-      "relevant": true,
-      "relevance_score": 1,
-      "fetched_at": "2026-06-16T11:12:57.401793+00:00"
+      "fetched_at": "2026-06-17T10:56:45.223960+00:00"
     },
     {
       "id": "28268b2e117eb8d4",
@@ -76,7 +58,7 @@
       "stats_highlight": true,
       "relevant": true,
       "relevance_score": 5,
-      "fetched_at": "2026-06-16T11:12:52.816149+00:00"
+      "fetched_at": "2026-06-17T10:58:51.071347+00:00"
     },
     {
       "id": "a61959839b0d1c32",
@@ -94,7 +76,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-16T11:10:49.033937+00:00"
+      "fetched_at": "2026-06-17T10:56:45.224220+00:00"
     },
     {
       "id": "50cf8accc651c084",
@@ -112,7 +94,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-16T11:12:35.615987+00:00"
+      "fetched_at": "2026-06-17T10:58:32.068526+00:00"
     }
   ]
 }
