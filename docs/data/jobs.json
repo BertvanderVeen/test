@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-21T09:50:38.804686+00:00",
+  "last_updated": "2026-06-22T11:54:34.187770+00:00",
   "stats": {
-    "total": 5,
+    "total": 4,
     "permanent": 1,
     "postdoc": 1
   },
@@ -22,7 +22,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-21T09:51:57.083973+00:00"
+      "fetched_at": "2026-06-22T11:55:49.861508+00:00"
     },
     {
       "id": "65145af68d4cb268",
@@ -40,7 +40,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-21T09:50:44.077851+00:00"
+      "fetched_at": "2026-06-22T11:54:37.857985+00:00"
     },
     {
       "id": "28268b2e117eb8d4",
@@ -58,25 +58,7 @@
       "stats_highlight": true,
       "relevant": true,
       "relevance_score": 5,
-      "fetched_at": "2026-06-21T09:52:51.542932+00:00"
-    },
-    {
-      "id": "a61959839b0d1c32",
-      "title": "Forsker innen bentisk økologi",
-      "institution": "",
-      "location": "Norway",
-      "country": "norway",
-      "inst_type": "institute",
-      "url": "https://www.jobbnorge.no/ledige-stillinger/stilling/301931",
-      "deadline": null,
-      "type": "unknown",
-      "description": "Havforskningsinstituttet Forsker innen bentisk økologi Forskningsgruppen Bentisk økologi ved Havforskningsinstituttet (HI) søker en høyt motivert 1109/1110-forsker til et tverrfaglig ... Tromsø Heltid 21.06.2026",
-      "source": "jobbnorge.no",
-      "aggregator": false,
-      "stats_highlight": false,
-      "relevant": true,
-      "relevance_score": 1,
-      "fetched_at": "2026-06-21T09:50:44.078086+00:00"
+      "fetched_at": "2026-06-22T11:56:42.788215+00:00"
     },
     {
       "id": "50cf8accc651c084",
@@ -94,7 +76,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-21T09:52:32.976370+00:00"
+      "fetched_at": "2026-06-22T11:56:25.584177+00:00"
     }
   ]
 }
