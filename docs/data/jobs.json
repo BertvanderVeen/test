@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-22T11:54:34.187770+00:00",
+  "last_updated": "2026-06-23T09:38:56.161092+00:00",
   "stats": {
-    "total": 4,
+    "total": 3,
     "permanent": 1,
     "postdoc": 1
   },
@@ -22,7 +22,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-22T11:55:49.861508+00:00"
+      "fetched_at": "2026-06-23T09:40:11.440800+00:00"
     },
     {
       "id": "65145af68d4cb268",
@@ -40,25 +40,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-22T11:54:37.857985+00:00"
-    },
-    {
-      "id": "28268b2e117eb8d4",
-      "title": "Biostatistician / Epidemiologist – Clinical Epidemiology Research Center (CERC) and Yale University",
-      "institution": "",
-      "location": "Norway",
-      "country": "norway",
-      "inst_type": "institute",
-      "url": "https://www.nature.com/naturecareers/job/12860823/biostatistician-epidemiologist-clinical-epidemiology-research-center-cerc-and-yale-university-/?LinkSource=PremiumListing",
-      "deadline": null,
-      "type": "unknown",
-      "description": "Biostatistician / Epidemiologist – Clinical Epidemiology Research Center (CERC) and Yale University West Haven, Connecticut depends on experience Yale University School of Medicine The Clinical Epidemiology Research Center and Yale seek an Epidemiologist/Biostatistician to contribute to improving healthcare for US Veterans",
-      "source": "nature.com/naturecareers",
-      "aggregator": false,
-      "stats_highlight": true,
-      "relevant": true,
-      "relevance_score": 5,
-      "fetched_at": "2026-06-22T11:56:42.788215+00:00"
+      "fetched_at": "2026-06-23T09:38:59.786448+00:00"
     },
     {
       "id": "50cf8accc651c084",
@@ -76,7 +58,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-22T11:56:25.584177+00:00"
+      "fetched_at": "2026-06-23T09:40:45.976082+00:00"
     }
   ]
 }
