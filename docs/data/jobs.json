@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-06-26T09:27:19.034952+00:00",
+  "last_updated": "2026-06-27T08:36:01.388424+00:00",
   "stats": {
-    "total": 6,
+    "total": 3,
     "permanent": 1,
-    "postdoc": 2
+    "postdoc": 0
   },
   "jobs": [
     {
@@ -22,43 +22,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-26T09:28:21.647296+00:00"
-    },
-    {
-      "id": "65145af68d4cb268",
-      "title": "Postdoktor innen bentisk økologi",
-      "institution": "",
-      "location": "Norway",
-      "country": "norway",
-      "inst_type": "institute",
-      "url": "https://www.jobbnorge.no/ledige-stillinger/stilling/303614",
-      "deadline": null,
-      "type": "postdoc",
-      "description": "Havforskningsinstituttet Postdoktor innen bentisk økologi Lei av å vake i overflaten? Gjør et dypdykk med Havforskningsinstituttet! ... Tromsø Heltid 26.06.2026",
-      "source": "jobbnorge.no",
-      "aggregator": false,
-      "stats_highlight": false,
-      "relevant": true,
-      "relevance_score": 1,
-      "fetched_at": "2026-06-26T09:27:23.355845+00:00"
-    },
-    {
-      "id": "0554ef6acc17ccb8",
-      "title": "Doktorand i växtfysiologi",
-      "institution": "Stockholm University",
-      "location": "Stockholm",
-      "country": "sweden",
-      "inst_type": "university",
-      "url": "https://su.varbi.com/en/what:job/jobID:949863/",
-      "deadline": "Fri, 26 Jun 2026 00:00:00 +0200",
-      "type": "postdoc",
-      "description": "Institutionen för ekologi, miljö och botanik (DEEP) bedriver forskning och utbildning vid Arrheniuslaboratorierna på campus Frescati. Vi är cirka 100 medarbetare, inklusive doktorander och postdoktorer, fördelade på 25 forskargrupper. Mer information om oss finns på: Institutionen för ekologi, miljö och botanik. Projektbeskrivning Avhandlingsarbetet kommer att bedrivas inom projektet “Epigenetic basis of reproductive thermotolerance”. Projektet fokuserar på hur epigenetisk reglering bidrar till reproduktiv värmetolerans hos växter. Doktoranden kommer att använda molekylära angreppssätt för att studera växters fertilitet och utveckling under värmestress. Behörighetskrav För att bli antagen ti",
-      "source": "su.se",
-      "aggregator": false,
-      "stats_highlight": false,
-      "relevant": true,
-      "relevance_score": 1,
-      "fetched_at": "2026-06-26T09:29:30.227379+00:00"
+      "fetched_at": "2026-06-27T08:37:03.605507+00:00"
     },
     {
       "id": "5b5fc238d20d7b49",
@@ -76,7 +40,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-26T09:28:58.934592+00:00"
+      "fetched_at": "2026-06-27T08:37:38.955086+00:00"
     },
     {
       "id": "50cf8accc651c084",
@@ -94,25 +58,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-26T09:28:58.934790+00:00"
-    },
-    {
-      "id": "458f366e9228e78e",
-      "title": "Staff scientist",
-      "institution": "Umeå University",
-      "location": "Umeå",
-      "country": "sweden",
-      "inst_type": "university",
-      "url": "https://umu.varbi.com/en/what:job/jobID:950240/",
-      "deadline": "Fri, 26 Jun 2026 00:00:00 +0200",
-      "type": "unknown",
-      "description": "Staff scientist Umeå Plant Science Centre (UPSC) är en av Europas starkaste forskningsmiljöer för växtgrundforskning inbegripande forskning om växternas ekologi, genetik, cellbiologi, molekylärbiologi och fysiologi (se www.upsc.se). Till institutionen för fysiologisk botanik, som är en del av Umeå Plant Science Center, söker vi nu en staff scientist. Anställningen är på heltid och tidsbegränsad i 12 månader med tillträde 21 augusti 2026 eller enligt överenskommelse. Projektbeskrivning Detta fysiologiska projekt fokuserar på flöden av metaboliter och resurser i poppel. Det är fortfarande okänt hur växten styr allokeringen av resurser från fotosyntesen. Målet med projektet är att förstå hur vä",
-      "source": "umu.se",
-      "aggregator": false,
-      "stats_highlight": false,
-      "relevant": true,
-      "relevance_score": 1,
-      "fetched_at": "2026-06-26T09:29:32.994216+00:00"
+      "fetched_at": "2026-06-27T08:37:38.955302+00:00"
     }
   ]
 }
