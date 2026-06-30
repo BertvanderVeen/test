@@ -1,28 +1,28 @@
 {
-  "last_updated": "2026-06-29T10:59:51.789828+00:00",
+  "last_updated": "2026-06-30T09:35:51.405924+00:00",
   "stats": {
     "total": 3,
-    "permanent": 1,
-    "postdoc": 0
+    "permanent": 0,
+    "postdoc": 1
   },
   "jobs": [
     {
-      "id": "9777d49e39f0be89",
-      "title": "Professor i oral økologi og oral mikrobiologi",
-      "institution": "Universitetet",
-      "location": "Norway",
-      "country": "norway",
+      "id": "5606196ba761b130",
+      "title": "Postdoktor (2 år och 10 månader) inom Molekylär ekologi",
+      "institution": "Umeå University",
+      "location": "Umeå",
+      "country": "sweden",
       "inst_type": "university",
-      "url": "https://www.jobbnorge.no/ledige-stillinger/stilling/298959",
-      "deadline": null,
-      "type": "permanent",
-      "description": "Universitetet i Oslo Professor i oral økologi og oral mikrobiologi Vil du bidra til å utvikle ny kunnskap om orale mikrobiologiske prosesser – og forme utdanningen av fremtidens tannleger? ... Oslo Heltid 29.06.2026",
-      "source": "jobbnorge.no",
+      "url": "https://umu.varbi.com/en/what:job/jobID:951945/",
+      "deadline": "Tue, 30 Jun 2026 00:00:00 +0200",
+      "type": "postdoc",
+      "description": "Institutionen för ekologi, miljö och geovetenskap (EMG) söker en postdoktor som ska arbeta med Molekylär ekologi (eller närliggande område). Anställningen avser heltid under 2 år och 10 månader, med tillträde 1 september 2026, eller enligt överenskommelse. Sista ansökningsdag är 31 juli, 2026. Projektbeskrivning och arbetsuppgifter Vi söker en postdoktor för projektet “Rapid Detect—Transboundary Action: Fast Species Detection using LAMP” vid Institutionen för ekologi, miljö och geovetenskap (EMG), med huvudansvarig forskare universitetslektor Anu Valtonen. Detta projekt är ett samarbete mellan Umeå universitet, Östra Finlands universitet, Uleåborgs universitet, och Naturresursinstitutet (Fin",
+      "source": "umu.se",
       "aggregator": false,
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-29T11:00:53.645638+00:00"
+      "fetched_at": "2026-06-30T09:37:54.022889+00:00"
     },
     {
       "id": "5b5fc238d20d7b49",
@@ -40,7 +40,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-29T11:01:28.377598+00:00"
+      "fetched_at": "2026-06-30T09:37:28.217816+00:00"
     },
     {
       "id": "50cf8accc651c084",
@@ -58,7 +58,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-06-29T11:01:28.377805+00:00"
+      "fetched_at": "2026-06-30T09:37:28.218032+00:00"
     }
   ]
 }
