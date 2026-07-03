@@ -1,11 +1,47 @@
 {
-  "last_updated": "2026-07-02T08:56:23.585335+00:00",
+  "last_updated": "2026-07-03T09:18:04.646054+00:00",
   "stats": {
-    "total": 2,
-    "permanent": 0,
-    "postdoc": 0
+    "total": 4,
+    "permanent": 1,
+    "postdoc": 1
   },
   "jobs": [
+    {
+      "id": "9777d49e39f0be89",
+      "title": "Professor i oral økologi og oral mikrobiologi",
+      "institution": "Universitetet",
+      "location": "Norway",
+      "country": "norway",
+      "inst_type": "university",
+      "url": "https://www.jobbnorge.no/ledige-stillinger/stilling/298959",
+      "deadline": null,
+      "type": "permanent",
+      "description": "Universitetet i Oslo Professor i oral økologi og oral mikrobiologi Vil du bidra til å utvikle ny kunnskap om orale mikrobiologiske prosesser – og forme utdanningen av fremtidens tannleger? ... Oslo Heltid 09.07.2026",
+      "source": "jobbnorge.no",
+      "aggregator": false,
+      "stats_highlight": false,
+      "relevant": true,
+      "relevance_score": 1,
+      "fetched_at": "2026-07-03T09:18:51.102727+00:00"
+    },
+    {
+      "id": "a2ec548ef2bd7628",
+      "title": "Postdoctor fellow in multiscale biodiversity assessment of terrestrial ecosystems",
+      "institution": "NTNU",
+      "location": "Norway",
+      "country": "norway",
+      "inst_type": "university",
+      "url": "https://www.jobbnorge.no/ledige-stillinger/stilling/305209",
+      "deadline": null,
+      "type": "postdoc",
+      "description": "NTNU - Norges teknisk-naturvitenskapelige universitet Postdoctor fellow in multiscale biodiversity assessment of terrestrial ecosystems The Gjærevoll Centre for biodiversity foresight analyses at NTNU has a vacancy for a ... Trondheim Heltid 01.08.2026",
+      "source": "jobbnorge.no",
+      "aggregator": false,
+      "stats_highlight": false,
+      "relevant": true,
+      "relevance_score": 1,
+      "fetched_at": "2026-07-03T09:18:49.128324+00:00"
+    },
     {
       "id": "5b5fc238d20d7b49",
       "title": "Norwegianversion of this page",
@@ -22,7 +58,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-07-02T08:57:50.423880+00:00"
+      "fetched_at": "2026-07-03T09:19:25.768859+00:00"
     },
     {
       "id": "50cf8accc651c084",
@@ -40,7 +76,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-07-02T08:57:50.424078+00:00"
+      "fetched_at": "2026-07-03T09:19:25.769076+00:00"
     }
   ]
 }
