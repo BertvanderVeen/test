@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-07-06T10:21:35.882067+00:00",
+  "last_updated": "2026-07-07T09:40:55.298237+00:00",
   "stats": {
-    "total": 4,
+    "total": 3,
     "permanent": 1,
     "postdoc": 1
   },
@@ -22,7 +22,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-07-06T10:22:23.039263+00:00"
+      "fetched_at": "2026-07-07T09:41:43.804629+00:00"
     },
     {
       "id": "a2ec548ef2bd7628",
@@ -40,25 +40,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-07-06T10:22:20.983481+00:00"
-    },
-    {
-      "id": "5b5fc238d20d7b49",
-      "title": "Norwegianversion of this page",
-      "institution": "INN University",
-      "location": "Innlandet",
-      "country": "norway",
-      "inst_type": "university",
-      "url": "https://www.inn.no/om-universitetet/jobbe-hos-oss/ledige-stillinger/index.html",
-      "deadline": null,
-      "type": "unknown",
-      "description": "Norwegian version of this page Vacant positions INN University delivers knowledge, innovation, and development in close collaboration with working life and society in Innlandet County. Would you like to work with us? See all our vacancies here or check them via the job applicant portal Jobb Norge. Institutteder ved institutt for samfunnssikkerhet og offentlig styring Institutteder ved institutt for samfunnssikkerhet og offentlig styring - Handelshøgskolen Innlandet - Fakultet for økonomi og samfunnsvitenskap Instituttleder for jordbruksfag Instituttleder for jordbruksfag - Fakultet for anvendt økologi, landbruksfag og bioteknologi Instituttleder ved institutt for bedriftsøkonomi Instituttled",
-      "source": "inn.no",
-      "aggregator": false,
-      "stats_highlight": false,
-      "relevant": true,
-      "relevance_score": 1,
-      "fetched_at": "2026-07-06T10:22:58.592335+00:00"
+      "fetched_at": "2026-07-07T09:41:41.640889+00:00"
     },
     {
       "id": "50cf8accc651c084",
@@ -76,7 +58,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-07-06T10:22:58.592551+00:00"
+      "fetched_at": "2026-07-07T09:42:19.494414+00:00"
     }
   ]
 }
