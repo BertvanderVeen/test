@@ -1,29 +1,11 @@
 {
-  "last_updated": "2026-07-09T09:39:10.380320+00:00",
+  "last_updated": "2026-07-10T09:35:00.550221+00:00",
   "stats": {
-    "total": 3,
-    "permanent": 1,
+    "total": 2,
+    "permanent": 0,
     "postdoc": 1
   },
   "jobs": [
-    {
-      "id": "9777d49e39f0be89",
-      "title": "Professor i oral økologi og oral mikrobiologi",
-      "institution": "Universitetet",
-      "location": "Norway",
-      "country": "norway",
-      "inst_type": "university",
-      "url": "https://www.jobbnorge.no/ledige-stillinger/stilling/298959",
-      "deadline": null,
-      "type": "permanent",
-      "description": "Universitetet i Oslo Professor i oral økologi og oral mikrobiologi Vil du bidra til å utvikle ny kunnskap om orale mikrobiologiske prosesser – og forme utdanningen av fremtidens tannleger? ... Oslo Heltid 09.07.2026",
-      "source": "jobbnorge.no",
-      "aggregator": false,
-      "stats_highlight": false,
-      "relevant": true,
-      "relevance_score": 1,
-      "fetched_at": "2026-07-09T09:39:57.875362+00:00"
-    },
     {
       "id": "a2ec548ef2bd7628",
       "title": "Postdoctor fellow in multiscale biodiversity assessment of terrestrial ecosystems",
@@ -40,7 +22,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-07-09T09:39:55.683829+00:00"
+      "fetched_at": "2026-07-10T09:35:46.663534+00:00"
     },
     {
       "id": "50cf8accc651c084",
@@ -58,7 +40,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-07-09T09:40:35.217112+00:00"
+      "fetched_at": "2026-07-10T09:36:26.860386+00:00"
     }
   ]
 }
