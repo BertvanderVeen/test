@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-20T08:57:30.285487+00:00",
+  "last_updated": "2026-07-21T08:28:07.773211+00:00",
   "stats": {
     "total": 2,
     "permanent": 0,
@@ -22,7 +22,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-07-20T08:58:15.295690+00:00"
+      "fetched_at": "2026-07-21T08:28:51.472722+00:00"
     },
     {
       "id": "50cf8accc651c084",
@@ -40,7 +40,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-07-20T08:58:54.066489+00:00"
+      "fetched_at": "2026-07-21T08:29:27.697757+00:00"
     }
   ]
 }
