@@ -1,29 +1,11 @@
 {
-  "last_updated": "2026-08-01T08:20:27.546181+00:00",
+  "last_updated": "2026-08-02T08:23:42.317620+00:00",
   "stats": {
-    "total": 2,
+    "total": 1,
     "permanent": 0,
-    "postdoc": 1
+    "postdoc": 0
   },
   "jobs": [
-    {
-      "id": "a2ec548ef2bd7628",
-      "title": "Postdoctor fellow in multiscale biodiversity assessment of terrestrial ecosystems",
-      "institution": "NTNU",
-      "location": "Norway",
-      "country": "norway",
-      "inst_type": "university",
-      "url": "https://www.jobbnorge.no/ledige-stillinger/stilling/305209",
-      "deadline": null,
-      "type": "postdoc",
-      "description": "NTNU - Norges teknisk-naturvitenskapelige universitet Postdoctor fellow in multiscale biodiversity assessment of terrestrial ecosystems The Gjærevoll Centre for biodiversity foresight analyses at NTNU has a vacancy for a ... Trondheim Heltid 01.08.2026",
-      "source": "jobbnorge.no",
-      "aggregator": false,
-      "stats_highlight": false,
-      "relevant": true,
-      "relevance_score": 1,
-      "fetched_at": "2026-08-01T08:21:13.070487+00:00"
-    },
     {
       "id": "50cf8accc651c084",
       "title": "Instituttleder for jordbruksfag",
@@ -40,7 +22,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-08-01T08:21:49.474170+00:00"
+      "fetched_at": "2026-08-02T08:25:25.060594+00:00"
     }
   ]
 }
