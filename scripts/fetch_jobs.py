@@ -56,6 +56,7 @@ ECOLOGY_TERMS = [
 ]
 
 STATS_TERMS = [
+    'statistic',      # English
     'statistical ecol',      # English
     'ecological statistic',
     'quantitative ecol',
