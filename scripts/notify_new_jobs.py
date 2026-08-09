@@ -38,7 +38,8 @@ title = f"[Jobs] {len(new_jobs)} new ecology/statistics position(s)"
 
 result = subprocess.run(
     ['gh', 'issue', 'create', '--repo', repo,
-     '--title', title, '--body', body, '--label', 'jobs'],
+     '--title', title, '--body', body, '--label', 'jobs',
+    '--assignee', 'BertvanderVeen'],
     capture_output=True, text=True
 )
 if result.returncode == 0:
@@ -63,7 +64,8 @@ else:
     # Label may not exist — retry without it
     result2 = subprocess.run(
         ['gh', 'issue', 'create', '--repo', repo,
-         '--title', title, '--body', body],
+         '--title', title, '--body', body,
+        '--assignee', 'BertvanderVeen'],
         capture_output=True, text=True
     )
     if result2.returncode == 0:
