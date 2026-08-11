@@ -1,29 +1,11 @@
 {
-  "last_updated": "2026-08-10T07:40:01.284698+00:00",
+  "last_updated": "2026-08-11T07:06:23.092500+00:00",
   "stats": {
-    "total": 3,
+    "total": 2,
     "permanent": 0,
-    "postdoc": 1
+    "postdoc": 0
   },
   "jobs": [
-    {
-      "id": "1ba619df458bd8b0",
-      "title": "Postdoctoral Research Fellow in Statistics and Data Science",
-      "institution": "University of Oslo",
-      "location": "Oslo",
-      "country": "norway",
-      "inst_type": "university",
-      "url": "https://www.jobbnorge.no/en/available-jobs/job/305298/postdoctoral-research-fellow-in-statistics-and-data-science",
-      "deadline": "July 3, 2026",
-      "type": "postdoc",
-      "description": "Postdoctoral Research Fellow in Statistics and Data Science July 3, 2026 Department: Department of Mathematics Faculty: The Faculty of Mathematics and Natural Sciences Languages: English Deadline: Monday, August 10, 2026",
-      "source": "uio.no",
-      "aggregator": false,
-      "stats_highlight": true,
-      "relevant": true,
-      "relevance_score": 5,
-      "fetched_at": "2026-08-10T07:41:23.876158+00:00"
-    },
     {
       "id": "50cf8accc651c084",
       "title": "Instituttleder for jordbruksfag",
@@ -40,7 +22,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-08-10T07:41:41.678297+00:00"
+      "fetched_at": "2026-08-11T07:08:06.201657+00:00"
     },
     {
       "id": "1e4d832094c6184f",
@@ -58,7 +40,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-08-10T07:41:41.678369+00:00"
+      "fetched_at": "2026-08-11T07:08:06.201747+00:00"
     }
   ]
 }
