@@ -1,11 +1,29 @@
 {
-  "last_updated": "2026-08-18T06:41:38.592745+00:00",
+  "last_updated": "2026-08-20T06:43:54.226023+00:00",
   "stats": {
-    "total": 2,
-    "permanent": 0,
+    "total": 3,
+    "permanent": 1,
     "postdoc": 0
   },
   "jobs": [
+    {
+      "id": "5b5fc238d20d7b49",
+      "title": "Norwegianversion of this page",
+      "institution": "INN University",
+      "location": "Innlandet",
+      "country": "norway",
+      "inst_type": "university",
+      "url": "https://www.inn.no/om-universitetet/jobbe-hos-oss/ledige-stillinger/index.html",
+      "deadline": null,
+      "type": "permanent",
+      "description": "Norwegian version of this page Vacant positions INN University delivers knowledge, innovation, and development in close collaboration with working life and society in Innlandet County. Would you like to work with us? See all our vacancies here or check them via the job applicant portal Jobb Norge. Instituttleder for jordbruksfag Instituttleder for jordbruksfag - Fakultet for anvendt økologi, landbruksfag og bioteknologi Landbruksteknolog Landbruksteknolog - Fakultet for anvendt økologi, landbruksfag og bioteknologi Leder for sikkerhet og beredskap Leder for sikkerhet og beredskap - Rektors stab Prodekan forskning Prodekan forskning - Fakultet for film, TV og spill Professor/dosent/førsteaman",
+      "source": "inn.no",
+      "aggregator": false,
+      "stats_highlight": false,
+      "relevant": true,
+      "relevance_score": 1,
+      "fetched_at": "2026-08-20T06:45:33.768926+00:00"
+    },
     {
       "id": "50cf8accc651c084",
       "title": "Instituttleder for jordbruksfag",
@@ -22,7 +40,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-08-18T06:43:17.215757+00:00"
+      "fetched_at": "2026-08-20T06:45:33.769000+00:00"
     },
     {
       "id": "1e4d832094c6184f",
@@ -40,7 +58,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-08-18T06:43:17.215840+00:00"
+      "fetched_at": "2026-08-20T06:45:33.769062+00:00"
     }
   ]
 }
