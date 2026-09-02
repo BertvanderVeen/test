@@ -1,29 +1,11 @@
 {
-  "last_updated": "2026-09-01T11:11:14.709142+00:00",
+  "last_updated": "2026-09-02T10:44:25.752465+00:00",
   "stats": {
-    "total": 2,
-    "permanent": 1,
+    "total": 1,
+    "permanent": 0,
     "postdoc": 0
   },
   "jobs": [
-    {
-      "id": "90362024b7c2ea72",
-      "title": "Universitetslektor i gynekologi förenad med anställning som specialistläkare/överläkare",
-      "institution": "Lund University",
-      "location": "Lund",
-      "country": "sweden",
-      "inst_type": "university",
-      "url": "https://lu.varbi.com/en/what:job/jobID:902060/",
-      "deadline": "Tue, 01 Sep 2026 00:00:00 +0200",
-      "type": "permanent",
-      "description": "Anställning Anställningen är placerad vid Institutionen för kliniska vetenskaper i Malmö. Den kliniska tjänstgöringen är placerad vid Kvinnokliniken, Skånes universitetssjukhus. Arbetsuppgifter Anställningen utlyses för att säkerställa grundutbildningens behov inom ämnet obstetrik och gynekologi. Den huvudsakliga arbetsuppgiften är att leda och driva utbildningen inom obstetrik och gynekologi i Malmö samt vara en av tre ämneansvariga inom läkarprogrammet. Innehavaren ska dessutom vara beredd att ta på sig ytterligare ledningsuppdrag inom ämnet på läkarprogrammet, liksom andra utbildningsuppdrag på grund- och avancerad nivå vid Medicinska fakultetens utbildningsprogram samt inom forskarutbild",
-      "source": "lu.se",
-      "aggregator": false,
-      "stats_highlight": false,
-      "relevant": true,
-      "relevance_score": 1,
-      "fetched_at": "2026-09-01T11:13:31.265500+00:00"
-    },
     {
       "id": "1e4d832094c6184f",
       "title": "Landbruksteknolog",
@@ -40,7 +22,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-09-01T11:13:01.964541+00:00"
+      "fetched_at": "2026-09-02T10:46:09.391501+00:00"
     }
   ]
 }
