@@ -1,11 +1,29 @@
 {
-  "last_updated": "2026-09-02T10:44:25.752465+00:00",
+  "last_updated": "2026-09-03T10:45:08.780303+00:00",
   "stats": {
-    "total": 1,
-    "permanent": 0,
+    "total": 3,
+    "permanent": 1,
     "postdoc": 0
   },
   "jobs": [
+    {
+      "id": "5b5fc238d20d7b49",
+      "title": "Norwegianversion of this page",
+      "institution": "INN University",
+      "location": "Innlandet",
+      "country": "norway",
+      "inst_type": "university",
+      "url": "https://www.inn.no/om-universitetet/jobbe-hos-oss/ledige-stillinger/index.html",
+      "deadline": null,
+      "type": "permanent",
+      "description": "Norwegian version of this page Vacant positions INN University delivers knowledge, innovation, and development in close collaboration with working life and society in Innlandet County. Would you like to work with us? See all our vacancies here or check them via the job applicant portal Jobb Norge. Landbruksteknolog Landbruksteknolog - Fakultet for anvendt økologi, landbruksfag og bioteknologi To faste stillinger som universitetslektor To faste stillinger som universitetslektor - Institutt for sosialfag og veiledning Last modified Nov. 27, 2024 7:49 PM",
+      "source": "inn.no",
+      "aggregator": false,
+      "stats_highlight": false,
+      "relevant": true,
+      "relevance_score": 1,
+      "fetched_at": "2026-09-03T10:46:46.949012+00:00"
+    },
     {
       "id": "1e4d832094c6184f",
       "title": "Landbruksteknolog",
@@ -22,7 +40,25 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-09-02T10:46:09.391501+00:00"
+      "fetched_at": "2026-09-03T10:46:46.949126+00:00"
+    },
+    {
+      "id": "228447d6b39a5f0f",
+      "title": "Forskare i evolutionsbiologi",
+      "institution": "Lund University",
+      "location": "Lund",
+      "country": "sweden",
+      "inst_type": "university",
+      "url": "https://lu.varbi.com/en/what:job/jobID:964025/",
+      "deadline": "Thu, 03 Sep 2026 00:00:00 +0200",
+      "type": "unknown",
+      "description": "Ämnesbeskrivning Om forskargruppen: Forskningsverksamheten bedrivs vid Avdelningen för biodiversitet och evolution vid Biologiska institutionen, Lunds universitet. För mer information, se https://portal.research.lu.se/sv/persons/hwei-yen-chen/. Vi arbetar aktivt för att upprätthålla en arbetsmiljö präglad av ömsesidig respekt och hänsyn. Vi strävar efter att erbjuda en stimulerande arbetsplats med goda möjligheter till professionell utveckling. Vi arbetar kontinuerligt för att skapa förutsättningar som främjar arbetstillfredsställelse och aktivt deltagande. Vi lägger stor vikt vid såväl fysisk säkerhet som en god psykosocial arbetsmiljö. Projektbeskrivning Projektet syftar till att undersöka",
+      "source": "lu.se",
+      "aggregator": false,
+      "stats_highlight": false,
+      "relevant": true,
+      "relevance_score": 1,
+      "fetched_at": "2026-09-03T10:47:17.598366+00:00"
     }
   ]
 }
