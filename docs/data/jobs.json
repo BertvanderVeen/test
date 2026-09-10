@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-09-09T10:50:22.740740+00:00",
+  "last_updated": "2026-09-10T10:44:13.551052+00:00",
   "stats": {
-    "total": 4,
+    "total": 3,
     "permanent": 0,
     "postdoc": 1
   },
@@ -22,25 +22,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-09-09T10:51:57.366836+00:00"
-    },
-    {
-      "id": "ad69b7dd6c70ece5",
-      "title": "Doktorand i evolutionär och ekologisk genetik",
-      "institution": "Uppsala University",
-      "location": "Uppsala",
-      "country": "sweden",
-      "inst_type": "university",
-      "url": "https://uu.varbi.com/en/what:job/jobID:967249/",
-      "deadline": "Wed, 09 Sep 2026 00:00:00 +0200",
-      "type": "unknown",
-      "description": "Vill du bedriva banbrytande forskning i en framstående miljö inom evolutionsbiologi vid Sveriges största fakultet för naturvetenskap och teknik? Institutionen för ekologi och genetik vid Uppsala universitet bedriver världsledande forskning inom biologi, från molekyler till ekosystem och globala biodiversitetsmönster. Vi söker nu en doktorand som vill utveckla sin forskarkarriär tillsammans med oss. Institutionen för ekologi och genetik (IEG) vid Evolutionsbiologiskt centrum (EBC) är en internationell miljö där våra medarbetare bedriver forskning för att förstå ekologiska och evolutionära processer på alla nivåer av biologisk organisation. IEG erbjuder tillgång till avancerade nationella och ",
-      "source": "uu.se",
-      "aggregator": false,
-      "stats_highlight": false,
-      "relevant": true,
-      "relevance_score": 2,
-      "fetched_at": "2026-09-09T10:52:18.530194+00:00"
+      "fetched_at": "2026-09-10T10:45:49.759762+00:00"
     },
     {
       "id": "44c63a9b25e0fb8e",
@@ -58,7 +40,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-09-09T10:51:23.595215+00:00"
+      "fetched_at": "2026-09-10T10:45:15.272138+00:00"
     },
     {
       "id": "1e4d832094c6184f",
@@ -76,7 +58,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-09-09T10:51:57.366922+00:00"
+      "fetched_at": "2026-09-10T10:45:49.759820+00:00"
     }
   ]
 }
