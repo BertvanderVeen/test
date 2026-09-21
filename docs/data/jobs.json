@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-09-20T10:43:46.172486+00:00",
+  "last_updated": "2026-09-21T12:07:41.756553+00:00",
   "stats": {
-    "total": 3,
+    "total": 1,
     "permanent": 0,
     "postdoc": 1
   },
@@ -22,43 +22,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-09-20T10:45:57.594993+00:00"
-    },
-    {
-      "id": "44c63a9b25e0fb8e",
-      "title": "1109-/1110 Forsker innen kyst-/marinøkologi",
-      "institution": "",
-      "location": "Norway",
-      "country": "norway",
-      "inst_type": "institute",
-      "url": "https://www.jobbnorge.no/ledige-stillinger/stilling/307845",
-      "deadline": null,
-      "type": "unknown",
-      "description": "Havforskningsinstituttet 1109-/1110 Forsker innen kyst-/marinøkologi Havforskningsinstituttet har ledig en fast forskerstilling i Faggruppe bunnsamfunn med arbeidssted Flødevigen med ansvar for ... His Heltid 20.09.2026",
-      "source": "jobbnorge.no",
-      "aggregator": false,
-      "stats_highlight": false,
-      "relevant": true,
-      "relevance_score": 1,
-      "fetched_at": "2026-09-20T10:45:20.989787+00:00"
-    },
-    {
-      "id": "1e4d832094c6184f",
-      "title": "Landbruksteknolog",
-      "institution": "INN University",
-      "location": "Innlandet",
-      "country": "norway",
-      "inst_type": "university",
-      "url": "https://www.jobbnorge.no/en/available-jobs/job/301272/landbruksteknolog",
-      "deadline": null,
-      "type": "unknown",
-      "description": "Landbruksteknolog Landbruksteknolog - Fakultet for anvendt økologi, landbruksfag og bioteknologi",
-      "source": "inn.no",
-      "aggregator": false,
-      "stats_highlight": false,
-      "relevant": true,
-      "relevance_score": 1,
-      "fetched_at": "2026-09-20T10:45:57.595075+00:00"
+      "fetched_at": "2026-09-21T12:09:52.773468+00:00"
     }
   ]
 }
