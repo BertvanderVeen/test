@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-09-22T11:02:41.286957+00:00",
+  "last_updated": "2026-09-23T10:52:14.407727+00:00",
   "stats": {
-    "total": 4,
+    "total": 2,
     "permanent": 0,
-    "postdoc": 4
+    "postdoc": 2
   },
   "jobs": [
     {
@@ -22,7 +22,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-09-22T11:04:45.901412+00:00"
+      "fetched_at": "2026-09-23T10:54:25.976088+00:00"
     },
     {
       "id": "748e5cc1fe9d832e",
@@ -40,43 +40,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-09-22T11:04:45.901550+00:00"
-    },
-    {
-      "id": "88822a6f164bb44d",
-      "title": "Doktorand i Våtmarksekologi",
-      "institution": "Stockholm University",
-      "location": "Stockholm",
-      "country": "sweden",
-      "inst_type": "university",
-      "url": "https://su.varbi.com/en/what:job/jobID:969795/",
-      "deadline": "Tue, 22 Sep 2026 00:00:00 +0200",
-      "type": "postdoc",
-      "description": "Institutionen för ekologi, miljö och botanik (DEEP) bedriver forskning och utbildning vid Arrheniuslaboratorierna på campus Frescati. Vi är cirka 100 medarbetare, inklusive doktorander och postdoktorer, fördelade på 25 forskargrupper. Mer information om oss finns på: Institutionen för ekologi, miljö och botanik Forskarutbildningsämne Ekologi och Evolution Avhandlingsarbetet kommer att bedrivas inom ramen för det tvärvetenskapliga projektet ’BALANS i Våtmarker: Balanserade åtgärder för lägre kolläckage och naturvård samtidigt i våtmarker’, som är finansierat av Formas. I projektgruppen ingår forskare inom ekologi, hydrologi och biogeokemi. Forskningsprojektets syfte är att studera hur olika m",
-      "source": "su.se",
-      "aggregator": false,
-      "stats_highlight": false,
-      "relevant": true,
-      "relevance_score": 1,
-      "fetched_at": "2026-09-22T11:05:06.682032+00:00"
-    },
-    {
-      "id": "67d4ff5b35ab0fef",
-      "title": "Doktorand i ekologi och evolution",
-      "institution": "Stockholm University",
-      "location": "Stockholm",
-      "country": "sweden",
-      "inst_type": "university",
-      "url": "https://su.varbi.com/en/what:job/jobID:966879/",
-      "deadline": "Tue, 22 Sep 2026 00:00:00 +0200",
-      "type": "postdoc",
-      "description": "Institutionen för ekologi, miljö och botanik (DEEP) bedriver forskning och utbildning vid Arrheniuslaboratorierna på campus Frescati. Vi är cirka 100 medarbetare, inklusive doktorander och postdoktorer, fördelade på 25 forskargrupper. Mer information om oss finns på: Institutionen för ekologi, miljö och botanik. Projektbeskrivning Institutionen för ekologi, miljö och botanik söker en doktorand till ett forskningsprojekt som syftar till att belysa evolutionära drivkrafter för och genomiska följder av pollenevolution i samband med skiften i pollinationssätt. Avhandlingsarbetet kommer att bedrivas inom ramen för detta projekt, med fokus på analyser av selektion på pollen i samband med skiften f",
-      "source": "su.se",
-      "aggregator": false,
-      "stats_highlight": false,
-      "relevant": true,
-      "relevance_score": 1,
-      "fetched_at": "2026-09-22T11:05:06.682261+00:00"
+      "fetched_at": "2026-09-23T10:54:25.976246+00:00"
     }
   ]
 }
