@@ -1,11 +1,29 @@
 {
-  "last_updated": "2026-09-24T11:12:24.028023+00:00",
+  "last_updated": "2026-09-25T11:16:41.339347+00:00",
   "stats": {
-    "total": 2,
+    "total": 6,
     "permanent": 0,
-    "postdoc": 2
+    "postdoc": 3
   },
   "jobs": [
+    {
+      "id": "d044d13910880727",
+      "title": "Postdoc in Statistical Genetics - Casale Group",
+      "institution": "",
+      "location": "Norway",
+      "country": "norway",
+      "inst_type": "institute",
+      "url": "https://www.nature.com/naturecareers/job/12864992/postdoc-in-statistical-genetics-casale-group/?LinkSource=PremiumListing",
+      "deadline": null,
+      "type": "postdoc",
+      "description": "Postdoc in Statistical Genetics - Casale Group Milan (IT) Up to € 43.000 depending on the candidate's seniority Human Technopole Join Human Technopole in Milan as a Postdoc in Statistical Genetics, combining human genetics, AI and multimodal data to uncover disease mechanisms.",
+      "source": "nature.com/naturecareers",
+      "aggregator": false,
+      "stats_highlight": true,
+      "relevant": true,
+      "relevance_score": 5,
+      "fetched_at": "2026-09-25T11:18:37.899246+00:00"
+    },
     {
       "id": "5b5fc238d20d7b49",
       "title": "Norwegianversion of this page",
@@ -22,7 +40,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-09-24T11:14:00.013686+00:00"
+      "fetched_at": "2026-09-25T11:18:20.928957+00:00"
     },
     {
       "id": "748e5cc1fe9d832e",
@@ -40,7 +58,61 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-09-24T11:14:00.013816+00:00"
+      "fetched_at": "2026-09-25T11:18:20.929063+00:00"
+    },
+    {
+      "id": "6f8e6934e02c95a4",
+      "title": "Staff scientist",
+      "institution": "Umeå University",
+      "location": "Umeå",
+      "country": "sweden",
+      "inst_type": "university",
+      "url": "https://umu.varbi.com/en/what:job/jobID:970310/",
+      "deadline": "Fri, 25 Sep 2026 00:00:00 +0200",
+      "type": "unknown",
+      "description": "Staff scientist Umeå Plant Science Centre (UPSC) är en av Europas starkaste forskningsmiljöer för växtgrundforskning inbegripande forskning om växternas ekologi, genetik, cellbiologi, molekylärbiologi och fysiologi (se www.upsc.se). Till institutionen för fysiologisk botanik, som är en del av Umeå Plant Science Center, söker vi nu en staff scientist. Anställningen är tidsbegränsad i 12 månader med tillträde 19 november 2026 eller enligt överenskommelse. Projektbeskrivning Projektet syftar till att modellera interaktioner mellan olika vattenlevande organismer i en kontrollerad odlingsmiljö, ofta kallad integrerad multitrofisk odling. Vi kommer att utvärdera vilken betydelse kretslopp- och ene",
+      "source": "umu.se",
+      "aggregator": false,
+      "stats_highlight": false,
+      "relevant": true,
+      "relevance_score": 1,
+      "fetched_at": "2026-09-25T11:18:45.349789+00:00"
+    },
+    {
+      "id": "595ee0b85f9c8af7",
+      "title": "Projektassistent vid Miljö- och geovetenskapliga institutionen",
+      "institution": "Lund University",
+      "location": "Lund",
+      "country": "sweden",
+      "inst_type": "university",
+      "url": "https://lu.varbi.com/en/what:job/jobID:969412/",
+      "deadline": "Fri, 25 Sep 2026 00:00:00 +0200",
+      "type": "unknown",
+      "description": "Arbetsuppgifter Skogar skiljer sig avsevärt åt vad gäller artsammansättning, struktur och ekologisk funktion. Trädslagsdiversitet påverkar biologisk mångfald, ekosystemtjänster och motståndskraft mot miljöförändringar och störningar samt bidrar till naturbaserade lösningar. Projektassistentens arbete kommer huvudsakligen att omfatta förberedelse och integrering av stora geospatiala datamängder, anpassning och tillämpning av maskininlärningsmodeller under olika skogs- och miljöförhållanden samt utvärdering av modellernas prestanda med hjälp av skogsinventeringsdata och andra referensdata. Arbetet kommer även att omfatta framställning av nationella kartor över trädslag och trädslagsammansättni",
+      "source": "lu.se",
+      "aggregator": false,
+      "stats_highlight": false,
+      "relevant": true,
+      "relevance_score": 1,
+      "fetched_at": "2026-09-25T11:18:48.569205+00:00"
+    },
+    {
+      "id": "4243b31178915b59",
+      "title": "Projektassistent inom insektstaxonomi vid Miljö- och geovetenskapliga institutionen",
+      "institution": "Lund University",
+      "location": "Lund",
+      "country": "sweden",
+      "inst_type": "university",
+      "url": "https://lu.varbi.com/en/what:job/jobID:972098/",
+      "deadline": "Fri, 25 Sep 2026 00:00:00 +0200",
+      "type": "unknown",
+      "description": "Arbetsuppgifter Arbetsuppgifterna består huvudsakligen av att sortera och taxonomiskt identifiera artropoder från insamlade prover. Arbetet omfattar artbestämning av jordlöpare, och i viss omfattning bin, samt sortering och identifiering av spindlar och blomflugor till respektive taxonomisk grupp. I arbetet ingår arbete med stereomikroskop och taxonomiska bestämningsnycklar samt registrering av resultaten i excel eller liknande. Proverna har samlats in från jordbruksfält och naturliga habitat i Skåne inom ramen för ett forskningsprojekt om agroekologi. Krav - högskoleutbildning med inriktning biologi, miljö eller motsvarande - Erfarenhet av att sortera och taxonomiskt identifiera insekter el",
+      "source": "lu.se",
+      "aggregator": false,
+      "stats_highlight": false,
+      "relevant": true,
+      "relevance_score": 1,
+      "fetched_at": "2026-09-25T11:18:48.569329+00:00"
     }
   ]
 }
