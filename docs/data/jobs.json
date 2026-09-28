@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-09-27T11:30:02.157814+00:00",
+  "last_updated": "2026-09-28T13:03:33.823797+00:00",
   "stats": {
-    "total": 3,
+    "total": 1,
     "permanent": 0,
-    "postdoc": 3
+    "postdoc": 1
   },
   "jobs": [
     {
@@ -22,43 +22,7 @@
       "stats_highlight": true,
       "relevant": true,
       "relevance_score": 5,
-      "fetched_at": "2026-09-27T11:31:56.884067+00:00"
-    },
-    {
-      "id": "5b5fc238d20d7b49",
-      "title": "Norwegianversion of this page",
-      "institution": "INN University",
-      "location": "Innlandet",
-      "country": "norway",
-      "inst_type": "university",
-      "url": "https://www.inn.no/om-universitetet/jobbe-hos-oss/ledige-stillinger/index.html",
-      "deadline": null,
-      "type": "postdoc",
-      "description": "Norwegian version of this page Vacant positions INN University delivers knowledge, innovation, and development in close collaboration with working life and society in Innlandet County. Would you like to work with us? See all our vacancies here or check them via the job applicant portal Jobb Norge. 3 year postdoc in embryology with emphasis on molecular biology/bioinformatics and microscopy 3 year postdoc in embryology with emphasis on molecular biology/bioinformatics and microscopy - Fakultet for anvendt økologi, landbruksfag og bioteknologi Instituttleder ved institutt for organisasjon, ledelse og innovasjon Instituttleder ved institutt for organisasjon, ledelse og innovasjon - Handelshøgsk",
-      "source": "inn.no",
-      "aggregator": false,
-      "stats_highlight": false,
-      "relevant": true,
-      "relevance_score": 1,
-      "fetched_at": "2026-09-27T11:31:39.197599+00:00"
-    },
-    {
-      "id": "748e5cc1fe9d832e",
-      "title": "3 year postdoc in embryology with emphasis on molecular biology/bioinformatics and microscopy",
-      "institution": "INN University",
-      "location": "Innlandet",
-      "country": "norway",
-      "inst_type": "university",
-      "url": "https://www.jobbnorge.no/en/available-jobs/job/307118/3-year-postdoc-in-embryology-with-emphasis-on-molecular-biology-bioinformatics-and-microscopy",
-      "deadline": null,
-      "type": "postdoc",
-      "description": "3 year postdoc in embryology with emphasis on molecular biology/bioinformatics and microscopy 3 year postdoc in embryology with emphasis on molecular biology/bioinformatics and microscopy - Fakultet for anvendt økologi, landbruksfag og bioteknologi",
-      "source": "inn.no",
-      "aggregator": false,
-      "stats_highlight": false,
-      "relevant": true,
-      "relevance_score": 1,
-      "fetched_at": "2026-09-27T11:31:39.197741+00:00"
+      "fetched_at": "2026-09-28T13:05:29.869714+00:00"
     }
   ]
 }
