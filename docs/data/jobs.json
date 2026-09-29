@@ -1,28 +1,28 @@
 {
-  "last_updated": "2026-09-28T13:03:33.823797+00:00",
+  "last_updated": "2026-09-29T12:13:32.544501+00:00",
   "stats": {
     "total": 1,
     "permanent": 0,
-    "postdoc": 1
+    "postdoc": 0
   },
   "jobs": [
     {
-      "id": "d044d13910880727",
-      "title": "Postdoc in Statistical Genetics - Casale Group",
-      "institution": "",
-      "location": "Norway",
-      "country": "norway",
-      "inst_type": "institute",
-      "url": "https://www.nature.com/naturecareers/job/12864992/postdoc-in-statistical-genetics-casale-group/?LinkSource=PremiumListing",
-      "deadline": null,
-      "type": "postdoc",
-      "description": "Postdoc in Statistical Genetics - Casale Group Milan (IT) Up to € 43.000 depending on the candidate's seniority Human Technopole Join Human Technopole in Milan as a Postdoc in Statistical Genetics, combining human genetics, AI and multimodal data to uncover disease mechanisms.",
-      "source": "nature.com/naturecareers",
+      "id": "2662e572f1af5332",
+      "title": "Kommunikatör till Fairtrans - forskningsprogram om klimatfrågor",
+      "institution": "Stockholm University",
+      "location": "Stockholm",
+      "country": "sweden",
+      "inst_type": "university",
+      "url": "https://su.varbi.com/en/what:job/jobID:973536/",
+      "deadline": "Tue, 29 Sep 2026 00:00:00 +0200",
+      "type": "unknown",
+      "description": "Stockholms Resilienscentrum (SRC) är ett forskningscenter för resiliens och hållbar utveckling vid Stockholms universitet. Centret främjar den vetenskapliga förståelsen för komplexa, dynamiska samspel mellan människa och natur i biosfären; utbildar nästa generation av forskare och ledare inom hållbar utveckling; och samarbetar med förändringsaktörer som delar vår vision. Centret är ett gemensamt initiativ från Stockholms universitet och Beijerinstitutet för ekologisk ekonomi vid Kungliga Vetenskapsakademin. Sammantaget har SRC cirka 165 medarbetare. Mer information om oss finns på: Stockholms Resilienscentrum (SRC). Vill du bidra med din kommunikationsexpertis för att öka kunskapen om att på",
+      "source": "su.se",
       "aggregator": false,
-      "stats_highlight": true,
+      "stats_highlight": false,
       "relevant": true,
-      "relevance_score": 5,
-      "fetched_at": "2026-09-28T13:05:29.869714+00:00"
+      "relevance_score": 1,
+      "fetched_at": "2026-09-29T12:15:36.755172+00:00"
     }
   ]
 }
