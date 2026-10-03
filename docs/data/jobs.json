@@ -1,29 +1,11 @@
 {
-  "last_updated": "2026-10-02T11:57:59.890729+00:00",
+  "last_updated": "2026-10-03T11:11:30.416441+00:00",
   "stats": {
-    "total": 4,
+    "total": 2,
     "permanent": 0,
-    "postdoc": 1
+    "postdoc": 0
   },
   "jobs": [
-    {
-      "id": "c8989bdb9fb04ddb",
-      "title": "Norwegianversion of this page",
-      "institution": "University of Oslo",
-      "location": "Oslo",
-      "country": "norway",
-      "inst_type": "university",
-      "url": "https://www.uio.no/om/ledige-stillinger/sist-utlyste.html",
-      "deadline": "October 18, 2026",
-      "type": "postdoc",
-      "description": "Norwegian version of this page Recently announced vacancies Part-time job as Biodiversity Coordinator for the Green Office Oct. 2, 2026 Department: Senter for global bærekraft Languages: English Deadline: Sunday, October 18, 2026 Green Office - Project Coordinator Oct. 2, 2026 Department: Senter for global bærekraft Languages: English Deadline: Sunday, October 18, 2026 Postdoctoral Research Fellow in Stochastic Analysis and Computational Methods Oct. 1, 2026 Department: Department of Mathematics Faculty: The Faculty of Mathematics and Natural Sciences Languages: English Deadline: Thursday, October 22, 2026 Postdoctoral Research Fellow at the interaction between information systems and machin",
-      "source": "uio.no",
-      "aggregator": false,
-      "stats_highlight": false,
-      "relevant": true,
-      "relevance_score": 1,
-      "fetched_at": "2026-10-02T11:59:20.821010+00:00"
-    },
     {
       "id": "1cf2634cdb701271",
       "title": "Part-time job as Biodiversity Coordinator for the Green Office",
@@ -40,7 +22,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-10-02T11:59:00.343845+00:00"
+      "fetched_at": "2026-10-03T11:12:31.046397+00:00"
     },
     {
       "id": "44da0e0438275588",
@@ -58,25 +40,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-10-02T11:59:20.821143+00:00"
-    },
-    {
-      "id": "b0488624e838ef53",
-      "title": "Staff scientist",
-      "institution": "Umeå University",
-      "location": "Umeå",
-      "country": "sweden",
-      "inst_type": "university",
-      "url": "https://umu.varbi.com/en/what:job/jobID:974202/",
-      "deadline": "Fri, 02 Oct 2026 00:00:00 +0200",
-      "type": "unknown",
-      "description": "Staff scientist – Brillouin-mikroskopi av växtcellväggar Umeå Plant Science Centre (UPSC) är en av Europas starkaste forskningsmiljöer för växtgrundforskning inbegripande forskning om växternas ekologi, genetik, cellbiologi, molekylärbiologi och fysiologi (se www.upsc.se). Till institutionen för fysiologisk botanik, som är en del av Umeå Plant Science Center, söker vi nu en staff scientist inom Brillouin-mikroskopi. Anställningen är tidsbegränsad i 12 månader med tillträde 13 november 2026 eller enligt överenskommelse. Projektbeskrivning 4DWalls-projektet undersöker hur växande växtceller etablerar och svarar på definierade tillstånd i cellväggen på korta tidsskalor, och hur dessa tillstånd ",
-      "source": "umu.se",
-      "aggregator": false,
-      "stats_highlight": false,
-      "relevant": true,
-      "relevance_score": 1,
-      "fetched_at": "2026-10-02T12:00:01.812839+00:00"
+      "fetched_at": "2026-10-03T11:12:52.790644+00:00"
     }
   ]
 }
