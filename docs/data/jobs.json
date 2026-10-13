@@ -1,29 +1,11 @@
 {
-  "last_updated": "2026-10-12T14:33:55.095504+00:00",
+  "last_updated": "2026-10-13T13:39:38.471986+00:00",
   "stats": {
     "total": 3,
     "permanent": 0,
-    "postdoc": 1
+    "postdoc": 0
   },
   "jobs": [
-    {
-      "id": "133ed95f7792d2bd",
-      "title": "Forskare i zoologisk beräkningspaleogenomik",
-      "institution": "Stockholm University",
-      "location": "Stockholm",
-      "country": "sweden",
-      "inst_type": "university",
-      "url": "https://su.varbi.com/en/what:job/jobID:977923/",
-      "deadline": "Mon, 12 Oct 2026 00:00:00 +0200",
-      "type": "postdoc",
-      "description": "Zoologiska institutionen är en av institutionerna vid Naturvetenskapliga fakulteten och har cirka 50 anställda och 40 doktorander. De huvudsakliga forskningsområdena är ekologi, etologi, funktionell morfologi, systematik och evolution, samt populationsgenetik. Mer information om oss finns på: Zoologiska institutionen. Centrum för paleogenetik (CPG) är ett forskningscentrum med världsledande faciliteter och expertis för att generera och analysera förhistoriska DNA-data. CPG består av sju forskningsgrupper och c. 45 doktorander/postdoktorer/anställda, och finansieras gemensamt av Naturhistoriska riksmuseet samt institutioner inom Geovetenskaper, Zoologi och Arkeologi vid Stockholms universitet",
-      "source": "su.se",
-      "aggregator": false,
-      "stats_highlight": false,
-      "relevant": true,
-      "relevance_score": 1,
-      "fetched_at": "2026-10-12T14:35:58.836782+00:00"
-    },
     {
       "id": "1cf2634cdb701271",
       "title": "Part-time job as Biodiversity Coordinator for the Green Office",
@@ -40,7 +22,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-10-12T14:34:56.297698+00:00"
+      "fetched_at": "2026-10-13T13:40:41.217981+00:00"
     },
     {
       "id": "44da0e0438275588",
@@ -58,7 +40,25 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-10-12T14:35:17.978930+00:00"
+      "fetched_at": "2026-10-13T13:41:02.997302+00:00"
+    },
+    {
+      "id": "640f146920f65155",
+      "title": "Doktorand i vetenskap om hållbar utveckling",
+      "institution": "Stockholm University",
+      "location": "Stockholm",
+      "country": "sweden",
+      "inst_type": "university",
+      "url": "https://su.varbi.com/en/what:job/jobID:966197/",
+      "deadline": "Tue, 13 Oct 2026 00:00:00 +0200",
+      "type": "unknown",
+      "description": "Stockholms Resilienscentrum (SRC) är ett forskningscenter för resiliens och hållbar utveckling vid Stockholms universitet. Centret främjar den vetenskapliga förståelsen för komplexa, dynamiska samspel mellan människa och natur i biosfären; utbildar nästa generation av forskare och ledare inom hållbar utveckling; och samarbetar med förändringsaktörer som delar vår vision. Centret är ett gemensamt initiativ från Stockholms universitet och Beijerinstitutet för ekologisk ekonomi vid Kungliga Vetenskapsakademin. Sammantaget har SRC cirka 165 medarbetare. Mer information om oss finns på: Stockholms Resilienscentrum (SRC). SRC strävar mot att främja nya generationer av forskare och akademiska ledar",
+      "source": "su.se",
+      "aggregator": false,
+      "stats_highlight": false,
+      "relevant": true,
+      "relevance_score": 1,
+      "fetched_at": "2026-10-13T13:41:44.509593+00:00"
     }
   ]
 }
