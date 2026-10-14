@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-10-13T13:39:38.471986+00:00",
+  "last_updated": "2026-10-14T11:18:10.620164+00:00",
   "stats": {
-    "total": 3,
+    "total": 2,
     "permanent": 0,
     "postdoc": 0
   },
@@ -22,7 +22,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-10-13T13:40:41.217981+00:00"
+      "fetched_at": "2026-10-14T11:19:09.909164+00:00"
     },
     {
       "id": "44da0e0438275588",
@@ -40,25 +40,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-10-13T13:41:02.997302+00:00"
-    },
-    {
-      "id": "640f146920f65155",
-      "title": "Doktorand i vetenskap om hållbar utveckling",
-      "institution": "Stockholm University",
-      "location": "Stockholm",
-      "country": "sweden",
-      "inst_type": "university",
-      "url": "https://su.varbi.com/en/what:job/jobID:966197/",
-      "deadline": "Tue, 13 Oct 2026 00:00:00 +0200",
-      "type": "unknown",
-      "description": "Stockholms Resilienscentrum (SRC) är ett forskningscenter för resiliens och hållbar utveckling vid Stockholms universitet. Centret främjar den vetenskapliga förståelsen för komplexa, dynamiska samspel mellan människa och natur i biosfären; utbildar nästa generation av forskare och ledare inom hållbar utveckling; och samarbetar med förändringsaktörer som delar vår vision. Centret är ett gemensamt initiativ från Stockholms universitet och Beijerinstitutet för ekologisk ekonomi vid Kungliga Vetenskapsakademin. Sammantaget har SRC cirka 165 medarbetare. Mer information om oss finns på: Stockholms Resilienscentrum (SRC). SRC strävar mot att främja nya generationer av forskare och akademiska ledar",
-      "source": "su.se",
-      "aggregator": false,
-      "stats_highlight": false,
-      "relevant": true,
-      "relevance_score": 1,
-      "fetched_at": "2026-10-13T13:41:44.509593+00:00"
+      "fetched_at": "2026-10-14T11:19:31.005403+00:00"
     }
   ]
 }
