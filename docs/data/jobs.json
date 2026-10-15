@@ -1,11 +1,47 @@
 {
-  "last_updated": "2026-10-14T11:18:10.620164+00:00",
+  "last_updated": "2026-10-15T10:56:12.651194+00:00",
   "stats": {
-    "total": 2,
+    "total": 4,
     "permanent": 0,
-    "postdoc": 0
+    "postdoc": 2
   },
   "jobs": [
+    {
+      "id": "65ed727cad55373b",
+      "title": "Postdoktor i arktiske akvatisk økologi og klimaendringer",
+      "institution": "UiT",
+      "location": "Norway",
+      "country": "norway",
+      "inst_type": "university",
+      "url": "https://www.jobbnorge.no/ledige-stillinger/stilling/309396",
+      "deadline": null,
+      "type": "postdoc",
+      "description": "UiT Norges arktiske universitet Postdoktor i arktiske akvatisk økologi og klimaendringer Fakultet for Humaniora, Samfunnsvitenskap og Lærerutdanning ... Tromsø Heltid 15.11.2026",
+      "source": "jobbnorge.no",
+      "aggregator": false,
+      "stats_highlight": false,
+      "relevant": true,
+      "relevance_score": 1,
+      "fetched_at": "2026-10-15T10:56:17.373088+00:00"
+    },
+    {
+      "id": "d9374463ea6c80cd",
+      "title": "Postdoktor i klimaendringer og sosioøkologisk samspill i arktiske lakseelver",
+      "institution": "UiT",
+      "location": "Norway",
+      "country": "norway",
+      "inst_type": "university",
+      "url": "https://www.jobbnorge.no/ledige-stillinger/stilling/309415",
+      "deadline": null,
+      "type": "postdoc",
+      "description": "UiT Norges arktiske universitet Postdoktor i klimaendringer og sosioøkologisk samspill i arktiske lakseelver Fakultet for humaniora, samfunnsvitenskap og lærerutdanning ... Tromsø Heltid 15.11.2026",
+      "source": "jobbnorge.no",
+      "aggregator": false,
+      "stats_highlight": false,
+      "relevant": true,
+      "relevance_score": 1,
+      "fetched_at": "2026-10-15T10:56:36.528115+00:00"
+    },
     {
       "id": "1cf2634cdb701271",
       "title": "Part-time job as Biodiversity Coordinator for the Green Office",
@@ -22,7 +58,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-10-14T11:19:09.909164+00:00"
+      "fetched_at": "2026-10-15T10:57:12.830030+00:00"
     },
     {
       "id": "44da0e0438275588",
@@ -40,7 +76,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-10-14T11:19:31.005403+00:00"
+      "fetched_at": "2026-10-15T10:57:33.520424+00:00"
     }
   ]
 }
