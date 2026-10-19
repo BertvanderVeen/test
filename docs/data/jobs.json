@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-10-18T10:29:06.492154+00:00",
+  "last_updated": "2026-10-19T12:17:06.982818+00:00",
   "stats": {
-    "total": 4,
+    "total": 2,
     "permanent": 0,
     "postdoc": 2
   },
@@ -22,7 +22,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-10-18T10:29:10.898175+00:00"
+      "fetched_at": "2026-10-19T12:17:10.803304+00:00"
     },
     {
       "id": "d9374463ea6c80cd",
@@ -40,43 +40,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-10-18T10:29:29.953515+00:00"
-    },
-    {
-      "id": "1cf2634cdb701271",
-      "title": "Part-time job as Biodiversity Coordinator for the Green Office",
-      "institution": "Universitetet",
-      "location": "Norway",
-      "country": "norway",
-      "inst_type": "university",
-      "url": "https://www.jobbnorge.no/ledige-stillinger/stilling/309368",
-      "deadline": null,
-      "type": "unknown",
-      "description": "Universitetet i Oslo Part-time job as Biodiversity Coordinator for the Green Office Are you passionate about biodiversity, sustainability, and student engagement? Be a part of sustainability projects at the Green Office ... Oslo Deltid 18.10.2026",
-      "source": "jobbnorge.no",
-      "aggregator": false,
-      "stats_highlight": false,
-      "relevant": true,
-      "relevance_score": 1,
-      "fetched_at": "2026-10-18T10:30:06.197543+00:00"
-    },
-    {
-      "id": "44da0e0438275588",
-      "title": "Part-time job as Biodiversity Coordinator for the Green Office",
-      "institution": "University of Oslo",
-      "location": "Oslo",
-      "country": "norway",
-      "inst_type": "university",
-      "url": "https://www.jobbnorge.no/en/available-jobs/job/309368/part-time-job-as-biodiversity-coordinator-for-the-green-office",
-      "deadline": "October 18, 2026",
-      "type": "unknown",
-      "description": "Part-time job as Biodiversity Coordinator for the Green Office Oct. 2, 2026 Department: Senter for global bærekraft Languages: English Deadline: Sunday, October 18, 2026",
-      "source": "uio.no",
-      "aggregator": false,
-      "stats_highlight": false,
-      "relevant": true,
-      "relevance_score": 1,
-      "fetched_at": "2026-10-18T10:30:27.451023+00:00"
+      "fetched_at": "2026-10-19T12:17:29.635275+00:00"
     }
   ]
 }
