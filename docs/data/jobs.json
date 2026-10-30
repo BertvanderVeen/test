@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-10-29T12:22:33.292725+00:00",
+  "last_updated": "2026-10-30T12:13:24.560383+00:00",
   "stats": {
-    "total": 2,
+    "total": 3,
     "permanent": 0,
-    "postdoc": 2
+    "postdoc": 3
   },
   "jobs": [
     {
@@ -22,7 +22,25 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-10-29T12:22:37.990206+00:00"
+      "fetched_at": "2026-10-30T12:13:28.426309+00:00"
+    },
+    {
+      "id": "2a74198a955fbeac",
+      "title": "1352 Postdoctoral position in marine ecological modelling",
+      "institution": "Institute",
+      "location": "Norway",
+      "country": "norway",
+      "inst_type": "institute",
+      "url": "https://www.jobbnorge.no/ledige-stillinger/stilling/311024",
+      "deadline": null,
+      "type": "postdoc",
+      "description": "Havforskningsinstituttet 1352 Postdoctoral position in marine ecological modelling The Institute of Marine Research (IMR) offers a 3-year postdoctoral position as part of the MORSE (“Models supporting practical restoration ... His Heltid 30.11.2026",
+      "source": "jobbnorge.no",
+      "aggregator": false,
+      "stats_highlight": false,
+      "relevant": true,
+      "relevance_score": 1,
+      "fetched_at": "2026-10-30T12:13:47.569548+00:00"
     },
     {
       "id": "d9374463ea6c80cd",
@@ -40,7 +58,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-10-29T12:22:57.503736+00:00"
+      "fetched_at": "2026-10-30T12:13:47.569723+00:00"
     }
   ]
 }
