@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-11-02T14:52:56.972036+00:00",
+  "last_updated": "2026-11-03T13:41:59.666483+00:00",
   "stats": {
-    "total": 3,
+    "total": 4,
     "permanent": 0,
     "postdoc": 3
   },
@@ -22,7 +22,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-02T14:53:03.675678+00:00"
+      "fetched_at": "2026-11-03T13:42:03.709267+00:00"
     },
     {
       "id": "2a74198a955fbeac",
@@ -40,7 +40,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-02T14:53:23.274216+00:00"
+      "fetched_at": "2026-11-03T13:42:22.936359+00:00"
     },
     {
       "id": "d9374463ea6c80cd",
@@ -58,7 +58,25 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-02T14:53:23.274388+00:00"
+      "fetched_at": "2026-11-03T13:42:22.936536+00:00"
+    },
+    {
+      "id": "494f0f1a4940ab44",
+      "title": "Doktorand i biologi (Färgseende hos ryggradslösa djur)",
+      "institution": "Lund University",
+      "location": "Lund",
+      "country": "sweden",
+      "inst_type": "university",
+      "url": "https://lu.varbi.com/en/what:job/jobID:982662/",
+      "deadline": "Tue, 03 Nov 2026 00:00:00 +0100",
+      "type": "unknown",
+      "description": "Beskrivning av verksamheten I din doktorandforskning kommer du att vara en del av Bok-labbet, som använder ett brett spektrum av tekniker för att studera evolutionen och ekologin bakom syn hos olika ryggradslösa djur. Vårt laboratorium är en del av Lund Vision Group (Syngruppen), ett mycket samarbetsinriktat kluster av åtta forskargrupper som är internationellt erkänt som ett av världens ledande centra för jämförande synforskning. Med 35–40 forskare och studenter på olika utbildnings- och karriärnivåer sträcker sig vår synforskning över hela djurriket – från maneter, insekter och kräftdjur till bläckfiskar och ryggradsdjur. Vår specialitet är ögats design och evolution, hur ögon är anpassade",
+      "source": "lu.se",
+      "aggregator": false,
+      "stats_highlight": false,
+      "relevant": true,
+      "relevance_score": 1,
+      "fetched_at": "2026-11-03T13:44:03.145191+00:00"
     }
   ]
 }
