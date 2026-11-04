@@ -1,11 +1,47 @@
 {
-  "last_updated": "2026-11-03T13:41:59.666483+00:00",
+  "last_updated": "2026-11-04T13:51:11.384450+00:00",
   "stats": {
-    "total": 4,
+    "total": 5,
     "permanent": 0,
-    "postdoc": 3
+    "postdoc": 5
   },
   "jobs": [
+    {
+      "id": "c8989bdb9fb04ddb",
+      "title": "Norwegianversion of this page",
+      "institution": "University of Oslo",
+      "location": "Oslo",
+      "country": "norway",
+      "inst_type": "university",
+      "url": "https://www.uio.no/om/ledige-stillinger/sist-utlyste.html",
+      "deadline": "January 11, 2027",
+      "type": "postdoc",
+      "description": "Norwegian version of this page Recently announced vacancies Associate Professor in Political Science - Computational Methods Nov. 3, 2026 Department: The Department of Political Science Faculty: Faculty of Social Sciences Languages: English Deadline: Monday, January 11, 2027 Doctoral Research Fellowship in Multi-Omics at Centre for Precision Psychiatry Nov. 3, 2026 Department: Institute of Clinical Medicine (Klinmed) Faculty: Faculty of Medicine Languages: English Deadline: Wednesday, November 25, 2026 Postdoctoral Research Fellowship in Precision Medicine and Statistical Data Science Nov. 3, 2026 Department: Institute of Clinical Medicine (Klinmed) Faculty: Faculty of Medicine Languages: En",
+      "source": "uio.no",
+      "aggregator": false,
+      "stats_highlight": true,
+      "relevant": true,
+      "relevance_score": 5,
+      "fetched_at": "2026-11-04T13:52:35.841778+00:00"
+    },
+    {
+      "id": "b35c820ea45f2e39",
+      "title": "Postdoctoral Research Fellowship in Precision Medicine and Statistical Data Science",
+      "institution": "University of Oslo",
+      "location": "Oslo",
+      "country": "norway",
+      "inst_type": "university",
+      "url": "https://www.jobbnorge.no/en/available-jobs/job/310466/postdoctoral-research-fellowship-in-precision-medicine-and-statistical-data-science",
+      "deadline": "November 24, 2026",
+      "type": "postdoc",
+      "description": "Postdoctoral Research Fellowship in Precision Medicine and Statistical Data Science Nov. 3, 2026 Department: Institute of Clinical Medicine (Klinmed) Faculty: Faculty of Medicine Languages: English Deadline: Tuesday, November 24, 2026",
+      "source": "uio.no",
+      "aggregator": false,
+      "stats_highlight": true,
+      "relevant": true,
+      "relevance_score": 5,
+      "fetched_at": "2026-11-04T13:52:35.842124+00:00"
+    },
     {
       "id": "65ed727cad55373b",
       "title": "Postdoktor i arktiske akvatisk økologi og klimaendringer",
@@ -22,7 +58,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-03T13:42:03.709267+00:00"
+      "fetched_at": "2026-11-04T13:51:17.295135+00:00"
     },
     {
       "id": "2a74198a955fbeac",
@@ -40,7 +76,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-03T13:42:22.936359+00:00"
+      "fetched_at": "2026-11-04T13:51:36.740636+00:00"
     },
     {
       "id": "d9374463ea6c80cd",
@@ -58,25 +94,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-03T13:42:22.936536+00:00"
-    },
-    {
-      "id": "494f0f1a4940ab44",
-      "title": "Doktorand i biologi (Färgseende hos ryggradslösa djur)",
-      "institution": "Lund University",
-      "location": "Lund",
-      "country": "sweden",
-      "inst_type": "university",
-      "url": "https://lu.varbi.com/en/what:job/jobID:982662/",
-      "deadline": "Tue, 03 Nov 2026 00:00:00 +0100",
-      "type": "unknown",
-      "description": "Beskrivning av verksamheten I din doktorandforskning kommer du att vara en del av Bok-labbet, som använder ett brett spektrum av tekniker för att studera evolutionen och ekologin bakom syn hos olika ryggradslösa djur. Vårt laboratorium är en del av Lund Vision Group (Syngruppen), ett mycket samarbetsinriktat kluster av åtta forskargrupper som är internationellt erkänt som ett av världens ledande centra för jämförande synforskning. Med 35–40 forskare och studenter på olika utbildnings- och karriärnivåer sträcker sig vår synforskning över hela djurriket – från maneter, insekter och kräftdjur till bläckfiskar och ryggradsdjur. Vår specialitet är ögats design och evolution, hur ögon är anpassade",
-      "source": "lu.se",
-      "aggregator": false,
-      "stats_highlight": false,
-      "relevant": true,
-      "relevance_score": 1,
-      "fetched_at": "2026-11-03T13:44:03.145191+00:00"
+      "fetched_at": "2026-11-04T13:51:36.740815+00:00"
     }
   ]
 }
