@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-11-05T14:04:00.579787+00:00",
+  "last_updated": "2026-11-06T13:48:14.119887+00:00",
   "stats": {
-    "total": 5,
+    "total": 7,
     "permanent": 0,
     "postdoc": 5
   },
@@ -14,15 +14,15 @@
       "country": "norway",
       "inst_type": "university",
       "url": "https://www.uio.no/om/ledige-stillinger/sist-utlyste.html",
-      "deadline": "January 11, 2027",
+      "deadline": "November 26, 2026",
       "type": "postdoc",
-      "description": "Norwegian version of this page Recently announced vacancies Associate Professor in Political Science - Computational Methods Nov. 3, 2026 Department: The Department of Political Science Faculty: Faculty of Social Sciences Languages: English Deadline: Monday, January 11, 2027 Doctoral Research Fellowship in Multi-Omics at Centre for Precision Psychiatry Nov. 3, 2026 Department: Institute of Clinical Medicine (Klinmed) Faculty: Faculty of Medicine Languages: English Deadline: Wednesday, November 25, 2026 Postdoctoral Research Fellowship in Precision Medicine and Statistical Data Science Nov. 3, 2026 Department: Institute of Clinical Medicine (Klinmed) Faculty: Faculty of Medicine Languages: En",
+      "description": "Norwegian version of this page Recently announced vacancies Researcher in Biostatistics Nov. 6, 2026 Department: Institute of Basic Medical Sciences Faculty: Faculty of Medicine Languages: English Deadline: Thursday, November 26, 2026 Associate Professor in Political Science - Computational Methods Nov. 3, 2026 Department: The Department of Political Science Faculty: Faculty of Social Sciences Languages: English Deadline: Monday, January 11, 2027 Doctoral Research Fellowship in Multi-Omics at Centre for Precision Psychiatry Nov. 3, 2026 Department: Institute of Clinical Medicine (Klinmed) Faculty: Faculty of Medicine Languages: English Deadline: Wednesday, November 25, 2026 Postdoctoral Rese",
       "source": "uio.no",
       "aggregator": false,
       "stats_highlight": true,
       "relevant": true,
-      "relevance_score": 5,
-      "fetched_at": "2026-11-05T14:05:33.721838+00:00"
+      "relevance_score": 10,
+      "fetched_at": "2026-11-06T13:49:36.165634+00:00"
     },
     {
       "id": "b35c820ea45f2e39",
@@ -40,7 +40,7 @@
       "stats_highlight": true,
       "relevant": true,
       "relevance_score": 5,
-      "fetched_at": "2026-11-05T14:05:33.722204+00:00"
+      "fetched_at": "2026-11-06T13:49:36.165979+00:00"
     },
     {
       "id": "65ed727cad55373b",
@@ -58,7 +58,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-05T14:04:04.456076+00:00"
+      "fetched_at": "2026-11-06T13:48:18.354894+00:00"
     },
     {
       "id": "2a74198a955fbeac",
@@ -76,7 +76,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-05T14:04:23.514518+00:00"
+      "fetched_at": "2026-11-06T13:48:37.773773+00:00"
     },
     {
       "id": "d9374463ea6c80cd",
@@ -94,7 +94,43 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-05T14:04:23.514698+00:00"
+      "fetched_at": "2026-11-06T13:48:37.773914+00:00"
+    },
+    {
+      "id": "4a51ed9a015a0cbe",
+      "title": "Researcher in Biostatistics",
+      "institution": "University of Oslo",
+      "location": "Oslo",
+      "country": "norway",
+      "inst_type": "university",
+      "url": "https://www.jobbnorge.no/en/available-jobs/job/309186/researcher-in-biostatistics",
+      "deadline": "November 26, 2026",
+      "type": "unknown",
+      "description": "Researcher in Biostatistics Nov. 6, 2026 Department: Institute of Basic Medical Sciences Faculty: Faculty of Medicine Languages: English Deadline: Thursday, November 26, 2026",
+      "source": "uio.no",
+      "aggregator": false,
+      "stats_highlight": true,
+      "relevant": true,
+      "relevance_score": 10,
+      "fetched_at": "2026-11-06T13:49:36.165725+00:00"
+    },
+    {
+      "id": "f65233d2d266ad96",
+      "title": "Doktorand i växtdemografi",
+      "institution": "Uppsala University",
+      "location": "Uppsala",
+      "country": "sweden",
+      "inst_type": "university",
+      "url": "https://uu.varbi.com/en/what:job/jobID:985215/",
+      "deadline": "Fri, 06 Nov 2026 00:00:00 +0100",
+      "type": "unknown",
+      "description": "Vill du forska om växters populationsekologi? Vill du bli en del av en framstående akademisk miljö på Uppsala universitets Evolutionsbiologiskt centrum? Vi söker nu en doktorand som vill påbörja sin forskarkarriär tillsammans med oss. Institutionen för ekologi och genetik (IEG) vid Evolutionsbiologiskt centrum (EBC) är en internationell miljö där våra medarbetare bedriver forskning för att förstå ekologiska och evolutionära processer på alla nivåer av biologisk organisation. IEG erbjuder tillgång till avancerade nationella och lokala forskningsinfrastrukturer, inklusive superdatorresurser (NAISS) och de senaste molekylära teknologierna och sekvenseringsplattformarna (SciLifeLab-plattformar).",
+      "source": "uu.se",
+      "aggregator": false,
+      "stats_highlight": false,
+      "relevant": true,
+      "relevance_score": 1,
+      "fetched_at": "2026-11-06T13:50:11.527715+00:00"
     }
   ]
 }
