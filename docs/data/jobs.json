@@ -1,29 +1,11 @@
 {
-  "last_updated": "2026-11-08T12:50:20.550960+00:00",
+  "last_updated": "2026-11-09T15:20:29.661516+00:00",
   "stats": {
-    "total": 6,
+    "total": 5,
     "permanent": 0,
-    "postdoc": 5
+    "postdoc": 4
   },
   "jobs": [
-    {
-      "id": "c8989bdb9fb04ddb",
-      "title": "Norwegianversion of this page",
-      "institution": "University of Oslo",
-      "location": "Oslo",
-      "country": "norway",
-      "inst_type": "university",
-      "url": "https://www.uio.no/om/ledige-stillinger/sist-utlyste.html",
-      "deadline": "November 26, 2026",
-      "type": "postdoc",
-      "description": "Norwegian version of this page Recently announced vacancies Researcher in Biostatistics Nov. 6, 2026 Department: Institute of Basic Medical Sciences Faculty: Faculty of Medicine Languages: English Deadline: Thursday, November 26, 2026 Associate Professor in Political Science - Computational Methods Nov. 3, 2026 Department: The Department of Political Science Faculty: Faculty of Social Sciences Languages: English Deadline: Monday, January 11, 2027 Doctoral Research Fellowship in Multi-Omics at Centre for Precision Psychiatry Nov. 3, 2026 Department: Institute of Clinical Medicine (Klinmed) Faculty: Faculty of Medicine Languages: English Deadline: Wednesday, November 25, 2026 Postdoctoral Rese",
-      "source": "uio.no",
-      "aggregator": false,
-      "stats_highlight": true,
-      "relevant": true,
-      "relevance_score": 10,
-      "fetched_at": "2026-11-08T12:51:43.777301+00:00"
-    },
     {
       "id": "b35c820ea45f2e39",
       "title": "Postdoctoral Research Fellowship in Precision Medicine and Statistical Data Science",
@@ -40,7 +22,7 @@
       "stats_highlight": true,
       "relevant": true,
       "relevance_score": 5,
-      "fetched_at": "2026-11-08T12:51:43.777771+00:00"
+      "fetched_at": "2026-11-09T15:21:50.821581+00:00"
     },
     {
       "id": "65ed727cad55373b",
@@ -58,7 +40,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-08T12:50:25.331069+00:00"
+      "fetched_at": "2026-11-09T15:20:33.572656+00:00"
     },
     {
       "id": "2a74198a955fbeac",
@@ -76,7 +58,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-08T12:50:44.762775+00:00"
+      "fetched_at": "2026-11-09T15:20:52.812683+00:00"
     },
     {
       "id": "d9374463ea6c80cd",
@@ -94,7 +76,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-08T12:50:44.762945+00:00"
+      "fetched_at": "2026-11-09T15:20:52.812796+00:00"
     },
     {
       "id": "4a51ed9a015a0cbe",
@@ -112,7 +94,7 @@
       "stats_highlight": true,
       "relevant": true,
       "relevance_score": 10,
-      "fetched_at": "2026-11-08T12:51:43.777435+00:00"
+      "fetched_at": "2026-11-09T15:21:50.821379+00:00"
     }
   ]
 }
