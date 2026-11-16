@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-11-15T13:29:38.610790+00:00",
+  "last_updated": "2026-11-16T14:56:39.622072+00:00",
   "stats": {
-    "total": 9,
+    "total": 8,
     "permanent": 0,
-    "postdoc": 4
+    "postdoc": 2
   },
   "jobs": [
     {
@@ -22,25 +22,7 @@
       "stats_highlight": true,
       "relevant": true,
       "relevance_score": 5,
-      "fetched_at": "2026-11-15T13:31:12.805970+00:00"
-    },
-    {
-      "id": "65ed727cad55373b",
-      "title": "Postdoktor i arktiske akvatisk økologi og klimaendringer",
-      "institution": "UiT",
-      "location": "Norway",
-      "country": "norway",
-      "inst_type": "university",
-      "url": "https://www.jobbnorge.no/ledige-stillinger/stilling/309396",
-      "deadline": null,
-      "type": "postdoc",
-      "description": "UiT Norges arktiske universitet Postdoktor i arktiske akvatisk økologi og klimaendringer Fakultet for Humaniora, Samfunnsvitenskap og Lærerutdanning ... Tromsø Heltid 15.11.2026",
-      "source": "jobbnorge.no",
-      "aggregator": false,
-      "stats_highlight": false,
-      "relevant": true,
-      "relevance_score": 1,
-      "fetched_at": "2026-11-15T13:29:42.062356+00:00"
+      "fetched_at": "2026-11-16T14:58:36.203079+00:00"
     },
     {
       "id": "2a74198a955fbeac",
@@ -58,25 +40,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-15T13:30:00.676532+00:00"
-    },
-    {
-      "id": "d9374463ea6c80cd",
-      "title": "Postdoktor i klimaendringer og sosioøkologisk samspill i arktiske lakseelver",
-      "institution": "UiT",
-      "location": "Norway",
-      "country": "norway",
-      "inst_type": "university",
-      "url": "https://www.jobbnorge.no/ledige-stillinger/stilling/309415",
-      "deadline": null,
-      "type": "postdoc",
-      "description": "UiT Norges arktiske universitet Postdoktor i klimaendringer og sosioøkologisk samspill i arktiske lakseelver Fakultet for humaniora, samfunnsvitenskap og lærerutdanning ... Tromsø Heltid 15.11.2026",
-      "source": "jobbnorge.no",
-      "aggregator": false,
-      "stats_highlight": false,
-      "relevant": true,
-      "relevance_score": 1,
-      "fetched_at": "2026-11-15T13:30:00.676642+00:00"
+      "fetched_at": "2026-11-16T14:57:23.554083+00:00"
     },
     {
       "id": "4a51ed9a015a0cbe",
@@ -94,7 +58,7 @@
       "stats_highlight": true,
       "relevant": true,
       "relevance_score": 10,
-      "fetched_at": "2026-11-15T13:31:12.805795+00:00"
+      "fetched_at": "2026-11-16T14:58:36.202871+00:00"
     },
     {
       "id": "749a11505e7ccfe3",
@@ -106,13 +70,13 @@
       "url": "https://www.jobbnorge.no/ledige-stillinger/stilling/290423",
       "deadline": null,
       "type": "unknown",
-      "description": "Universitetet i Innlandet Prodekan for utdanning Fakultet for anvendt økologi, landbruksfag og bioteknologi søker prodekan for utdanning. ... Ridabu Heltid 06.12.2026",
+      "description": "Universitetet i Innlandet Prodekan for utdanning Fakultet for anvendt økologi, landbruksfag og bioteknologi søker prodekan for utdanning. ... Hamar Heltid 06.12.2026",
       "source": "jobbnorge.no",
       "aggregator": false,
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-15T13:30:53.620384+00:00"
+      "fetched_at": "2026-11-16T14:58:17.688703+00:00"
     },
     {
       "id": "046daf5b777b2345",
@@ -124,13 +88,13 @@
       "url": "https://www.jobbnorge.no/ledige-stillinger/stilling/290425",
       "deadline": null,
       "type": "unknown",
-      "description": "Universitetet i Innlandet Prodekan for forskning Fakultet for anvendt økologi, landbruksfag og bioteknologi søker prodekan for forskning. ... Ridabu Heltid 06.12.2026",
+      "description": "Universitetet i Innlandet Prodekan for forskning Fakultet for anvendt økologi, landbruksfag og bioteknologi søker prodekan for forskning. ... Hamar Heltid 06.12.2026",
       "source": "jobbnorge.no",
       "aggregator": false,
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-15T13:30:53.620479+00:00"
+      "fetched_at": "2026-11-16T14:58:17.688817+00:00"
     },
     {
       "id": "0b7425006b1c667c",
@@ -148,7 +112,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-15T13:31:26.896565+00:00"
+      "fetched_at": "2026-11-16T14:58:51.013429+00:00"
     },
     {
       "id": "27d818f09c480290",
@@ -166,7 +130,25 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-15T13:31:26.896603+00:00"
+      "fetched_at": "2026-11-16T14:58:51.013479+00:00"
+    },
+    {
+      "id": "977320a1c818cdd6",
+      "title": "Forskare inom biologisk mångfald och hållbarhet vid institutionen för Mgeo",
+      "institution": "Lund University",
+      "location": "Lund",
+      "country": "sweden",
+      "inst_type": "university",
+      "url": "https://lu.varbi.com/en/what:job/jobID:989973/",
+      "deadline": "Mon, 16 Nov 2026 00:00:00 +0100",
+      "type": "unknown",
+      "description": "Arbetsuppgifter Forskaren kommer att koordinera tvärvetenskaplig forskning om bevarande och hållbarhet av biologisk mångfald i jordbruks- och livsmedelssystem. Tjänsten kommer att använda expertis inom ekologi, bedömning av biologisk mångfald, socioekonomisk och beteendemässig forskning, samt tvärvetenskapliga metoder för att utvärdera resultat av biologisk mångfald och informera bevarande, förvaltning och policy. Arbetsuppgifterna kommer att omfatta att utforma och genomföra ekologiska och socioekonomiska studier, samarbeta med jordbrukare, företag, myndigheter och andra samhällsaktörer, samt skriva vetenskapliga publikationer. Krav - Doktorsexamen inom ekologi. - Mycket god förmåga att kom",
+      "source": "lu.se",
+      "aggregator": false,
+      "stats_highlight": false,
+      "relevant": true,
+      "relevance_score": 1,
+      "fetched_at": "2026-11-16T14:59:22.070217+00:00"
     }
   ]
 }
