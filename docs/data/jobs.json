@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-11-16T14:56:39.622072+00:00",
+  "last_updated": "2026-11-17T15:33:44.279235+00:00",
   "stats": {
-    "total": 8,
+    "total": 7,
     "permanent": 0,
     "postdoc": 2
   },
@@ -22,7 +22,7 @@
       "stats_highlight": true,
       "relevant": true,
       "relevance_score": 5,
-      "fetched_at": "2026-11-16T14:58:36.203079+00:00"
+      "fetched_at": "2026-11-17T15:35:34.078566+00:00"
     },
     {
       "id": "2a74198a955fbeac",
@@ -40,7 +40,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-16T14:57:23.554083+00:00"
+      "fetched_at": "2026-11-17T15:34:22.880038+00:00"
     },
     {
       "id": "4a51ed9a015a0cbe",
@@ -58,7 +58,7 @@
       "stats_highlight": true,
       "relevant": true,
       "relevance_score": 10,
-      "fetched_at": "2026-11-16T14:58:36.202871+00:00"
+      "fetched_at": "2026-11-17T15:35:34.078190+00:00"
     },
     {
       "id": "749a11505e7ccfe3",
@@ -76,7 +76,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-16T14:58:17.688703+00:00"
+      "fetched_at": "2026-11-17T15:35:15.361229+00:00"
     },
     {
       "id": "046daf5b777b2345",
@@ -94,7 +94,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-16T14:58:17.688817+00:00"
+      "fetched_at": "2026-11-17T15:35:15.361411+00:00"
     },
     {
       "id": "0b7425006b1c667c",
@@ -112,7 +112,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-16T14:58:51.013429+00:00"
+      "fetched_at": "2026-11-17T15:35:48.387128+00:00"
     },
     {
       "id": "27d818f09c480290",
@@ -130,25 +130,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-16T14:58:51.013479+00:00"
-    },
-    {
-      "id": "977320a1c818cdd6",
-      "title": "Forskare inom biologisk mångfald och hållbarhet vid institutionen för Mgeo",
-      "institution": "Lund University",
-      "location": "Lund",
-      "country": "sweden",
-      "inst_type": "university",
-      "url": "https://lu.varbi.com/en/what:job/jobID:989973/",
-      "deadline": "Mon, 16 Nov 2026 00:00:00 +0100",
-      "type": "unknown",
-      "description": "Arbetsuppgifter Forskaren kommer att koordinera tvärvetenskaplig forskning om bevarande och hållbarhet av biologisk mångfald i jordbruks- och livsmedelssystem. Tjänsten kommer att använda expertis inom ekologi, bedömning av biologisk mångfald, socioekonomisk och beteendemässig forskning, samt tvärvetenskapliga metoder för att utvärdera resultat av biologisk mångfald och informera bevarande, förvaltning och policy. Arbetsuppgifterna kommer att omfatta att utforma och genomföra ekologiska och socioekonomiska studier, samarbeta med jordbrukare, företag, myndigheter och andra samhällsaktörer, samt skriva vetenskapliga publikationer. Krav - Doktorsexamen inom ekologi. - Mycket god förmåga att kom",
-      "source": "lu.se",
-      "aggregator": false,
-      "stats_highlight": false,
-      "relevant": true,
-      "relevance_score": 1,
-      "fetched_at": "2026-11-16T14:59:22.070217+00:00"
+      "fetched_at": "2026-11-17T15:35:48.387199+00:00"
     }
   ]
 }
