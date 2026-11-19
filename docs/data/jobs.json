@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-18T15:11:37.119413+00:00",
+  "last_updated": "2026-11-19T15:22:13.238929+00:00",
   "stats": {
     "total": 8,
     "permanent": 1,
@@ -7,22 +7,22 @@
   },
   "jobs": [
     {
-      "id": "23a9711effe75435",
-      "title": "Vikarierande universitetslektor i miljörätt och EU-rätt",
-      "institution": "Lund University",
-      "location": "Lund",
-      "country": "sweden",
-      "inst_type": "university",
-      "url": "https://lu.varbi.com/en/what:job/jobID:991713/",
-      "deadline": "Wed, 18 Nov 2026 00:00:00 +0100",
+      "id": "4a3b07373bcd8981",
+      "title": "1109/1110 Forsker innen Bentisk økologi med maskinsyn (KI)",
+      "institution": "",
+      "location": "Norway",
+      "country": "norway",
+      "inst_type": "institute",
+      "url": "https://www.jobbnorge.no/ledige-stillinger/stilling/312133",
+      "deadline": null,
       "type": "permanent",
-      "description": "Ämne Miljörätt och EU-rätt Ämnesbeskrivning Ämnet miljörätt omfattar de delar av rättsordningen som syftar till att skydda miljön, bevara naturen och den biologiska mångfalden samt främja en ekologiskt hållbar utveckling i vid bemärkelse. Ämnet omfattar bland annat rättsliga frågor om skydd för ekosystem, vatten, luft, arter, skogar och andra naturmiljöer samt regleringen av kemikalier, bekämpningsmedel, avfall, transporter, markanvändning och klimatpåverkan. Inom ämnet ingår även studier av miljörättsliga principer, särskilt försiktighetsprincipen, principen om förebyggande åtgärder och principen om att förorenaren ska betala, samt deras betydelse för rättslig reglering, beslutsfattande och",
-      "source": "lu.se",
+      "description": "Havforskningsinstituttet 1109/1110 Forsker innen Bentisk økologi med maskinsyn (KI) Havforskningsinstituttet (HI) har ledig en fast stilling som forsker innen bentisk økologi med sterk kompetans innen bildeanalyse ved bruk ... His Heltid 13.12.2026",
+      "source": "jobbnorge.no",
       "aggregator": false,
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-18T15:14:04.047458+00:00"
+      "fetched_at": "2026-11-19T15:23:36.846933+00:00"
     },
     {
       "id": "b35c820ea45f2e39",
@@ -40,7 +40,7 @@
       "stats_highlight": true,
       "relevant": true,
       "relevance_score": 5,
-      "fetched_at": "2026-11-18T15:13:26.019547+00:00"
+      "fetched_at": "2026-11-19T15:23:56.310960+00:00"
     },
     {
       "id": "2a74198a955fbeac",
@@ -58,7 +58,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-18T15:12:14.492525+00:00"
+      "fetched_at": "2026-11-19T15:22:41.816123+00:00"
     },
     {
       "id": "4a51ed9a015a0cbe",
@@ -76,7 +76,7 @@
       "stats_highlight": true,
       "relevant": true,
       "relevance_score": 10,
-      "fetched_at": "2026-11-18T15:13:26.019315+00:00"
+      "fetched_at": "2026-11-19T15:23:56.310755+00:00"
     },
     {
       "id": "749a11505e7ccfe3",
@@ -94,7 +94,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-18T15:13:07.379019+00:00"
+      "fetched_at": "2026-11-19T15:23:36.847051+00:00"
     },
     {
       "id": "046daf5b777b2345",
@@ -112,7 +112,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-18T15:13:07.379159+00:00"
+      "fetched_at": "2026-11-19T15:23:36.847145+00:00"
     },
     {
       "id": "0b7425006b1c667c",
@@ -130,7 +130,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-18T15:13:39.667846+00:00"
+      "fetched_at": "2026-11-19T15:24:11.421367+00:00"
     },
     {
       "id": "27d818f09c480290",
@@ -148,7 +148,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-18T15:13:39.667902+00:00"
+      "fetched_at": "2026-11-19T15:24:11.421415+00:00"
     }
   ]
 }
