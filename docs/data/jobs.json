@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-11-24T17:01:22.550675+00:00",
+  "last_updated": "2026-11-25T16:52:10.994610+00:00",
   "stats": {
-    "total": 9,
+    "total": 8,
     "permanent": 1,
-    "postdoc": 3
+    "postdoc": 2
   },
   "jobs": [
     {
@@ -22,25 +22,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-24T17:02:38.170844+00:00"
-    },
-    {
-      "id": "b35c820ea45f2e39",
-      "title": "Postdoctoral Research Fellowship in Precision Medicine and Statistical Data Science",
-      "institution": "University of Oslo",
-      "location": "Oslo",
-      "country": "norway",
-      "inst_type": "university",
-      "url": "https://www.jobbnorge.no/en/available-jobs/job/310466/postdoctoral-research-fellowship-in-precision-medicine-and-statistical-data-science",
-      "deadline": "November 24, 2026",
-      "type": "postdoc",
-      "description": "Postdoctoral Research Fellowship in Precision Medicine and Statistical Data Science Nov. 3, 2026 Department: Institute of Clinical Medicine (Klinmed) Faculty: Faculty of Medicine Languages: English Deadline: Tuesday, November 24, 2026",
-      "source": "uio.no",
-      "aggregator": false,
-      "stats_highlight": true,
-      "relevant": true,
-      "relevance_score": 5,
-      "fetched_at": "2026-11-24T17:02:56.612489+00:00"
+      "fetched_at": "2026-11-25T16:53:25.712190+00:00"
     },
     {
       "id": "2a74198a955fbeac",
@@ -58,25 +40,25 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-24T17:01:45.158938+00:00"
+      "fetched_at": "2026-11-25T16:52:33.159748+00:00"
     },
     {
-      "id": "8e1ad0f2c1430036",
-      "title": "Postdoktor i mikrobiell evolution",
+      "id": "23146bda9114fdfd",
+      "title": "Postdoktor i ekologi",
       "institution": "Stockholm University",
       "location": "Stockholm",
       "country": "sweden",
       "inst_type": "university",
-      "url": "https://su.varbi.com/en/what:job/jobID:993980/",
-      "deadline": "Tue, 24 Nov 2026 00:00:00 +0100",
+      "url": "https://su.varbi.com/en/what:job/jobID:990216/",
+      "deadline": "Wed, 25 Nov 2026 00:00:00 +0100",
       "type": "postdoc",
-      "description": "Institutionen för ekologi, miljö och botanik (DEEP) bedriver forskning och utbildning vid Arrheniuslaboratorierna på campus Frescati. Vi är cirka 100 medarbetare, inklusive doktorander och postdoktorer, fördelade på 25 forskargrupper. Mer information om oss finns på: Institutionen för ekologi, miljö och botanik Projektbeskrivning Hur har mikrobiella interaktioner påverkat uppkomsten och evolutionen av flercellighet, till exempel hos djur? Hur har sådana övergångar till flercellighet hos värdorganismer i sin tur format evolutionen hos interagerande mikroorganismer, till exempel endosymbionter? Vi välkomnar nyfikna och motiverade forskare som fascineras av dessa frågor att söka en postdoktoral",
+      "description": "Institutionen för ekologi, miljö och botanik (DEEP) bedriver forskning och utbildning vid Arrheniuslaboratorierna på campus Frescati. Vi är cirka 100 medarbetare, inklusive doktorander och postdoktorer, fördelade på 25 forskargrupper. Mer information om oss finns på: Institutionen för ekologi, miljö och botanik. Projektbeskrivning Anställningen kommer att vara knuten till projektet med titeln ”Klimatförändringars effekter på mossors fenologi”. Som en följd av klimatförändringarna förväntas sommartorkor bli både vanligare och mer långvariga, vilket potentiellt kan få negativa konsekvenser för många arter. Effekterna av torka beror sannolikt på när under säsongen torkan inträffar i förhållande",
       "source": "su.se",
       "aggregator": false,
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-24T17:03:31.789381+00:00"
+      "fetched_at": "2026-11-25T16:54:19.020873+00:00"
     },
     {
       "id": "4a51ed9a015a0cbe",
@@ -94,7 +76,7 @@
       "stats_highlight": true,
       "relevant": true,
       "relevance_score": 10,
-      "fetched_at": "2026-11-24T17:02:56.612263+00:00"
+      "fetched_at": "2026-11-25T16:53:43.953859+00:00"
     },
     {
       "id": "749a11505e7ccfe3",
@@ -112,7 +94,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-24T17:02:38.170983+00:00"
+      "fetched_at": "2026-11-25T16:53:25.712328+00:00"
     },
     {
       "id": "046daf5b777b2345",
@@ -130,7 +112,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-24T17:02:38.171088+00:00"
+      "fetched_at": "2026-11-25T16:53:25.712436+00:00"
     },
     {
       "id": "0b7425006b1c667c",
@@ -148,7 +130,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-24T17:03:10.182844+00:00"
+      "fetched_at": "2026-11-25T16:53:57.138508+00:00"
     },
     {
       "id": "27d818f09c480290",
@@ -166,7 +148,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-24T17:03:10.182915+00:00"
+      "fetched_at": "2026-11-25T16:53:57.138566+00:00"
     }
   ]
 }
