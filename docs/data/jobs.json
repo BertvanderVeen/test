@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-11-26T16:29:08.044602+00:00",
+  "last_updated": "2026-11-27T16:14:54.013844+00:00",
   "stats": {
-    "total": 7,
+    "total": 6,
     "permanent": 1,
     "postdoc": 1
   },
@@ -22,7 +22,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-26T16:30:26.147994+00:00"
+      "fetched_at": "2026-11-27T16:16:12.721635+00:00"
     },
     {
       "id": "2a74198a955fbeac",
@@ -40,25 +40,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-26T16:29:31.864113+00:00"
-    },
-    {
-      "id": "4a51ed9a015a0cbe",
-      "title": "Researcher in Biostatistics",
-      "institution": "University of Oslo",
-      "location": "Oslo",
-      "country": "norway",
-      "inst_type": "university",
-      "url": "https://www.jobbnorge.no/en/available-jobs/job/309186/researcher-in-biostatistics",
-      "deadline": "November 26, 2026",
-      "type": "unknown",
-      "description": "Researcher in Biostatistics Nov. 6, 2026 Department: Institute of Basic Medical Sciences Faculty: Faculty of Medicine Languages: English Deadline: Thursday, November 26, 2026",
-      "source": "uio.no",
-      "aggregator": false,
-      "stats_highlight": true,
-      "relevant": true,
-      "relevance_score": 10,
-      "fetched_at": "2026-11-26T16:30:45.386867+00:00"
+      "fetched_at": "2026-11-27T16:15:19.714140+00:00"
     },
     {
       "id": "749a11505e7ccfe3",
@@ -76,7 +58,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-26T16:30:26.148123+00:00"
+      "fetched_at": "2026-11-27T16:16:12.721767+00:00"
     },
     {
       "id": "046daf5b777b2345",
@@ -94,7 +76,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-26T16:30:26.148223+00:00"
+      "fetched_at": "2026-11-27T16:16:12.721864+00:00"
     },
     {
       "id": "0b7425006b1c667c",
@@ -112,7 +94,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-26T16:31:02.787328+00:00"
+      "fetched_at": "2026-11-27T16:16:45.641092+00:00"
     },
     {
       "id": "27d818f09c480290",
@@ -130,7 +112,7 @@
       "stats_highlight": false,
       "relevant": true,
       "relevance_score": 1,
-      "fetched_at": "2026-11-26T16:31:02.787387+00:00"
+      "fetched_at": "2026-11-27T16:16:45.641142+00:00"
     }
   ]
 }
